@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-kids: "Quicksand", "Nunito", "Comic Sans MS", system-ui, sans-serif;
+}
+
+/* Global Kid-Friendly Reset */
+body {
+  margin: 0;
+  font-family: var(--font-kids);
+  background-color: #f0fdf4; /* Ultra-soft mint green background */
+  overflow: hidden; /* Prevent rubber-banding scroll on iPad web view */
+  user-select: none; /* Prevent text selection callouts for a toddler tapping */
+  -webkit-user-select: none;
+  -webkit-touch-callout: none; /* Prevent long-press popups */
+}
+
+/* Standalone PWA Layout Container */
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* SVG World Map Styles */
+svg#svg1926 {
+  width: 100%;
+  height: 100%;
+  background-color: #e0f2fe; /* Beautiful soft sky-blue ocean */
+  transition: transform 0.3s ease-out;
+}
+
+/* Basic path behaviors */
+path {
+  transition: fill 0.2s ease, stroke 0.2s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent; /* Remove native touch blue boxes */
+}
+
+/* Base land paths (all countries) */
+.land {
+  fill: #f8fafc; /* Clean soft cream white for unsupported countries */
+  stroke: #cbd5e1; /* Soft gray borders */
+  stroke-width: 0.6;
+}
+
+/* Ocean background path inside SVG */
+.ocean {
+  fill: #e0f2fe !important; /* Baby blue ocean */
+  stroke: none;
+  cursor: default;
+}
+
+/* Lakes/Rivers inside land mass */
+.lake {
+  fill: #e0f2fe !important; /* Matches ocean water color */
+  stroke: #e0f2fe !important;
+  stroke-width: 0.2;
+  cursor: default;
+}
+
+/* 🚀 CLICKABLE COUNTRIES (Nations with train data) 
+   Soft pastel warm amber so the 4-year-old knows these are special buttons! */
+.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke {
+  fill: #fde047 !important; /* Beautiful sunshine yellow */
+  stroke: #eab308 !important; /* Darker warm borders */
+  stroke-width: 1.0;
+}
+
+/* Hover/Active Touch states for Supported Countries */
+.jp:active, .us:active, .fr:active, .gb:active, .in:active, 
+.de:active, .ch:active, .au:active, .ca:active, .ke:active {
+  fill: #f97316 !important; /* Flash bright orange when touched! */
+}
+
+/* 🌟 SELECTED ACTIVE COUNTRY HIGHLIGHT STATE 
+   When clicked, the selected country lights up a brilliant, vibrant emerald green! */
+.country-selected {
+  fill: #22c55e !important; /* Vibrant emerald green */
+  stroke: #15803d !important; /* Dark emerald borders */
+  stroke-width: 1.8;
+  filter: drop-shadow(0px 4px 8px rgba(22, 163, 74, 0.4));
+  animation: pulse-selected 2s infinite ease-in-out;
+}
+
+@keyframes pulse-selected {
+  0% { opacity: 1.0; }
+  50% { fill: #4ade80 !important; } /* Slightly lighter pulse */
+  100% { opacity: 1.0; }
+}
+
+/* Hide default scrollbars in panels for an app-like experience */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
