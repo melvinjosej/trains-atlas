@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './', // Ensures all asset linkages are relative, critical for x20 and GitHub Pages subfolders
+  base: './', // Restored to universal relative pathing, supporting both x20 and github.io subfolder deployments smoothly
   plugins: [
     react(),
     tailwindcss()
