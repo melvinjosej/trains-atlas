@@ -4,31 +4,65 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     
-    <!-- 🚨 Global Diagnostic Error Catcher for Remote iPad Debugging -->
+    <!-- 🚨 Ultra-Robust Diagnostic Console for Remote Workspace Debugging -->
     <script>
-      window.onerror = function(message, source, lineno, colno, error) {
-        setTimeout(() => {
-          const div = document.createElement('div');
-          div.style.color = '#991b1b';
-          div.style.padding = '24px';
-          div.style.fontSize = '18px';
-          div.style.background = '#fef2f2';
-          div.style.position = 'fixed';
-          div.style.inset = '0';
-          div.style.zIndex = '999999';
-          div.style.overflow = 'auto';
-          div.style.fontFamily = 'monospace';
-          div.innerHTML = '<h1>🚨 MAGICAL TRAINS ATLAS CRASHED!</h1>' +
-                          '<p><b>Error Message:</b> ' + message + '</p>' +
-                          '<p><b>File:</b> ' + source + '</p>' +
-                          '<p><b>Line/Col:</b> ' + lineno + ':' + colno + '</p>' +
-                          '<h3 style="margin-top:20px;">📋 Stack Trace:</h3>' +
-                          '<pre style="background:#fee2e2; padding:12px; border-radius:8px; overflow:auto;">' + 
-                          (error ? error.stack : 'No stack trace available') + '</pre>';
-          document.body.appendChild(div);
-        }, 500); // Slight delay to ensure body element exists
-        return false;
-      };
+      (function() {
+        const logs = [];
+        function log(msg, isError = false) {
+          logs.push((isError ? '❌ ' : 'ℹ️ ') + msg);
+          updateScreen();
+        }
+        
+        // Intercept resource load failures (capture phase)
+        window.addEventListener('error', function(e) {
+          if (e.target && (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK')) {
+            log("FAILED TO LOAD RESOURCE: " + (e.target.src || e.target.href), true);
+          }
+        }, true);
+
+        // Intercept unhandled JS exceptions
+        window.onerror = function(message, source, lineno, colno, error) {
+          log("JS EXCEPTION: " + message + " at " + source + ":" + lineno + ":" + colno, true);
+          if (error && error.stack) {
+            log("STACK: " + error.stack, true);
+          }
+          return false;
+        };
+
+        // Intercept console error calls
+        const oldError = console.error;
+        console.error = function() {
+          log("CONSOLE ERROR: " + Array.from(arguments).join(' '), true);
+          oldError.apply(console, arguments);
+        };
+
+        function updateScreen() {
+          let debugDiv = document.getElementById('diagnostics-console');
+          if (!debugDiv) {
+            debugDiv = document.createElement('div');
+            debugDiv.id = 'diagnostics-console';
+            debugDiv.style.color = '#1e293b';
+            debugDiv.style.padding = '24px';
+            debugDiv.style.fontSize = '15px';
+            debugDiv.style.background = '#f8fafc';
+            debugDiv.style.position = 'fixed';
+            debugDiv.style.inset = '0';
+            debugDiv.style.zIndex = '999999';
+            debugDiv.style.overflow = 'auto';
+            debugDiv.style.fontFamily = 'monospace';
+            document.documentElement.appendChild(debugDiv);
+          }
+          debugDiv.innerHTML = '<h1 style="color:#991b1b; margin-bottom:10px; font-size:24px;">🚨 DIAGNOSTIC CONSOLE ACTIVE</h1>' +
+                              '<p style="color:#475569; margin-bottom:15px;">If you see this screen, a script resource failed to load or React crashed during boot.</p>' +
+                              '<h3 style="margin-top:20px; padding-bottom:6px; border-bottom:2px solid #cbd5e1; color:#0f172a;">📋 Logs & Events:</h3>' +
+                              '<pre style="background:#f1f5f9; padding:12px; border-radius:8px; overflow:auto; font-size:13px; line-height:1.5; color:#334155;">' + 
+                              logs.join('\n') + '</pre>' +
+                              '<button onclick="location.reload(true)" style="margin-top:15px; background:#10b981; color:white; font-weight:bold; padding:10px 18px; border-radius:8px; border:none; cursor:pointer; font-size:14px; box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);">🔄 Force Refresh Page</button>';
+        }
+
+        // Log initial template parsing state
+        log("HTML parsed successfully. Bootstrapping React assets...");
+      })();
     </script>
 
     <!-- 📱 iPad Web App Standalone Viewport Optimizations -->
