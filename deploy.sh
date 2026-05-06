@@ -8,9 +8,6 @@ echo "🚄 1. COMPILING THE REACT IPAD WEB APP..."
 echo "=================================================="
 npm run build
 
-echo "⚙️ Post-Build: Stripping 'crossorigin' attributes to bypass strict x20 corporate CORS blocks..."
-sed -i 's/crossorigin//g' dist/index.html
-
 echo ""
 echo "=================================================="
 echo "📂 2. PUBLISHING STATIC CONTENT TO GOOGLE x20..."
