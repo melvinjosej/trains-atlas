@@ -62,9 +62,7 @@ path {
   cursor: default;
 }
 
-/* 🚀 CLICKABLE COUNTRIES (Nations with train data) 
-   Soft pastel warm amber so the 4-year-old knows these are special buttons! */
-.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke {
+.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz {
   fill: #fde047 !important; /* Beautiful sunshine yellow */
   stroke: #eab308 !important; /* Darker warm borders */
   stroke-width: 1.0;
@@ -72,7 +70,8 @@ path {
 
 /* Hover/Active Touch states for Supported Countries */
 .jp:active, .us:active, .fr:active, .gb:active, .in:active, 
-.de:active, .ch:active, .au:active, .ca:active, .ke:active {
+.de:active, .ch:active, .au:active, .ca:active, .ke:active,
+.cn:active, .tr:active, .ru:active, .kz:active {
   fill: #f97316 !important; /* Flash bright orange when touched! */
 }
 

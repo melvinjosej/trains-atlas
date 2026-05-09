@@ -17,9 +17,6 @@ X20_DIR="/google/data/rw/users/me/melvinp/www/trains-atlas"
 echo "Creating target x20 folder at: $X20_DIR"
 mkdir -p "$X20_DIR"
 
-echo "Clearing old files..."
-rm -rf "${X20_DIR:?}"/*
-
 echo "Copying fresh optimized bundle to x20..."
 cp -r dist/* "$X20_DIR/"
 
