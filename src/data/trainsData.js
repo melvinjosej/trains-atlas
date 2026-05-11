@@ -34,6 +34,7 @@ export const trainsData = [
         type: "🚀 Super Fast Bullet Train",
         photoUrl: shinkansenImg,
         funFacts: [
+          "⚡ Top Speed: Zooms at an amazing 200 mph! ⚡",
           "The Shinkansen looks like a duck-billed bird and flies on the tracks! 🚄",
           "It travels as fast as a real airplane flies on the ground!",
           "It has special tilting wheels so it can zoom around curves without slowing down!"
@@ -52,6 +53,7 @@ export const trainsData = [
         type: "🧲 Magnetic Floating Train",
         photoUrl: shanghaimaglevImg,
         funFacts: [
+          "⚡ Top Speed: Floats through the air at a mind-blowing 268 mph! ⚡",
           "The Shanghai Maglev is the fastest commercial electric train in the whole world! 🧲",
           "It doesn't have wheels! It floats in the air on super-strong magnets, sliding like a hovercraft!",
           "It travels from the airport to the city center in just 7 minutes!"
@@ -70,6 +72,7 @@ export const trainsData = [
         type: "🚂 Giant Steam Locomotive",
         photoUrl: bigboyImg,
         funFacts: [
+          "💨 Top Speed: Puffs along at a giant 80 mph! 💨",
           "The Big Boy is the biggest and heaviest steam train ever built in history! 🚂",
           "It is so long that it needs two sets of giant driving wheels just to turn corners!",
           "It drinks a giant swimming pool of water to create its white puffy steam cloud."
@@ -80,6 +83,7 @@ export const trainsData = [
         type: "⚡ High-Speed Electric Train",
         photoUrl: acelaImg,
         funFacts: [
+          "⚡ Top Speed: Flies along the rails at 150 mph! ⚡",
           "The Acela is the fastest passenger train in America, zooming along the East Coast!",
           "It leans into corners just like a fast motorcycle rider on a racetrack! 🚴",
           "It gets all its power from hanging electric wires over the tracks."
@@ -98,6 +102,7 @@ export const trainsData = [
         type: "🚀 Double-Decker Speed Train",
         photoUrl: tgvImg,
         funFacts: [
+          "⚡ Top Speed: Cruises across France at 200 mph! ⚡",
           "The TGV Duplex is an incredibly fast bullet train that is two stories tall! 🪜",
           "You can sit on the top roof deck and look down at cows, farms, and fields zooming by!",
           "It connects big beautiful cities at a speed faster than a race car."
@@ -116,6 +121,7 @@ export const trainsData = [
         type: "🚂 Famous Royal Steam Train",
         photoUrl: scotsmanImg,
         funFacts: [
+          "💨 Top Speed: Puffs at a historic 100 mph! 💨",
           "The Flying Scotsman is one of the most famous steam locomotives in the world! 🌟",
           "It was the first steam engine in the world to go 100 miles per hour!",
           "It has a beautiful glossy green paint coat and has traveled all around the world."
@@ -126,6 +132,7 @@ export const trainsData = [
         type: "🌊 Underwater Bullet Train",
         photoUrl: eurostarImg,
         funFacts: [
+          "⚡ Top Speed: Undersea cruise at 200 mph! ⚡",
           "The Eurostar is a long bullet train that dives deep under the sea inside a giant tunnel! 🌊",
           "It lets you travel from London to Paris while swimming fish and whales swim far above you!",
           "It has two nose cones, one at each end, so it never has to turn around."
@@ -144,6 +151,7 @@ export const trainsData = [
         type: "🚀 Modern Express Train",
         photoUrl: vandebharatImg,
         funFacts: [
+          "⚡ Top Speed: Flies across India at 110 mph! ⚡",
           "Vande Bharat is a sleek white and orange train that is completely made in India!",
           "It has massive panoramic windows so children can look out for wild peacocks and monkeys! 🦚🐒",
           "The passenger seats can rotate a full circle to always face the direction the train is moving!"
@@ -154,6 +162,7 @@ export const trainsData = [
         type: "☁️ Cute Mountain Steam Train",
         photoUrl: darjeelingImg,
         funFacts: [
+          "🐌 Top Speed: Cozy, gentle stroll at only 10 mph! 🐌",
           "This tiny, cute blue steam engine is called a 'Toy Train' because it is so small! 🧸",
           "It climbs very high up into the mountain clouds where tea leaves grow.",
           "It moves slow enough that you can easily walk right next to it as it puffs along!"
@@ -172,6 +181,7 @@ export const trainsData = [
         type: "🚀 Sleek European Speedliner",
         photoUrl: iceImg,
         funFacts: [
+          "⚡ Top Speed: Glides quietly at 165 mph! ⚡",
           "The ICE is a shiny white train with a bright red stripe racing across Europe!",
           "It has a special kitchen car where chefs cook pretzels, soup, and sausages while driving! 🥨",
           "It is designed to be extremely quiet inside, so passengers can take peaceful naps."
@@ -182,6 +192,7 @@ export const trainsData = [
         type: "🐒 Hanging Upside-Down Train",
         photoUrl: wuppertalImg,
         funFacts: [
+          "🐒 Top Speed: Swings upside down at 37 mph! 🐒",
           "This train is totally upside down—it hangs *underneath* the tracks and flies through the air! 🐒",
           "It glides right over a real flowing river and through streets like a spaceship!",
           "Once, a famous baby elephant named Tuffi took a ride on it!"
@@ -200,6 +211,7 @@ export const trainsData = [
         type: "🏔️ Panoramic Alpine Train",
         photoUrl: glacierImg,
         funFacts: [
+          "🐌 Top Speed: Famously slow alpine cruise at only 24 mph! 🐌",
           "The Glacier Express is a bright red train that drives over high stone bridges in the Swiss Alps!",
           "It has a massive glass curved roof so you can look straight up at snowy mountaintops! 🏔️",
           "It is known as the slowest express train in the world because it wants you to enjoy the views."
@@ -210,6 +222,7 @@ export const trainsData = [
         type: "🎢 Roller Coaster Mountain Train",
         photoUrl: berninaImg,
         funFacts: [
+          "⛰️ Top Speed: Climbs snowy loops at a safe 28 mph! ⛰️",
           "This red train climbs super steep snowy mountains without using any cogs or gears!",
           "It drives over a magical circular stone bridge that loops around like a giant roller coaster track! 🎢",
           "It takes you past giant freezing glaciers and down into sunny valleys with palm trees."
@@ -228,6 +241,7 @@ export const trainsData = [
         type: "🏔️ Snowy Mountain Scenic Train",
         photoUrl: easternexpressImg,
         funFacts: [
+          "🏔️ Top Speed: Cozy winter journey at 50 mph! 🏔️",
           "This cozy passenger train takes you on a magical journey across giant snow-covered mountains! 🏔️",
           "It has sleeper rooms where you can sleep in warm beds while watching the stars outside!",
           "It runs all the way across Turkey, passing beautiful old stone castles and pine forests."
@@ -246,6 +260,7 @@ export const trainsData = [
         type: "🌍 The Longest Train Ride on Earth!",
         photoUrl: transsiberianImg,
         funFacts: [
+          "🌍 Top Speed: Day and night desert cruising at 60 mph! 🌍",
           "This is the longest train trip in the world! It takes a whole week of sleeping on the train to finish! 🌍",
           "It races past massive Siberian pine forests, next to deep blue lakes, and past wild brown bears! 🐻",
           "You cross 8 different time zones, meaning you have to change your watch 8 times on the trip!"
@@ -264,6 +279,7 @@ export const trainsData = [
         type: "🚀 Sleek Desert Steppe Speedliner",
         photoUrl: tulpartalgoImg,
         funFacts: [
+          "⚡ Top Speed: Glides across fields at 125 mph! ⚡",
           "This super-sleek silver bullet train is built to glide across the giant grass fields (steppes) of Kazakhstan! 🌾",
           "It has special insulated walls to keep children warm and cozy, even when it's freezing cold outside!",
           "The passenger train cars are extra wide and comfortable, making it feel like a rolling hotel!"
@@ -282,6 +298,7 @@ export const trainsData = [
         type: "🐫 Legendary Outback Explorer",
         photoUrl: ghanImg,
         funFacts: [
+          "🐫 Top Speed: Rolls across red desert sands at 70 mph! 🐫",
           "The Ghan is a massive train with a red locomotive that is as long as 10 football fields! 🦘",
           "It travels completely across the hot, sandy red desert center of Australia from bottom to top!",
           "It is named after camel drivers who used to explore the desert a long time ago."
@@ -292,6 +309,7 @@ export const trainsData = [
         type: "🪵 Forest Dangle-Leg Train",
         photoUrl: puffingImg,
         funFacts: [
+          "🌳 Top Speed: Fun forest chugger at 15 mph! 🌳",
           "Puffing Billy is a beautiful old steam train that runs through giant green fern tree forests!",
           "Children are officially allowed to sit right on the wooden windowsills and dangle their legs outside! 🪵",
           "It rings a big loud bell and blows a loud steam whistle as it crosses wooden trestle bridges."
@@ -310,6 +328,7 @@ export const trainsData = [
         type: "𫫮 Trans-Continental Dome Train",
         photoUrl: canadianImg,
         funFacts: [
+          "🏔️ Top Speed: Mountain watching at 80 mph! 🏔️",
           "The Canadian is a beautiful classic silver train that takes 4 whole days to cross Canada!",
           "It has a special bullet-shaped glass dome room on top for animal watching! 𫫮🐻",
           "You can sleep in bunk beds on the train and eat breakfast while watching giant waterfalls and rocky mountains."
@@ -328,6 +347,7 @@ export const trainsData = [
         type: "🦁 Safari Wildlife Express",
         photoUrl: madarakaImg,
         funFacts: [
+          "🦁 Top Speed: Safari cruising at 75 mph! 🦁",
           "This beautiful orange and white train travels from the sandy ocean beach straight into safari parks!",
           "The tracks are built on high columns above the ground so wild animals can walk safely underneath! 🐘🦒",
           "If you look out the window, you can see real wild lions, giraffes, and zebras running by!"
@@ -346,6 +366,7 @@ export const trainsData = [
         type: "🏔️ Cloud Forest Explorer",
         photoUrl: vistadomeImg,
         funFacts: [
+          "⛰️ Top Speed: Careful canyon climbing at 30 mph! ⛰️",
           "This bright blue train climbs super-high up into the clouds to a secret ancient city in the sky called Machu Picchu! ☁️",
           "It has giant curved windows on the ceiling so you can look straight up at flying giant condors (the biggest birds in the sky!) and high snowy mountains! 🦅",
           "Inside the train, musicians play happy music on drums and flutes while performers dance in colorful animal costumes! 🪘"
@@ -364,6 +385,7 @@ export const trainsData = [
         type: "🕸️ Sky Bridge Express",
         photoUrl: cloudsImg,
         funFacts: [
+          "☁️ Top Speed: Flying into the clouds at 22 mph! ☁️",
           "This train is called the 'Train to the Clouds' because it drives so high that puffy white clouds float right next to your window! ☁️",
           "It rolls over a giant steel bridge that looks like a giant toy spiderweb stretching across a deep red canyon! 🕸️",
           "It goes so high up in the sky that it is closer to space than almost any other train on Earth!"
@@ -382,6 +404,7 @@ export const trainsData = [
         type: "🎢 Mountain Jungle Cog Train",
         photoUrl: corcovadoImg,
         funFacts: [
+          "🎢 Top Speed: Safe mountain climbing at only 9 mph! 🎢",
           "This bright red train climbs steep, green jungle hills like a real-life roller coaster! 🎢",
           "It drives through a thick jungle where wild monkeys and colorful toucans chatter in the trees! 🐒🦜",
           "It takes you all the way to the top of a giant mountain where a massive statue of a man with open arms stands looking over the ocean!"
