@@ -18,6 +18,9 @@ import shanghaimaglevImg from '../assets/trains/shanghaimaglev.jpeg'
 import easternexpressImg from '../assets/trains/easternexpress.jpeg'
 import transsiberianImg from '../assets/trains/transsiberian.jpeg'
 import tulpartalgoImg from '../assets/trains/tulpartalgo.jpeg'
+import vistadomeImg from '../assets/trains/vistadome.jpeg'
+import cloudsImg from '../assets/trains/clouds.jpeg'
+import corcovadoImg from '../assets/trains/corcovado.jpeg'
 
 export const trainsData = [
   {
@@ -328,6 +331,60 @@ export const trainsData = [
           "This beautiful orange and white train travels from the sandy ocean beach straight into safari parks!",
           "The tracks are built on high columns above the ground so wild animals can walk safely underneath! 🐘🦒",
           "If you look out the window, you can see real wild lions, giraffes, and zebras running by!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PE",
+    countryName: "Peru",
+    capital: "Lima",
+    flagEmoji: "🇵🇪",
+    trains: [
+      {
+        name: "PeruRail Vistadome",
+        type: "🏔️ Cloud Forest Explorer",
+        photoUrl: vistadomeImg,
+        funFacts: [
+          "This bright blue train climbs super-high up into the clouds to a secret ancient city in the sky called Machu Picchu! ☁️",
+          "It has giant curved windows on the ceiling so you can look straight up at flying giant condors (the biggest birds in the sky!) and high snowy mountains! 🦅",
+          "Inside the train, musicians play happy music on drums and flutes while performers dance in colorful animal costumes! 🪘"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AR",
+    countryName: "Argentina",
+    capital: "Buenos Aires",
+    flagEmoji: "🇦🇷",
+    trains: [
+      {
+        name: "Tren a las Nubes (Train to the Clouds)",
+        type: "🕸️ Sky Bridge Express",
+        photoUrl: cloudsImg,
+        funFacts: [
+          "This train is called the 'Train to the Clouds' because it drives so high that puffy white clouds float right next to your window! ☁️",
+          "It rolls over a giant steel bridge that looks like a giant toy spiderweb stretching across a deep red canyon! 🕸️",
+          "It goes so high up in the sky that it is closer to space than almost any other train on Earth!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BR",
+    countryName: "Brazil",
+    capital: "Brasília",
+    flagEmoji: "🇧🇷",
+    trains: [
+      {
+        name: "Trem do Corcovado",
+        type: "🎢 Mountain Jungle Cog Train",
+        photoUrl: corcovadoImg,
+        funFacts: [
+          "This bright red train climbs steep, green jungle hills like a real-life roller coaster! 🎢",
+          "It drives through a thick jungle where wild monkeys and colorful toucans chatter in the trees! 🐒🦜",
+          "It takes you all the way to the top of a giant mountain where a massive statue of a man with open arms stands looking over the ocean!"
         ]
       }
     ]
