@@ -30,8 +30,13 @@ function VoiceControl({ onSelectCountry }) {
   const [errorMessage, setErrorMessage] = useState('')
   const [recognition, setRecognition] = useState(null)
 
-  // 🛡️ React Ref pattern: preserves and delivers the absolute latest callback reference
-  // to single-mount listeners, completely avoiding closures/render loops!
+  // 🔧 MediaRecorder Diagnostic States
+  const [mediaRecorder, setMediaRecorder] = useState(null)
+  const [audioUrl, setAudioUrl] = useState('')
+  const [recordingDiagnostic, setRecordingDiagnostic] = useState(false)
+  const [diagnosticStatus, setDiagnosticStatus] = useState('')
+  const [showDiagnostics, setShowDiagnostics] = useState(false)
+
   const selectCountryRef = useRef(onSelectCountry)
 
   useEffect(() => {
@@ -87,9 +92,7 @@ function VoiceControl({ onSelectCountry }) {
       }
 
       if (matchedCountry) {
-        // Invoke latest callback stably via ref container
         selectCountryRef.current(matchedCountry)
-        // Flash success feedback on the microphone button!
         setErrorMessage(`Found ${transcript}! 🚂✨`)
       } else {
         setErrorMessage(`Heard "${transcript}", try another country! 🧐`)
@@ -98,11 +101,10 @@ function VoiceControl({ onSelectCountry }) {
 
     setRecognition(rec)
     
-    // Clean up on component destroy
     return () => {
       rec.abort()
     }
-  }, []) // 🔒 Empty dependency array: single-mount instantiation guarantee!
+  }, [])
 
   const toggleListen = () => {
     if (!recognition) {
@@ -117,35 +119,148 @@ function VoiceControl({ onSelectCountry }) {
     }
   }
 
-  return (
-    <div className="flex items-center space-x-3 select-none">
-      {/* Microphone activation button */}
-      <button
-        onClick={toggleListen}
-        className={`relative w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-md transition-all duration-300 border-4 cursor-pointer select-none ${
-          listening 
-            ? 'bg-red-500 border-red-300 text-white scale-110 animate-pulse' 
-            : 'bg-amber-400 border-amber-200 text-amber-950 hover:bg-amber-300 hover:scale-105'
-        }`}
-        title={listening ? 'Listening... Speak now!' : 'Tap to speak a country!'}
-      >
-        {listening ? '🎙️' : '🗣️'}
-        {listening && (
-          <span className="absolute inset-0 rounded-full border-4 border-red-400 animate-ping opacity-75"></span>
-        )}
-      </button>
+  // 🛠️ MediaRecorder Hardware-Level Diagnostic Methods
+  const startDiagnosticRecord = async () => {
+    try {
+      setDiagnosticStatus('Requesting mic hardware access...')
+      // standard iOS and Chrome mic stream request
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      setDiagnosticStatus('Mic linked! Speak into your iPad... 🎙️')
+      
+      const recorder = new MediaRecorder(stream)
+      const chunks = []
+      
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) chunks.push(e.data)
+      }
+      
+      recorder.onstop = () => {
+        const audioBlob = new Blob(chunks, { type: 'audio/webm' })
+        const url = URL.createObjectURL(audioBlob)
+        setAudioUrl(url)
+        setDiagnosticStatus('Voice captured successfully! Tap Play below 🎧')
+        
+        // Release mic hardware tracks immediately
+        stream.getTracks().forEach(track => track.stop())
+      }
+      
+      recorder.start()
+      setMediaRecorder(recorder)
+      setRecordingDiagnostic(true)
+    } catch (err) {
+      console.error('Mic diagnostic hardware error:', err)
+      setDiagnosticStatus(`Hardware error: ${err.name}. Wires blocked! 🧐`)
+    }
+  }
 
-      {/* Dynamic status text logs */}
-      <div className="flex flex-col justify-center max-w-[200px] md:max-w-[300px] text-left">
-        <div className="text-sm font-black text-sky-900 font-kids tracking-wide leading-tight">
-          {listening ? '🔴 Listening...' : 'Speak Country!'}
+  const stopDiagnosticRecord = () => {
+    if (mediaRecorder && recordingDiagnostic) {
+      mediaRecorder.stop()
+      setRecordingDiagnostic(false)
+    }
+  }
+
+  const playDiagnosticPlayback = () => {
+    if (!audioUrl) return
+    const audio = new Audio(audioUrl)
+    audio.play()
+    setDiagnosticStatus('Playing back captured sound waves... 🎧')
+  }
+
+  return (
+    <div className="flex flex-col items-center relative">
+      
+      {/* 🎙️ MAIN mic interaction bar */}
+      <div className="flex items-center space-x-3 select-none z-10">
+        <button
+          onClick={toggleListen}
+          className={`relative w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-md transition-all duration-300 border-4 cursor-pointer select-none ${
+            listening 
+              ? 'bg-red-500 border-red-300 text-white scale-110 animate-pulse' 
+              : 'bg-amber-400 border-amber-200 text-amber-950 hover:bg-amber-300 hover:scale-105'
+          }`}
+          title={listening ? 'Listening... Speak now!' : 'Tap to speak a country!'}
+        >
+          {listening ? '🎙️' : '🗣️'}
+          {listening && (
+            <span className="absolute inset-0 rounded-full border-4 border-red-400 animate-ping opacity-75"></span>
+          )}
+        </button>
+
+        <div className="flex flex-col justify-center max-w-[200px] md:max-w-[300px] text-left">
+          <div className="text-sm font-black text-sky-900 font-kids tracking-wide leading-tight">
+            {listening ? '🔴 Listening...' : 'Speak Country!'}
+          </div>
+          <div className={`text-xs font-bold font-kids truncate ${
+            errorMessage.includes('Found') ? 'text-emerald-600' : 'text-amber-700'
+          }`}>
+            {errorMessage || 'Tap and say "Japan" or "Spain"!'}
+          </div>
         </div>
-        <div className={`text-xs font-bold font-kids truncate ${
-          errorMessage.includes('Found') ? 'text-emerald-600' : 'text-amber-700'
-        }`}>
-          {errorMessage || 'Tap and say "Japan" or "Spain"!'}
-        </div>
+
+        {/* Small screwdriver button to expand debugger */}
+        <button
+          onClick={() => setShowDiagnostics(!showDiagnostics)}
+          className="text-lg bg-white/40 hover:bg-white/60 p-1.5 rounded-full cursor-pointer transition"
+          title="🔧 Microphone Hardware Diagnostics"
+        >
+          🔧
+        </button>
       </div>
+
+      {/* 🔧 HARDWARE DIAGNOSTIC DRAWER MODAL */}
+      {showDiagnostics && (
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 bg-slate-900/95 backdrop-blur-md p-5 rounded-2xl shadow-xl text-white w-[320px] md:w-[380px] text-left border-2 border-slate-700 z-50 font-mono text-xs leading-relaxed">
+          <div className="flex justify-between items-center border-b border-slate-700 pb-2 mb-3">
+            <span className="font-bold text-rose-400 text-sm">🔧 MIC HARDWARE DIAGNOSTIC</span>
+            <button 
+              onClick={() => setShowDiagnostics(false)}
+              className="text-slate-400 hover:text-white text-base font-bold cursor-pointer"
+            >
+              ✕
+            </button>
+          </div>
+          
+          <p className="text-slate-400 mb-3">
+            Test if your browser's microphone channel is physically receiving audio waves or blocked at the OS level.
+          </p>
+
+          <div className="bg-slate-950 p-3 rounded-lg mb-3 text-amber-400 font-semibold border border-slate-800 truncate min-h-[40px] flex items-center">
+            {diagnosticStatus || 'Ready. Press Record and speak!'}
+          </div>
+
+          <div className="flex space-x-2">
+            {recordingDiagnostic ? (
+              <button
+                onClick={stopDiagnosticRecord}
+                className="flex-1 bg-red-600 hover:bg-red-700 font-bold py-2.5 rounded-lg text-center cursor-pointer border border-red-500"
+              >
+                ⏹️ Stop Record
+              </button>
+            ) : (
+              <button
+                onClick={startDiagnosticRecord}
+                className="flex-1 bg-slate-700 hover:bg-slate-600 font-bold py-2.5 rounded-lg text-center cursor-pointer border border-slate-600"
+              >
+                ⏺️ Start Record
+              </button>
+            )}
+
+            <button
+              onClick={playDiagnosticPlayback}
+              disabled={!audioUrl}
+              className={`flex-1 font-bold py-2.5 rounded-lg text-center cursor-pointer border ${
+                audioUrl 
+                  ? 'bg-emerald-600 border-emerald-500 hover:bg-emerald-700 text-white' 
+                  : 'bg-slate-800 border-slate-800 text-slate-500 cursor-not-allowed'
+              }`}
+            >
+              ▶️ Play Test Voice
+            </button>
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }
