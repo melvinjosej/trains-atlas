@@ -102,3 +102,16 @@ path {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* 🚀 Custom slow-bounce animation for the child narrator toggle button */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2.5s infinite ease-in-out;
+}

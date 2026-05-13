@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { trainsData } from './data/trainsData'
 import MapView from './components/MapView'
 import CountryDetailPanel from './components/CountryDetailPanel'
+import VoiceControl from './components/VoiceControl'
 
 function App() {
   const [selectedCountryId, setSelectedCountryId] = useState(null)
@@ -56,6 +57,11 @@ function App() {
           <h1 className="text-3xl font-extrabold text-white tracking-wide drop-shadow-sm font-kids">
             MY ATLAS OF TRAINS! 🌍
           </h1>
+        </div>
+
+        {/* 🎙️ Child Microphone voice control button */}
+        <div className="flex-1 flex justify-center mx-6">
+          <VoiceControl onSelectCountry={handleSelectCountry} />
         </div>
         
         {selectedCountryId ? (

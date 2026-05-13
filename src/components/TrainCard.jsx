@@ -3,20 +3,64 @@ import { useState, useEffect, useRef } from 'react'
 function TrainCard({ train }) {
   const [imgLoading, setImgLoading] = useState(true)
   const [imgError, setImgError] = useState(false)
+  const [isMuted, setIsMuted] = useState(() => {
+    return localStorage.getItem('trains-atlas-muted') === 'true'
+  })
   const imgRef = useRef(null)
 
-  // 🔄 Reset states on train change
+  // 🔄 Reset image states on train change
   useEffect(() => {
     setImgLoading(true)
     setImgError(false)
     
-    // If image is already fully cached in browser, onLoad might not fire
     if (imgRef.current && imgRef.current.complete) {
       setImgLoading(false)
     }
   }, [train.photoUrl])
 
+  // 🔊 Speech Synthesis (TTS) Narrator side-effect
+  useEffect(() => {
+    // Cancel any active speech immediately on mount or train change
+    window.speechSynthesis.cancel()
+
+    if (isMuted || !train) return
+
+    // 1. Assemble the narrator script from train name, type, and all fun facts
+    const introText = `Let's explore the ${train.name}! It is a ${train.type}.`
+    const factsText = train.funFacts ? train.funFacts.join('. ') : ''
+    const rawScriptText = `${introText}. ${factsText}`
+
+    // 2. Wipe out emojis and special unicode symbols so the text-to-speech voice reads cleanly
+    const cleanScript = rawScriptText
+      .replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDC00-\uDFFF]/g, "")
+      .replace(/\s+/g, ' ')
+      .trim()
+
+    // 3. Initialize browser voice utterance
+    const utterance = new SpeechSynthesisUtterance(cleanScript)
+    utterance.lang = 'en-US'
+    utterance.rate = 0.85 // Moderately slow, ideal for a 4-year-old's comprehension!
+    utterance.pitch = 1.1 // Warm, slightly higher pitch for a friendly, playful sound
+
+    // 4. Trigger narrator
+    window.speechSynthesis.speak(utterance)
+
+    // 🧼 Cleanup function: cancel active narration when card closes or unmounts
+    return () => {
+      window.speechSynthesis.cancel()
+    }
+  }, [train, isMuted])
+
   if (!train) return null
+
+  const toggleMute = () => {
+    const nextMuteState = !isMuted
+    setIsMuted(nextMuteState)
+    localStorage.setItem('trains-atlas-muted', String(nextMuteState))
+    if (nextMuteState) {
+      window.speechSynthesis.cancel()
+    }
+  }
 
   return (
     <div className="w-full h-full flex flex-col bg-white rounded-3xl shadow-lg border-4 border-slate-100 overflow-hidden font-kids min-h-0">
@@ -49,7 +93,7 @@ function TrainCard({ train }) {
           src={train.photoUrl} 
           alt={train.name}
           loading="lazy"
-          referrerPolicy="no-referrer" // 🛡️ Wipes the Referer header, bypassing all Wikimedia CDN hotlinking blocks!
+          referrerPolicy="no-referrer"
           onLoad={() => setImgLoading(false)}
           onError={() => {
             setImgLoading(false)
@@ -71,10 +115,23 @@ function TrainCard({ train }) {
       {/* 📝 TRAIN FACTS DETAILS DESCRIPTION BOX */}
       <div className="flex-1 p-4 flex flex-col min-h-0 overflow-y-auto no-scrollbar bg-gradient-to-b from-white to-slate-50/50">
         
-        {/* Train Name Title */}
-        <h3 className="text-2xl font-black text-slate-800 mb-3 border-b-4 border-amber-300 pb-1 leading-tight shrink-0">
-          {train.name}
-        </h3>
+        {/* Train Name Title with floating Mute Narrator Toggle */}
+        <div className="flex items-center justify-between border-b-4 border-amber-300 pb-2 mb-3 shrink-0">
+          <h3 className="text-2xl font-black text-slate-800 leading-tight flex-1">
+            {train.name}
+          </h3>
+          <button 
+            onClick={toggleMute}
+            className={`ml-3 text-2xl p-2.5 rounded-full cursor-pointer transition active:scale-90 border-2 shadow-sm ${
+              isMuted 
+                ? 'bg-rose-50 border-rose-200 hover:bg-rose-100 text-rose-700' 
+                : 'bg-emerald-50 border-emerald-200 hover:bg-emerald-100 text-emerald-700 animate-bounce-slow'
+            }`}
+            title={isMuted ? "Unmute narrator 🔊" : "Mute narrator 🔇"}
+          >
+            {isMuted ? '🔇' : '🔊'}
+          </button>
+        </div>
 
         {/* Fun Educational Child-Friendly Fact List */}
         <div className="flex-1 space-y-3 overflow-y-auto no-scrollbar pr-1">
