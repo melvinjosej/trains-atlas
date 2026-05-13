@@ -30,12 +30,16 @@ function VoiceControl({ onSelectCountry }) {
   const [errorMessage, setErrorMessage] = useState('')
   const [recognition, setRecognition] = useState(null)
 
-  // 🔧 MediaRecorder Diagnostic States
+  // 🔧 MediaRecorder & Hardware Selection States
   const [mediaRecorder, setMediaRecorder] = useState(null)
   const [audioUrl, setAudioUrl] = useState('')
   const [recordingDiagnostic, setRecordingDiagnostic] = useState(false)
   const [diagnosticStatus, setDiagnosticStatus] = useState('')
   const [showDiagnostics, setShowDiagnostics] = useState(false)
+  
+  // 🎙️ Live Microphone Inputs List
+  const [micDevices, setMicDevices] = useState([])
+  const [selectedMicId, setSelectedMicId] = useState('')
 
   const selectCountryRef = useRef(onSelectCountry)
 
@@ -43,8 +47,27 @@ function VoiceControl({ onSelectCountry }) {
     selectCountryRef.current = onSelectCountry
   }, [onSelectCountry])
 
+  // 🎙️ Scan all connected hardware microphone devices on mount
   useEffect(() => {
-    // Instantiate Web Speech Recognition (supports standard and webkit versions)
+    const getMics = async () => {
+      try {
+        // Request mic permission once up-front to unlock OS privacy labels
+        // (otherwise browser returns empty labels like "Microphone 1")
+        await navigator.mediaDevices.getUserMedia({ audio: true })
+        const devices = await navigator.mediaDevices.enumerateDevices()
+        const audioInputs = devices.filter(device => device.kind === 'audioinput')
+        setMicDevices(audioInputs)
+        if (audioInputs.length > 0) {
+          setSelectedMicId(audioInputs[0].deviceId)
+        }
+      } catch (err) {
+        console.warn('Mic hardware enumeration blocked or failed:', err)
+      }
+    }
+    getMics()
+  }, [])
+
+  useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
     if (!SpeechRecognition) {
       console.warn('Speech recognition not supported in this browser.')
@@ -119,13 +142,18 @@ function VoiceControl({ onSelectCountry }) {
     }
   }
 
-  // 🛠️ MediaRecorder Hardware-Level Diagnostic Methods
+  // 🛠️ MediaRecorder Hardware-Level Diagnostic Methods (using selected input)
   const startDiagnosticRecord = async () => {
     try {
-      setDiagnosticStatus('Requesting mic hardware access...')
-      // standard iOS and Chrome mic stream request
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
-      setDiagnosticStatus('Mic linked! Speak into your iPad... 🎙️')
+      setDiagnosticStatus('Connecting to selected microphone...')
+      
+      // Build constraints specifically targeting the selected microphone Device ID!
+      const constraints = {
+        audio: selectedMicId ? { deviceId: { exact: selectedMicId } } : true
+      }
+      
+      const stream = await navigator.mediaDevices.getUserMedia(constraints)
+      setDiagnosticStatus('Mic connected! Speak into your active mic... 🎙️')
       
       const recorder = new MediaRecorder(stream)
       const chunks = []
@@ -149,7 +177,7 @@ function VoiceControl({ onSelectCountry }) {
       setRecordingDiagnostic(true)
     } catch (err) {
       console.error('Mic diagnostic hardware error:', err)
-      setDiagnosticStatus(`Hardware error: ${err.name}. Wires blocked! 🧐`)
+      setDiagnosticStatus(`Hardware error: ${err.name}. Channel blocked! 🧐`)
     }
   }
 
@@ -198,21 +226,21 @@ function VoiceControl({ onSelectCountry }) {
           </div>
         </div>
 
-        {/* Small screwdriver button to expand debugger */}
+        {/* Wrench details button to expand diagnostics drawer */}
         <button
           onClick={() => setShowDiagnostics(!showDiagnostics)}
           className="text-lg bg-white/40 hover:bg-white/60 p-1.5 rounded-full cursor-pointer transition"
-          title="🔧 Microphone Hardware Diagnostics"
+          title="🔧 Microphone Hardware Settings"
         >
           🔧
         </button>
       </div>
 
-      {/* 🔧 HARDWARE DIAGNOSTIC DRAWER MODAL */}
+      {/* 🔧 HARDWARE DIAGNOSTIC DRAWER MODAL WITH MIC SELECTOR */}
       {showDiagnostics && (
         <div className="absolute top-20 left-1/2 -translate-x-1/2 bg-slate-900/95 backdrop-blur-md p-5 rounded-2xl shadow-xl text-white w-[320px] md:w-[380px] text-left border-2 border-slate-700 z-50 font-mono text-xs leading-relaxed">
           <div className="flex justify-between items-center border-b border-slate-700 pb-2 mb-3">
-            <span className="font-bold text-rose-400 text-sm">🔧 MIC HARDWARE DIAGNOSTIC</span>
+            <span className="font-bold text-rose-400 text-sm">🎙️ HARDWARE AUDIO INPUTS</span>
             <button 
               onClick={() => setShowDiagnostics(false)}
               className="text-slate-400 hover:text-white text-base font-bold cursor-pointer"
@@ -221,12 +249,33 @@ function VoiceControl({ onSelectCountry }) {
             </button>
           </div>
           
-          <p className="text-slate-400 mb-3">
-            Test if your browser's microphone channel is physically receiving audio waves or blocked at the OS level.
-          </p>
+          {/* 🎙️ Child-Friendly Microphone Hardware Dropdown Selector */}
+          <div className="mb-4">
+            <label className="block text-slate-400 mb-1 font-bold text-[10px] uppercase tracking-wider">Active Recording Device:</label>
+            {micDevices.length > 0 ? (
+              <select
+                value={selectedMicId}
+                onChange={(e) => {
+                  setSelectedMicId(e.target.value)
+                  setDiagnosticStatus(`Switched input to selected device 🎙️`)
+                }}
+                className="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-white text-xs font-mono focus:outline-none focus:border-rose-500 cursor-pointer truncate"
+              >
+                {micDevices.map((device, idx) => (
+                  <option key={device.deviceId} value={device.deviceId}>
+                    {device.label || `Microphone Channel ${idx + 1}`}
+                  </option>
+                ))}
+              </select>
+            ) : (
+              <div className="bg-slate-950 text-rose-400 p-2 rounded border border-slate-800 text-center font-semibold">
+                ⚠️ No hardware microphones found!
+              </div>
+            )}
+          </div>
 
-          <div className="bg-slate-950 p-3 rounded-lg mb-3 text-amber-400 font-semibold border border-slate-800 truncate min-h-[40px] flex items-center">
-            {diagnosticStatus || 'Ready. Press Record and speak!'}
+          <div className="bg-slate-950 p-3 rounded-lg mb-3 text-amber-400 font-semibold border border-slate-800 min-h-[40px] flex items-center leading-snug">
+            {diagnosticStatus || 'Ready. Press Record and speak to test!'}
           </div>
 
           <div className="flex space-x-2">
