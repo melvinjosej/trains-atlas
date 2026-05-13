@@ -25,6 +25,8 @@ import borneoImg from '../assets/trains/borneo.jpeg'
 import transmongolianImg from '../assets/trains/transmongolian.jpeg'
 import nepalImg from '../assets/trains/nepal.jpeg'
 import aveImg from '../assets/trains/ave.jpeg'
+import belgiumImg from '../assets/trains/belgium.jpeg'
+import ktxImg from '../assets/trains/ktx.jpeg'
 
 export const trainsData = [
   {
@@ -488,6 +490,44 @@ export const trainsData = [
           "The AVE has a sleek, pointy nose that looks like a fast duck-billed bird zooming through the air! 🐦",
           "It travels so fast that it connects Madrid to Barcelona in just two and a half hours! 🚀",
           "It has glass-roofed passenger cars and is incredibly quiet, smooth, and fast!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BE",
+    countryName: "Belgium",
+    capital: "Brussels",
+    flagEmoji: "🇧🇪",
+    trains: [
+      {
+        name: "Belgian Double-Decker Network",
+        type: "🏰 Double-Decker Castle Chugger",
+        photoUrl: belgiumImg,
+        funFacts: [
+          "🏔️ Top Speed: Cruises at a smooth 100 mph! 🏔️",
+          "Belgium has one of the busiest and most magical train networks on Earth, chugging past ancient stone castles and green fields! 🏰",
+          "It is double-decker! You can sit on the top roof level and look down at chocolate factories and historic windmills zooming by! 🍫",
+          "It has huge, cozy glass-windowed cars where families can play games while traveling from city to city!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "KR",
+    countryName: "South Korea",
+    capital: "Seoul",
+    flagEmoji: "🇰🇷",
+    trains: [
+      {
+        name: "KTX (Korea Train eXpress)",
+        type: "🚀 Space-Rocket Speed Bullet",
+        photoUrl: ktxImg,
+        funFacts: [
+          "⚡ Top Speed: Flies across Korea at a lightning-fast 186 mph! ⚡",
+          "The KTX bullet train is shaped like a super-sleek futuristic silver space rocket! 🚀",
+          "It zooms through long dark mountain tunnels and over giant bridges crossing high above the ocean! 🌊",
+          "It has cinema screens inside the passenger cars where you can watch cartoons while traveling!"
         ]
       }
     ]
