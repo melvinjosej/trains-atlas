@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 // Resilient synonym-to-ISO-code dictionary designed to absorb toddler pronunciation quirks!
 const COUNTRY_SYNONYMS = {
@@ -29,6 +29,14 @@ function VoiceControl({ onSelectCountry }) {
   const [listening, setListening] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const [recognition, setRecognition] = useState(null)
+
+  // 🛡️ React Ref pattern: preserves and delivers the absolute latest callback reference
+  // to single-mount listeners, completely avoiding closures/render loops!
+  const selectCountryRef = useRef(onSelectCountry)
+
+  useEffect(() => {
+    selectCountryRef.current = onSelectCountry
+  }, [onSelectCountry])
 
   useEffect(() => {
     // Instantiate Web Speech Recognition (supports standard and webkit versions)
@@ -79,7 +87,8 @@ function VoiceControl({ onSelectCountry }) {
       }
 
       if (matchedCountry) {
-        onSelectCountry(matchedCountry)
+        // Invoke latest callback stably via ref container
+        selectCountryRef.current(matchedCountry)
         // Flash success feedback on the microphone button!
         setErrorMessage(`Found ${transcript}! 🚂✨`)
       } else {
@@ -88,7 +97,12 @@ function VoiceControl({ onSelectCountry }) {
     }
 
     setRecognition(rec)
-  }, [onSelectCountry])
+    
+    // Clean up on component destroy
+    return () => {
+      rec.abort()
+    }
+  }, []) // 🔒 Empty dependency array: single-mount instantiation guarantee!
 
   const toggleListen = () => {
     if (!recognition) {

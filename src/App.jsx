@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { trainsData } from './data/trainsData'
 import MapView from './components/MapView'
 import CountryDetailPanel from './components/CountryDetailPanel'
@@ -22,7 +22,7 @@ function App() {
   // Lookup current country data safely from our database
   const currentCountry = trainsData.find(c => c.id === selectedCountryId)
 
-  const handleSelectCountry = (countryId) => {
+  const handleSelectCountry = useCallback((countryId) => {
     // Check if the country code tapped actually exists in our train database
     const exists = trainsData.some(c => c.id === countryId)
     if (exists) {
@@ -32,7 +32,7 @@ function App() {
       // or just keep it closed to prevent breaking their flow
       setSelectedCountryId(null)
     }
-  }
+  }, [])
 
   return (
     <div className="relative w-full h-full bg-[#f0fdf4] select-none flex flex-col">
