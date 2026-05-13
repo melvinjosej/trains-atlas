@@ -21,6 +21,7 @@ import tulpartalgoImg from '../assets/trains/tulpartalgo.jpeg'
 import vistadomeImg from '../assets/trains/vistadome.jpeg'
 import cloudsImg from '../assets/trains/clouds.jpeg'
 import corcovadoImg from '../assets/trains/corcovado.jpeg'
+import borneoImg from '../assets/trains/borneo.jpeg'
 
 export const trainsData = [
   {
@@ -72,7 +73,7 @@ export const trainsData = [
         type: "🚂 Giant Steam Locomotive",
         photoUrl: bigboyImg,
         funFacts: [
-          "💨 Top Speed: Puffs along at a giant 80 mph! 💨",
+          "      Top Speed: Puffs along at a giant 80 mph!      ",
           "The Big Boy is the biggest and heaviest steam train ever built in history! 🚂",
           "It is so long that it needs two sets of giant driving wheels just to turn corners!",
           "It drinks a giant swimming pool of water to create its white puffy steam cloud."
@@ -121,7 +122,7 @@ export const trainsData = [
         type: "🚂 Famous Royal Steam Train",
         photoUrl: scotsmanImg,
         funFacts: [
-          "💨 Top Speed: Puffs at a historic 100 mph! 💨",
+          "      Top Speed: Puffs at a historic 100 mph!      ",
           "The Flying Scotsman is one of the most famous steam locomotives in the world! 🌟",
           "It was the first steam engine in the world to go 100 miles per hour!",
           "It has a beautiful glossy green paint coat and has traveled all around the world."
@@ -162,7 +163,7 @@ export const trainsData = [
         type: "☁️ Cute Mountain Steam Train",
         photoUrl: darjeelingImg,
         funFacts: [
-          "🐌 Top Speed: Cozy, gentle stroll at only 10 mph! 🐌",
+          "      Top Speed: Cozy, gentle stroll at only 10 mph!      ",
           "This tiny, cute blue steam engine is called a 'Toy Train' because it is so small! 🧸",
           "It climbs very high up into the mountain clouds where tea leaves grow.",
           "It moves slow enough that you can easily walk right next to it as it puffs along!"
@@ -211,7 +212,7 @@ export const trainsData = [
         type: "🏔️ Panoramic Alpine Train",
         photoUrl: glacierImg,
         funFacts: [
-          "🐌 Top Speed: Famously slow alpine cruise at only 24 mph! 🐌",
+          "      Top Speed: Famously slow alpine cruise at only 24 mph!      ",
           "The Glacier Express is a bright red train that drives over high stone bridges in the Swiss Alps!",
           "It has a massive glass curved roof so you can look straight up at snowy mountaintops! 🏔️",
           "It is known as the slowest express train in the world because it wants you to enjoy the views."
@@ -408,6 +409,25 @@ export const trainsData = [
           "This bright red train climbs steep, green jungle hills like a real-life roller coaster! 🎢",
           "It drives through a thick jungle where wild monkeys and colorful toucans chatter in the trees! 🐒🦜",
           "It takes you all the way to the top of a giant mountain where a massive statue of a man with open arms stands looking over the ocean!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MY",
+    countryName: "Malaysia (Borneo)",
+    capital: "Kuala Lumpur",
+    flagEmoji: "🇲🇾",
+    trains: [
+      {
+        name: "North Borneo Railway",
+        type: "🌳 Jungle Steam Heritage Train",
+        photoUrl: borneoImg,
+        funFacts: [
+          "🌳 Top Speed: Chugs through the jungle at a safe 20 mph! 🌳",
+          "This is a beautiful, old-fashioned steam train that burns real wood to create puffy white clouds! 🪵💨",
+          "It drives through tropical rainforests where wild monkeys chitter in the trees and crosses wooden trestle bridges! 🐒",
+          "Passengers get a special 'steam train passport' that gets stamped at every station, just like a real explorer! 🎫"
         ]
       }
     ]
