@@ -22,6 +22,9 @@ import vistadomeImg from '../assets/trains/vistadome.jpeg'
 import cloudsImg from '../assets/trains/clouds.jpeg'
 import corcovadoImg from '../assets/trains/corcovado.jpeg'
 import borneoImg from '../assets/trains/borneo.jpeg'
+import transmongolianImg from '../assets/trains/transmongolian.jpeg'
+import nepalImg from '../assets/trains/nepal.jpeg'
+import aveImg from '../assets/trains/ave.jpeg'
 
 export const trainsData = [
   {
@@ -428,6 +431,63 @@ export const trainsData = [
           "This is a beautiful, old-fashioned steam train that burns real wood to create puffy white clouds! 🪵💨",
           "It drives through tropical rainforests where wild monkeys chitter in the trees and crosses wooden trestle bridges! 🐒",
           "Passengers get a special 'steam train passport' that gets stamped at every station, just like a real explorer! 🎫"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MN",
+    countryName: "Mongolia",
+    capital: "Ulaanbaatar",
+    flagEmoji: "🇲🇳",
+    trains: [
+      {
+        name: "Trans-Mongolian Railway",
+        type: "🐫 Gobi Desert Express",
+        photoUrl: transmongolianImg,
+        funFacts: [
+          "🐫 Top Speed: Cruises across the wild Gobi desert at 55 mph! 🐫",
+          "This long desert train passes herds of wild running horses and furry two-humped Bactrian camels! 🐫🐎",
+          "You can look out the window and see white round tents called 'yurts' where nomadic families live on the grassy steppes! ⛺",
+          "It chugs along the ancient silk route between massive sandy dunes and rocky canyons!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "NP",
+    countryName: "Nepal",
+    capital: "Kathmandu",
+    flagEmoji: "🇳🇵",
+    trains: [
+      {
+        name: "Nepal Railway",
+        type: "🏔️ Himalayan foothill Explorer",
+        photoUrl: nepalImg,
+        funFacts: [
+          "🏔️ Top Speed: Cozy and steady mountain cruise at 35 mph! 🏔️",
+          "This is a colorful, happy passenger train that chugs past the foothills of the giant snowy Himalayas—the tallest mountains on Earth! 🏔️",
+          "It rolls through beautiful green valleys filled with bright yellow mustard flowers and farming villages! 🌾🌼",
+          "Locals wave happily at the train as it chugs along, carrying families to historic temple towns!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ES",
+    countryName: "Spain",
+    capital: "Madrid",
+    flagEmoji: "🇪🇸",
+    trains: [
+      {
+        name: "Renfe AVE",
+        type: "🚀 Duck-Billed European Bullet Train",
+        photoUrl: aveImg,
+        funFacts: [
+          "⚡ Top Speed: Flies across sunny Spain at an amazing 193 mph! ⚡",
+          "The AVE has a sleek, pointy nose that looks like a fast duck-billed bird zooming through the air! 🐦",
+          "It travels so fast that it connects Madrid to Barcelona in just two and a half hours! 🚀",
+          "It has glass-roofed passenger cars and is incredibly quiet, smooth, and fast!"
         ]
       }
     ]
