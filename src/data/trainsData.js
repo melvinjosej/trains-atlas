@@ -27,6 +27,8 @@ import nepalImg from '../assets/trains/nepal.jpeg'
 import aveImg from '../assets/trains/ave.jpeg'
 import belgiumImg from '../assets/trains/belgium.jpeg'
 import ktxImg from '../assets/trains/ktx.jpeg'
+import vereskImg from '../assets/trains/veresk.jpeg'
+import friendshipImg from '../assets/trains/friendship.jpeg'
 
 export const trainsData = [
   {
@@ -528,6 +530,44 @@ export const trainsData = [
           "The KTX bullet train is shaped like a super-sleek futuristic silver space rocket! 🚀",
           "It zooms through long dark mountain tunnels and over giant bridges crossing high above the ocean! 🌊",
           "It has cinema screens inside the passenger cars where you can watch cartoons while traveling!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IR",
+    countryName: "Iran",
+    capital: "Tehran",
+    flagEmoji: "🇮🇷",
+    trains: [
+      {
+        name: "Trans-Iranian Railway",
+        type: "🏔️ Veresk Stone Arch Explorer",
+        photoUrl: vereskImg,
+        funFacts: [
+          "⛰️ Top Speed: Climbs through giant mountain peaks at 60 mph! ⛰️",
+          "This mountain train crosses the famous Veresk Bridge, a giant stone arch bridge hanging high in the clouds! ☁️🌉",
+          "It dives through over 100 dark tunnels and loops around spiral tracks like a giant mountain roller coaster! 🎢",
+          "It travels from the sandy shores of the sea all the way through hot deserts and snowy pine forests!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AF",
+    countryName: "Afghanistan",
+    capital: "Kabul",
+    flagEmoji: "🇦🇫",
+    trains: [
+      {
+        name: "Hairatan Railway Link",
+        type: "🐫 Sandcastle Desert Steppe Express",
+        photoUrl: friendshipImg,
+        funFacts: [
+          "🐫 Top Speed: Glides across the ancient desert fields at 45 mph! 🐫",
+          "This big, strong diesel train crosses the famous Friendship Bridge over a giant wide river! 🌉",
+          "It zooms past ancient sandy castles and fortresses that look like giant sandcastles in the desert! 🏰🏜️",
+          "It carries cargo and happy travelers past herds of grazing desert sheep under sunny blue skies!"
         ]
       }
     ]

@@ -22,7 +22,9 @@ const COUNTRY_SYNONYMS = {
   'my': ['malaysia', 'borneo', 'jungle train'],
   'mn': ['mongolia', 'gobi', 'ulaanbaatar'],
   'np': ['nepal', 'kathmandu', 'himalayas'],
-  'es': ['spain', 'madrid', 'ave']
+  'es': ['spain', 'madrid', 'ave'],
+  'ir': ['iran', 'tehran', 'veresk', 'persian'],
+  'af': ['afghanistan', 'kabul', 'mazar', 'friendship bridge', 'afganistan']
 }
 
 function VoiceControl({ onSelectCountry }) {
@@ -51,8 +53,6 @@ function VoiceControl({ onSelectCountry }) {
   useEffect(() => {
     const getMics = async () => {
       try {
-        // Request mic permission once up-front to unlock OS privacy labels
-        // (otherwise browser returns empty labels like "Microphone 1")
         await navigator.mediaDevices.getUserMedia({ audio: true })
         const devices = await navigator.mediaDevices.enumerateDevices()
         const audioInputs = devices.filter(device => device.kind === 'audioinput')
@@ -142,12 +142,34 @@ function VoiceControl({ onSelectCountry }) {
     }
   }
 
-  // 🛠️ MediaRecorder Hardware-Level Diagnostic Methods (using selected input)
+  // ⌨️ Spacebar keyboard shortcut listener implementation (using stable callback reference)
+  const toggleListenRef = useRef(toggleListen)
+  useEffect(() => {
+    toggleListenRef.current = toggleListen
+  }, [toggleListen])
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      // Ignore spacebar typing locks inside text inputs
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return
+
+      if (e.key === ' ' || e.code === 'Space') {
+        e.preventDefault() // Blocks native browser page scrolling
+        toggleListenRef.current()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, []) // 🔒 Stable single-mount key listener!
+
+  // 🛠️ MediaRecorder Hardware-Level Diagnostic Methods
   const startDiagnosticRecord = async () => {
     try {
       setDiagnosticStatus('Connecting to selected microphone...')
       
-      // Build constraints specifically targeting the selected microphone Device ID!
       const constraints = {
         audio: selectedMicId ? { deviceId: { exact: selectedMicId } } : true
       }
@@ -168,7 +190,6 @@ function VoiceControl({ onSelectCountry }) {
         setAudioUrl(url)
         setDiagnosticStatus('Voice captured successfully! Tap Play below 🎧')
         
-        // Release mic hardware tracks immediately
         stream.getTracks().forEach(track => track.stop())
       }
       
@@ -207,7 +228,7 @@ function VoiceControl({ onSelectCountry }) {
               ? 'bg-red-500 border-red-300 text-white scale-110 animate-pulse' 
               : 'bg-amber-400 border-amber-200 text-amber-950 hover:bg-amber-300 hover:scale-105'
           }`}
-          title={listening ? 'Listening... Speak now!' : 'Tap to speak a country!'}
+          title={listening ? 'Listening... Speak now! (Or press Spacebar)' : 'Tap to speak a country! (Or press Spacebar)'}
         >
           {listening ? '🎙️' : '🗣️'}
           {listening && (
@@ -216,17 +237,17 @@ function VoiceControl({ onSelectCountry }) {
         </button>
 
         <div className="flex flex-col justify-center max-w-[200px] md:max-w-[300px] text-left">
-          <div className="text-sm font-black text-sky-900 font-kids tracking-wide leading-tight">
-            {listening ? '🔴 Listening...' : 'Speak Country!'}
+          <div className="text-sm font-black text-sky-900 font-kids tracking-wide leading-tight flex items-center space-x-2">
+            <span>{listening ? '🔴 Listening...' : 'Speak Country!'}</span>
+            <span className="hidden md:inline bg-sky-100 border border-sky-300 text-sky-800 font-bold text-[9px] px-1.5 py-0.5 rounded-full">SPACEBAR KEY</span>
           </div>
           <div className={`text-xs font-bold font-kids truncate ${
             errorMessage.includes('Found') ? 'text-emerald-600' : 'text-amber-700'
           }`}>
-            {errorMessage || 'Tap and say "Japan" or "Spain"!'}
+            {errorMessage || 'Say "Japan", "Borneo" or "Spain"!'}
           </div>
         </div>
 
-        {/* Wrench details button to expand diagnostics drawer */}
         <button
           onClick={() => setShowDiagnostics(!showDiagnostics)}
           className="text-lg bg-white/40 hover:bg-white/60 p-1.5 rounded-full cursor-pointer transition"
@@ -249,7 +270,6 @@ function VoiceControl({ onSelectCountry }) {
             </button>
           </div>
           
-          {/* 🎙️ Child-Friendly Microphone Hardware Dropdown Selector */}
           <div className="mb-4">
             <label className="block text-slate-400 mb-1 font-bold text-[10px] uppercase tracking-wider">Active Recording Device:</label>
             {micDevices.length > 0 ? (

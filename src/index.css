@@ -62,7 +62,7 @@ path {
   cursor: default;
 }
 
-.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr {
+.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af {
   fill: #fde047 !important; /* Beautiful sunshine yellow */
   stroke: #eab308 !important; /* Darker warm borders */
   stroke-width: 1.0;
@@ -74,7 +74,7 @@ path {
 .cn:active, .tr:active, .ru:active, .kz:active,
 .pe:active, .ar:active, .br:active,
 .my:active, .mn:active, .np:active, .es:active,
-.be:active, .kr:active {
+.be:active, .kr:active, .ir:active, .af:active {
   fill: #f97316 !important; /* Flash bright orange when touched! */
 }
 
