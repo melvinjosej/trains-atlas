@@ -29,6 +29,8 @@ import belgiumImg from '../assets/trains/belgium.jpeg'
 import ktxImg from '../assets/trains/ktx.jpeg'
 import vereskImg from '../assets/trains/veresk.jpeg'
 import friendshipImg from '../assets/trains/friendship.jpeg'
+import haramainImg from '../assets/trains/haramain.jpeg'
+import omanImg from '../assets/trains/oman.jpeg'
 
 export const trainsData = [
   {
@@ -568,6 +570,44 @@ export const trainsData = [
           "This big, strong diesel train crosses the famous Friendship Bridge over a giant wide river! 🌉",
           "It zooms past ancient sandy castles and fortresses that look like giant sandcastles in the desert! 🏰🏜️",
           "It carries cargo and happy travelers past herds of grazing desert sheep under sunny blue skies!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "SA",
+    countryName: "Saudi Arabia",
+    capital: "Riyadh",
+    flagEmoji: "🇸🇦",
+    trains: [
+      {
+        name: "Haramain High-Speed Railway",
+        type: "🚀 Space-Rocket Desert Speed Bullet",
+        photoUrl: haramainImg,
+        funFacts: [
+          "⚡ Top Speed: Flies across the desert sands at a super-fast 186 mph! ⚡",
+          "This sleek white bullet train looks like a shiny futuristic spaceship racing through the desert dunes! 🚀🏜️",
+          "It has special sandstorm shields on the windows to keep passengers safe and cool in the hot sun! ☀️",
+          "It connects magical ancient cities while gliding silently on super-smooth electric tracks!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "OM",
+    countryName: "Oman",
+    capital: "Muscat",
+    flagEmoji: "🇴🇲",
+    trains: [
+      {
+        name: "Oman National Rail Link",
+        type: "🏰 Wadi Oasis Mountain Speedliner",
+        photoUrl: omanImg,
+        funFacts: [
+          "⛰️ Top Speed: Cruises through mountain valleys at a steady 75 mph! ⛰️",
+          "This big, strong silver train climbs through the majestic green Al Hajar mountains and deep rocky canyons! 🏔️🏜️",
+          "It dives through deep mountain tunnels and crosses high stone bridges overlooking green oasis valleys! 🌴🌊",
+          "It connects historic sandy fortresses that look like giant castles from a fairy tale! 🏰"
         ]
       }
     ]

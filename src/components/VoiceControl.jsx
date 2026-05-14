@@ -24,7 +24,9 @@ const COUNTRY_SYNONYMS = {
   'np': ['nepal', 'kathmandu', 'himalayas'],
   'es': ['spain', 'madrid', 'ave'],
   'ir': ['iran', 'tehran', 'veresk', 'persian'],
-  'af': ['afghanistan', 'kabul', 'mazar', 'friendship bridge', 'afganistan']
+  'af': ['afghanistan', 'kabul', 'mazar', 'friendship bridge', 'afganistan'],
+  'sa': ['saudi arabia', 'mecca', 'medina', 'haramain', 'saudi'],
+  'om': ['oman', 'muscat', 'hajar', 'wadi']
 }
 
 function VoiceControl({ onSelectCountry }) {
