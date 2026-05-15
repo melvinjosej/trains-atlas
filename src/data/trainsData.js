@@ -34,7 +34,7 @@ import omanImg from '../assets/trains/oman.jpeg'
 import thailandImg from '../assets/trains/thailand.jpeg'
 import laosImg from '../assets/trains/laos.jpeg'
 import singaporeImg from '../assets/trains/singapore.jpeg'
-import croatiaImg from '../assets/trains/croatia.jpeg'
+import bratislavasplitImg from '../assets/trains/bratislavasplit.jpeg'
 
 export const trainsData = [
   {
@@ -680,14 +680,14 @@ export const trainsData = [
     flagEmoji: "🇭🇷",
     trains: [
       {
-        name: "Split Scenic Express (HŽ Class 6112)",
-        type: "🏍️ Karst Mountain Tilting Express",
-        photoUrl: croatiaImg,
+        name: "Bratislava-Split Holiday Express",
+        type: "🛌 Overnight Holiday Sleeper Train",
+        photoUrl: bratislavasplitImg,
         funFacts: [
-          "🏔️ Top Speed: Loops past the sunny beaches at a smooth 100 mph! 🏔️",
-          "This sleek silver and blue train takes you on a spectacular journey through giant stone mountains all the way down to the sunny ocean beach! 🏖️🌊",
-          "It runs past magical waterfalls, lavender fields, and ancient Roman stone castles that look like gladiator arenas! 🏰🦁",
-          "It is a special 'tilting train' that leans into mountain curves just like a fast motorcycle rider on a racetrack! 🚴"
+          "🛌 Top Speed: Chugs under the stars at a cozy 75 mph! 🛌",
+          "This is a magical overnight 'rolling hotel' train that carries families to their sunny summer holidays while they sleep! 🛌🌟",
+          "You can sleep in double-decker bunk beds, eat breakfast in bed, and wake up looking right at the deep blue ocean! 🥐🌊",
+          "It has special giant cargo cars at the very back that carry real family cars and bicycles along for the trip! 🚗🚲"
         ]
       }
     ]
