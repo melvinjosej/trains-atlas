@@ -29,7 +29,8 @@ const COUNTRY_SYNONYMS = {
   'om': ['oman', 'muscat', 'hajar', 'wadi'],
   'th': ['thailand', 'bangkok', 'chiang mai', 'srt'],
   'la': ['laos', 'lane xang', 'mekong', 'vientiane'],
-  'sg': ['singapore', 'mrt', 'sentosa', 'changi']
+  'sg': ['singapore', 'mrt', 'sentosa', 'changi'],
+  'hr': ['croatia', 'split', 'zagreb', 'croatya', 'hz']
 }
 
 function VoiceControl({ onSelectCountry }) {

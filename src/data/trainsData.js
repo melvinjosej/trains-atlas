@@ -34,6 +34,7 @@ import omanImg from '../assets/trains/oman.jpeg'
 import thailandImg from '../assets/trains/thailand.jpeg'
 import laosImg from '../assets/trains/laos.jpeg'
 import singaporeImg from '../assets/trains/singapore.jpeg'
+import croatiaImg from '../assets/trains/croatia.jpeg'
 
 export const trainsData = [
   {
@@ -668,6 +669,25 @@ export const trainsData = [
           "This futuristic train is completely driverless! It drives itself using super-smart computers! 🤖",
           "Because there is no driver cabin, children can stand right at the very front window and pretend to drive the train! 🚄",
           "It zooms underground and glides high on tracks past giant futuristic glowing 'Supertrees' and indoor waterfalls! 🌳💦"
+        ]
+      }
+    ]
+  },
+  {
+    id: "HR",
+    countryName: "Croatia",
+    capital: "Zagreb",
+    flagEmoji: "🇭🇷",
+    trains: [
+      {
+        name: "Split Scenic Express (HŽ Class 6112)",
+        type: "🏍️ Karst Mountain Tilting Express",
+        photoUrl: croatiaImg,
+        funFacts: [
+          "🏔️ Top Speed: Loops past the sunny beaches at a smooth 100 mph! 🏔️",
+          "This sleek silver and blue train takes you on a spectacular journey through giant stone mountains all the way down to the sunny ocean beach! 🏖️🌊",
+          "It runs past magical waterfalls, lavender fields, and ancient Roman stone castles that look like gladiator arenas! 🏰🦁",
+          "It is a special 'tilting train' that leans into mountain curves just like a fast motorcycle rider on a racetrack! 🚴"
         ]
       }
     ]
