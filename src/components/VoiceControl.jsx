@@ -26,7 +26,10 @@ const COUNTRY_SYNONYMS = {
   'ir': ['iran', 'tehran', 'veresk', 'persian'],
   'af': ['afghanistan', 'kabul', 'mazar', 'friendship bridge', 'afganistan'],
   'sa': ['saudi arabia', 'mecca', 'medina', 'haramain', 'saudi'],
-  'om': ['oman', 'muscat', 'hajar', 'wadi']
+  'om': ['oman', 'muscat', 'hajar', 'wadi'],
+  'th': ['thailand', 'bangkok', 'chiang mai', 'srt'],
+  'la': ['laos', 'lane xang', 'mekong', 'vientiane'],
+  'sg': ['singapore', 'mrt', 'sentosa', 'changi']
 }
 
 function VoiceControl({ onSelectCountry }) {

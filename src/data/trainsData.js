@@ -31,6 +31,9 @@ import vereskImg from '../assets/trains/veresk.jpeg'
 import friendshipImg from '../assets/trains/friendship.jpeg'
 import haramainImg from '../assets/trains/haramain.jpeg'
 import omanImg from '../assets/trains/oman.jpeg'
+import thailandImg from '../assets/trains/thailand.jpeg'
+import laosImg from '../assets/trains/laos.jpeg'
+import singaporeImg from '../assets/trains/singapore.jpeg'
 
 export const trainsData = [
   {
@@ -608,6 +611,63 @@ export const trainsData = [
           "This big, strong silver train climbs through the majestic green Al Hajar mountains and deep rocky canyons! 🏔️🏜️",
           "It dives through deep mountain tunnels and crosses high stone bridges overlooking green oasis valleys! 🌴🌊",
           "It connects historic sandy fortresses that look like giant castles from a fairy tale! 🏰"
+        ]
+      }
+    ]
+  },
+  {
+    id: "TH",
+    countryName: "Thailand",
+    capital: "Bangkok",
+    flagEmoji: "🇹🇭",
+    trains: [
+      {
+        name: "SRT Special Express (Utra Withi)",
+        type: "🌴 Tropical Temple Sleeper",
+        photoUrl: thailandImg,
+        funFacts: [
+          "⚡ Top Speed: Cruises through tropical fields at a smooth 75 mph! ⚡",
+          "This beautiful red and silver passenger train takes you on a magical journey from the big city of Bangkok all the way to northern mountain temples! 🛕",
+          "It drives past giant green rice fields, coconut palm trees, and even crosses bridges right over floating water markets! 🥥🌊",
+          "It has cozy sleeper rooms with personal TV screens where children can watch cartoons while riding!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "LA",
+    countryName: "Laos",
+    capital: "Vientiane",
+    flagEmoji: "🇱🇦",
+    trains: [
+      {
+        name: "Lane Xang Express (LCR)",
+        type: "🐘 Million Elephant Bullet Train",
+        photoUrl: laosImg,
+        funFacts: [
+          "⚡ Top Speed: Flies across the mountains at an amazing 100 mph! ⚡",
+          "This sleek bullet train is named 'Lane Xang', which means 'A Million Elephants' in the beautiful Lao language! 🐘🐘",
+          "It zooms through 75 dark mountain tunnels and crosses giant bridges high above the wide Mekong River! 🌊⛰️",
+          "It is painted red, white, and blue to match the beautiful flag of Laos! 🇱🇦"
+        ]
+      }
+    ]
+  },
+  {
+    id: "SG",
+    countryName: "Singapore",
+    capital: "Singapore",
+    flagEmoji: "🇸🇬",
+    trains: [
+      {
+        name: "Singapore MRT",
+        type: "🤖 Futuristic Driverless Metro",
+        photoUrl: singaporeImg,
+        funFacts: [
+          "⚡ Top Speed: Glides between skyscrapers at 50 mph! ⚡",
+          "This futuristic train is completely driverless! It drives itself using super-smart computers! 🤖",
+          "Because there is no driver cabin, children can stand right at the very front window and pretend to drive the train! 🚄",
+          "It zooms underground and glides high on tracks past giant futuristic glowing 'Supertrees' and indoor waterfalls! 🌳💦"
         ]
       }
     ]
