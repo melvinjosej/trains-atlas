@@ -35,6 +35,7 @@ import thailandImg from '../assets/trains/thailand.jpeg'
 import laosImg from '../assets/trains/laos.jpeg'
 import singaporeImg from '../assets/trains/singapore.jpeg'
 import bratislavasplitImg from '../assets/trains/bratislavasplit.jpeg'
+import jordanImg from '../assets/trains/jordan.jpeg'
 
 export const trainsData = [
   {
@@ -688,6 +689,25 @@ export const trainsData = [
           "This is a magical overnight 'rolling hotel' train that carries families to their sunny summer holidays while they sleep! 🛌🌟",
           "You can sleep in double-decker bunk beds, eat breakfast in bed, and wake up looking right at the deep blue ocean! 🥐🌊",
           "It has special giant cargo cars at the very back that carry real family cars and bicycles along for the trip! 🚗🚲"
+        ]
+      }
+    ]
+  },
+  {
+    id: "JO",
+    countryName: "Jordan",
+    capital: "Amman",
+    flagEmoji: "🇯🇴",
+    trains: [
+      {
+        name: "Hedjaz Jordan Railway",
+        type: "🚂 Desert Steam Adventure Train",
+        photoUrl: jordanImg,
+        funFacts: [
+          "🌳 Top Speed: Historic desert steam chugger at 30 mph! 🌳",
+          "This is a real, 100-year-old historic steam train chugging through the giant red sand dunes of the Wadi Rum desert! 🏜️🚂",
+          "It blows a loud steam whistle and passes camel caravans traveling across the hot desert! 🐫💨",
+          "This desert is so red and sandy that it looks like the surface of the planet Mars! 🪐🎒"
         ]
       }
     ]
