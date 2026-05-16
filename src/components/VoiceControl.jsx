@@ -34,7 +34,8 @@ const COUNTRY_SYNONYMS = {
   'jo': ['jordan', 'amman', 'petra', 'wadi rum', 'jordanian'],
   'mm': ['myanmar', 'burma', 'gokteik', 'yangon'],
   'pa': ['panama', 'panama city', 'canal', 'panama canal railway', 'ship-watching'],
-  'vn': ['vietnam', 'hanoi', 'reunion express', 'vietname']
+  'vn': ['vietnam', 'hanoi', 'reunion express', 'vietname'],
+  'pk': ['pakistan', 'islamabad', 'karachi', 'khyber pass', 'steam safari', 'pakistanian']
 }
 
 function VoiceControl({ onSelectCountry }) {

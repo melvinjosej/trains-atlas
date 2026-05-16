@@ -39,6 +39,7 @@ import jordanImg from '../assets/trains/jordan.jpeg'
 import myanmarImg from '../assets/trains/myanmar.jpeg'
 import panamaImg from '../assets/trains/panama.jpeg'
 import vietnamImg from '../assets/trains/vietnam.jpeg'
+import pakistanImg from '../assets/trains/pakistan.jpeg'
 
 export const trainsData = [
   {
@@ -768,6 +769,25 @@ export const trainsData = [
           "This famous train passes right through the narrow streets of Hanoi, squeezing just inches away from houses and cafes! ☕🏘️",
           "It climbs high over the scenic Hai Van Pass, looking directly down at deep blue oceans and sandy beaches! 🌊🏖️",
           "It chugs past lush green banana trees, rice fields, and happy water buffaloes grazing in the sun!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PK",
+    countryName: "Pakistan",
+    capital: "Islamabad",
+    flagEmoji: "🇵🇰",
+    trains: [
+      {
+        name: "Khyber Pass Steam Safari",
+        type: "🚂 Mountain Canyon Steam Safari",
+        photoUrl: pakistanImg,
+        funFacts: [
+          "🌳 Top Speed: Mountain steam safari chugs at a safe 35 mph! 🌳",
+          "This historic mountain steam train climbs past the giant, snowy peaks of the high Hindu Kush mountains! 🏔️🚂",
+          "It puffs massive fluffy clouds of white steam as it drives through 34 dark mountain tunnels and over high stone bridges! ☁️⛰️",
+          "It loops and spirals back-to-back through rugged mountain canyons like a giant roller coaster! 🎢"
         ]
       }
     ]
