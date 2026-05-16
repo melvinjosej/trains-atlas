@@ -37,7 +37,7 @@ import singaporeImg from '../assets/trains/singapore.jpeg'
 import bratislavasplitImg from '../assets/trains/bratislavasplit.jpeg'
 import jordanImg from '../assets/trains/jordan.jpeg'
 import myanmarImg from '../assets/trains/myanmar.jpeg'
-import nicaraguaImg from '../assets/trains/nicaragua.jpeg'
+import panamaImg from '../assets/trains/panama.jpeg'
 import vietnamImg from '../assets/trains/vietnam.jpeg'
 
 export const trainsData = [
@@ -735,20 +735,20 @@ export const trainsData = [
     ]
   },
   {
-    id: "NI",
-    countryName: "Nicaragua",
-    capital: "Managua",
-    flagEmoji: "🇳🇮",
+    id: "PA",
+    countryName: "Panama",
+    capital: "Panama City",
+    flagEmoji: "🇵🇦",
     trains: [
       {
-        name: "Granada Steam Locomotive",
-        type: "🌋 Tropical Volcano Steam Train",
-        photoUrl: nicaraguaImg,
+        name: "Panama Canal Railway",
+        type: "🚢 Ship-Watching Jungle Express",
+        photoUrl: panamaImg,
         funFacts: [
-          "🌋 Top Speed: Classic historic chugger at 25 mph! 🌋",
-          "This beautiful, bright-red historic steam train used to chug past giant smoking volcanoes and tropical palm tree forests! 🌋🌴",
-          "It burned real wood logs inside its firebox to create giant, fluffy white steam clouds from its chimney! 🪵💨",
-          "It takes you back in time to the historic city of Granada next to a giant lake filled with thousands of tiny islands!"
+          "🚢 Top Speed: Zooms next to giant cargo ships at 60 mph! 🚢",
+          "This legendary train runs completely across Panama, connecting the Pacific Ocean to the Atlantic Ocean in just one hour! 🌎",
+          "It runs directly alongside the famous Panama Canal where massive container ships float right next to your window! 🚢🌊",
+          "It has a spectacular glass-dome ceiling where children can look up at wild sloths, chattering monkeys, and toucans in the jungle! 🦥🦜"
         ]
       }
     ]

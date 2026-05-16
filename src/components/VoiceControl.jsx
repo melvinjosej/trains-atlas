@@ -33,7 +33,7 @@ const COUNTRY_SYNONYMS = {
   'hr': ['croatia', 'split', 'zagreb', 'croatya', 'hz'],
   'jo': ['jordan', 'amman', 'petra', 'wadi rum', 'jordanian'],
   'mm': ['myanmar', 'burma', 'gokteik', 'yangon'],
-  'ni': ['nicaragua', 'granada', 'volcano train', 'nicaraguya'],
+  'pa': ['panama', 'panama city', 'canal', 'panama canal railway', 'ship-watching'],
   'vn': ['vietnam', 'hanoi', 'reunion express', 'vietname']
 }
 
