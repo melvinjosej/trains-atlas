@@ -36,6 +36,9 @@ import laosImg from '../assets/trains/laos.jpeg'
 import singaporeImg from '../assets/trains/singapore.jpeg'
 import bratislavasplitImg from '../assets/trains/bratislavasplit.jpeg'
 import jordanImg from '../assets/trains/jordan.jpeg'
+import myanmarImg from '../assets/trains/myanmar.jpeg'
+import nicaraguaImg from '../assets/trains/nicaragua.jpeg'
+import vietnamImg from '../assets/trains/vietnam.jpeg'
 
 export const trainsData = [
   {
@@ -708,6 +711,63 @@ export const trainsData = [
           "This is a real, 100-year-old historic steam train chugging through the giant red sand dunes of the Wadi Rum desert! 🏜️🚂",
           "It blows a loud steam whistle and passes camel caravans traveling across the hot desert! 🐫💨",
           "This desert is so red and sandy that it looks like the surface of the planet Mars! 🪐🎒"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MM",
+    countryName: "Myanmar",
+    capital: "Naypyidaw",
+    flagEmoji: "🇲🇲",
+    trains: [
+      {
+        name: "Gokteik Viaduct Explorer",
+        type: "🌳 Canyon Jungle Sky Chugger",
+        photoUrl: myanmarImg,
+        funFacts: [
+          "⛰️ Top Speed: Chugs slowly across the sky at a safe 15 mph! ⛰️",
+          "This adventurous train crawls across the famous Gokteik Viaduct, a giant steel bridge hanging high above a massive jungle canyon! 🌉",
+          "It chugs so high in the air that it feels like you are flying on a roller coaster above the green tree canopy! 🌳🎢",
+          "If you look down, you can see misty tropical waterfalls and hear wild jungle birds singing below!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "NI",
+    countryName: "Nicaragua",
+    capital: "Managua",
+    flagEmoji: "🇳🇮",
+    trains: [
+      {
+        name: "Granada Steam Locomotive",
+        type: "🌋 Tropical Volcano Steam Train",
+        photoUrl: nicaraguaImg,
+        funFacts: [
+          "🌋 Top Speed: Classic historic chugger at 25 mph! 🌋",
+          "This beautiful, bright-red historic steam train used to chug past giant smoking volcanoes and tropical palm tree forests! 🌋🌴",
+          "It burned real wood logs inside its firebox to create giant, fluffy white steam clouds from its chimney! 🪵💨",
+          "It takes you back in time to the historic city of Granada next to a giant lake filled with thousands of tiny islands!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "VN",
+    countryName: "Vietnam",
+    capital: "Hanoi",
+    flagEmoji: "🇻🇳",
+    trains: [
+      {
+        name: "Reunion Express",
+        type: "🌊 Ocean Coast Scenic Express",
+        photoUrl: vietnamImg,
+        funFacts: [
+          "🌊 Top Speed: Cruises past the ocean waves at 50 mph! 🌊",
+          "This famous train passes right through the narrow streets of Hanoi, squeezing just inches away from houses and cafes! ☕🏘️",
+          "It climbs high over the scenic Hai Van Pass, looking directly down at deep blue oceans and sandy beaches! 🌊🏖️",
+          "It chugs past lush green banana trees, rice fields, and happy water buffaloes grazing in the sun!"
         ]
       }
     ]

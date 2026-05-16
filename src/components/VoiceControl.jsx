@@ -31,7 +31,10 @@ const COUNTRY_SYNONYMS = {
   'la': ['laos', 'lane xang', 'mekong', 'vientiane'],
   'sg': ['singapore', 'mrt', 'sentosa', 'changi'],
   'hr': ['croatia', 'split', 'zagreb', 'croatya', 'hz'],
-  'jo': ['jordan', 'amman', 'petra', 'wadi rum', 'jordanian']
+  'jo': ['jordan', 'amman', 'petra', 'wadi rum', 'jordanian'],
+  'mm': ['myanmar', 'burma', 'gokteik', 'yangon'],
+  'ni': ['nicaragua', 'granada', 'volcano train', 'nicaraguya'],
+  'vn': ['vietnam', 'hanoi', 'reunion express', 'vietname']
 }
 
 function VoiceControl({ onSelectCountry }) {
