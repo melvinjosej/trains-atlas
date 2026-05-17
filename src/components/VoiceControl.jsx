@@ -35,7 +35,9 @@ const COUNTRY_SYNONYMS = {
   'mm': ['myanmar', 'burma', 'gokteik', 'yangon'],
   'pa': ['panama', 'panama city', 'canal', 'panama canal railway', 'ship-watching'],
   'vn': ['vietnam', 'hanoi', 'reunion express', 'vietname'],
-  'pk': ['pakistan', 'islamabad', 'karachi', 'khyber pass', 'steam safari', 'pakistanian']
+  'pk': ['pakistan', 'islamabad', 'karachi', 'khyber pass', 'steam safari', 'pakistanian'],
+  'uz': ['uzbekistan', 'tashkent', 'samarkand', 'afrosiyob', 'uzbekstan'],
+  'tm': ['turkmenistan', 'ashgabat', 'karakum', 'turkmenstan']
 }
 
 function VoiceControl({ onSelectCountry }) {

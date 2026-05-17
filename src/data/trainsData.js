@@ -40,6 +40,8 @@ import myanmarImg from '../assets/trains/myanmar.jpeg'
 import panamaImg from '../assets/trains/panama.jpeg'
 import vietnamImg from '../assets/trains/vietnam.jpeg'
 import pakistanImg from '../assets/trains/pakistan.jpeg'
+import uzbekistanImg from '../assets/trains/uzbekistan.jpeg'
+import turkmenistanImg from '../assets/trains/turkmenistan.jpeg'
 
 export const trainsData = [
   {
@@ -388,7 +390,7 @@ export const trainsData = [
           "⛰️ Top Speed: Careful canyon climbing at 30 mph! ⛰️",
           "This bright blue train climbs super-high up into the clouds to a secret ancient city in the sky called Machu Picchu! ☁️",
           "It has giant curved windows on the ceiling so you can look straight up at flying giant condors (the biggest birds in the sky!) and high snowy mountains! 🦅",
-          "Inside the train, musicians play happy music on drums and flutes while performers dance in colorful animal costumes! 🪘"
+          "Inside the train, musicians play happy music on grams and flutes while performers dance in colorful animal costumes! 🪘"
         ]
       }
     ]
@@ -788,6 +790,44 @@ export const trainsData = [
           "This historic mountain steam train climbs past the giant, snowy peaks of the high Hindu Kush mountains! 🏔️🚂",
           "It puffs massive fluffy clouds of white steam as it drives through 34 dark mountain tunnels and over high stone bridges! ☁️⛰️",
           "It loops and spirals back-to-back through rugged mountain canyons like a giant roller coaster! 🎢"
+        ]
+      }
+    ]
+  },
+  {
+    id: "UZ",
+    countryName: "Uzbekistan",
+    capital: "Tashkent",
+    flagEmoji: "🇺🇿",
+    trains: [
+      {
+        name: "Afrosiyob Talgo Speedliner",
+        type: "🚀 Silk Road Desert Bullet Train",
+        photoUrl: uzbekistanImg,
+        funFacts: [
+          "⚡ Top Speed: Flies across the ancient Silk Road at 155 mph! ⚡",
+          "This super-fast white bullet train is named 'Afrosiyob' after an ancient legendary king! 👑",
+          "It zooms across hot sandy deserts, connecting historic cities filled with giant blue dome palaces and glittering gold towers! 🕌✨",
+          "It is incredibly smooth, making it feel like you are sliding on a magic flying carpet across the desert! 🧞"
+        ]
+      }
+    ]
+  },
+  {
+    id: "TM",
+    countryName: "Turkmenistan",
+    capital: "Ashgabat",
+    flagEmoji: "🇹🇲",
+    trains: [
+      {
+        name: "Karakum Desert Express",
+        type: "🐫 Marble City Desert Steppe Express",
+        photoUrl: turkmenistanImg,
+        funFacts: [
+          "🐫 Top Speed: Chugs past golden desert dunes at 50 mph! 🐫",
+          "This big, powerful green diesel train travels completely across the massive Karakum Desert under the hot sun! ☀️🐫",
+          "It zooms past herds of grazing desert camels and massive golden sand castles built by the wind! 🏜️",
+          "It starts in Ashgabat, a magical city made entirely of glittering white marble stone that looks like a winter palace! 🏰"
         ]
       }
     ]
