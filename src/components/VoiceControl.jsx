@@ -37,7 +37,8 @@ const COUNTRY_SYNONYMS = {
   'vn': ['vietnam', 'hanoi', 'reunion express', 'vietname'],
   'pk': ['pakistan', 'islamabad', 'karachi', 'khyber pass', 'steam safari', 'pakistanian'],
   'uz': ['uzbekistan', 'tashkent', 'samarkand', 'afrosiyob', 'uzbekstan'],
-  'tm': ['turkmenistan', 'ashgabat', 'karakum', 'turkmenstan']
+  'tm': ['turkmenistan', 'ashgabat', 'karakum', 'turkmenstan'],
+  'kh': ['cambodia', 'phnom penh', 'bamboo train', 'norry', 'cambodya']
 }
 
 function VoiceControl({ onSelectCountry }) {

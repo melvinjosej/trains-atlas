@@ -62,7 +62,7 @@ path {
   cursor: default;
 }
 
-.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af, .sa, .om, .th, .la, .sg, .hr, .jo, .mm, .pa, .vn, .pk, .uz, .tm {
+.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af, .sa, .om, .th, .la, .sg, .hr, .jo, .mm, .pa, .vn, .pk, .uz, .tm, .kh {
   fill: #fde047 !important; /* Beautiful sunshine yellow */
   stroke: #eab308 !important; /* Darker warm borders */
   stroke-width: 1.0;
@@ -77,7 +77,7 @@ path {
 .be:active, .kr:active, .ir:active, .af:active,
 .sa:active, .om:active, .th:active, .la:active, .sg:active,
 .hr:active, .jo:active, .mm:active, .pa:active, .vn:active,
-.pk:active, .uz:active, .tm:active {
+.pk:active, .uz:active, .tm:active, .kh:active {
   fill: #f97316 !important; /* Flash bright orange when touched! */
 }
 

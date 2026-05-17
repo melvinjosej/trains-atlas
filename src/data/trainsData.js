@@ -42,6 +42,7 @@ import vietnamImg from '../assets/trains/vietnam.jpeg'
 import pakistanImg from '../assets/trains/pakistan.jpeg'
 import uzbekistanImg from '../assets/trains/uzbekistan.jpeg'
 import turkmenistanImg from '../assets/trains/turkmenistan.jpeg'
+import cambodiaImg from '../assets/trains/cambodia.jpeg'
 
 export const trainsData = [
   {
@@ -390,7 +391,7 @@ export const trainsData = [
           "⛰️ Top Speed: Careful canyon climbing at 30 mph! ⛰️",
           "This bright blue train climbs super-high up into the clouds to a secret ancient city in the sky called Machu Picchu! ☁️",
           "It has giant curved windows on the ceiling so you can look straight up at flying giant condors (the biggest birds in the sky!) and high snowy mountains! 🦅",
-          "Inside the train, musicians play happy music on grams and flutes while performers dance in colorful animal costumes! 🪘"
+          "Inside the train, musicians play happy music on drums and flutes while performers dance in colorful animal costumes! 🪘"
         ]
       }
     ]
@@ -828,6 +829,25 @@ export const trainsData = [
           "This big, powerful green diesel train travels completely across the massive Karakum Desert under the hot sun! ☀️🐫",
           "It zooms past herds of grazing desert camels and massive golden sand castles built by the wind! 🏜️",
           "It starts in Ashgabat, a magical city made entirely of glittering white marble stone that looks like a winter palace! 🏰"
+        ]
+      }
+    ]
+  },
+  {
+    id: "KH",
+    countryName: "Cambodia",
+    capital: "Phnom Penh",
+    flagEmoji: "🇰🇭",
+    trains: [
+      {
+        name: "Cambodia Bamboo Train",
+        type: "🌾 Tropical Open-Air Bamboo Express",
+        photoUrl: cambodiaImg,
+        funFacts: [
+          "🌾 Top Speed: Breezy open-air chugger zooms at 30 mph! 🌾",
+          "This is the famous Bamboo Train—a flying magic carpet made of real bamboo stalks powered by a tiny tractor motor! 🌾🛵",
+          "It drives completely open-air through tropical green jungles and past banana trees under the sunny sky! 🌴🍌",
+          "Because there is only one track, when two trains meet, the drivers lift the whole train off the tracks to let the other pass! 🦾🛠️"
         ]
       }
     ]
