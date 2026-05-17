@@ -42,7 +42,9 @@ const COUNTRY_SYNONYMS = {
   've': ['venezuela', 'caracas', 'gran ferrocarril', 'venezuala'],
   'ec': ['ecuador', 'quito', 'devil\'s nose', 'nariz del diablo', 'ecuadorian'],
   'be': ['belgium', 'brussels', 'chocolate', 'double-decker'],
-  'kr': ['south korea', 'korea', 'seoul', 'ktx']
+  'kr': ['south korea', 'korea', 'seoul', 'ktx'],
+  'co': ['colombia', 'bogota', 'coffee train', 'sabana', 'colombya'],
+  'by': ['belarus', 'minsk', 'children railway', 'belarussia']
 }
 
 function VoiceControl({ onSelectCountry }) {

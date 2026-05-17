@@ -45,6 +45,8 @@ import turkmenistanImg from '../assets/trains/turkmenistan.jpeg'
 import cambodiaImg from '../assets/trains/cambodia.jpeg'
 import venezuelaImg from '../assets/trains/venezuela.jpeg'
 import ecuadorImg from '../assets/trains/ecuador.jpeg'
+import colombiaImg from '../assets/trains/colombia.jpeg'
+import belarusImg from '../assets/trains/belarus.jpeg'
 
 export const trainsData = [
   {
@@ -888,6 +890,44 @@ export const trainsData = [
           "This is the famous Devil's Nose Train—an adventurous mountain chugger that climbs a super-steep vertical rock wall! ⛰️🧗",
           "To climb up, it has to run zig-zag! It chugs forward, stops, rolls backward, stops, and zooms forward again! 🎢",
           "It glides past giant green valleys and roaring mountain waterfalls high up in the majestic Andes mountains! 🏔️🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "CO",
+    countryName: "Colombia",
+    capital: "Bogotá",
+    flagEmoji: "🇨🇴",
+    trains: [
+      {
+        name: "Sabana Train (Turistren)",
+        type: "🚂 Vintage Coffee Mountain Steam Safari",
+        photoUrl: colombiaImg,
+        funFacts: [
+          "🌴 Top Speed: Cozy coffee mountain safari puffs at 30 mph! 🌴",
+          "This is a beautiful, vintage steam train chugging through the misty valleys of the giant Colombian Andes mountains! 🏔️🚂",
+          "It blows a loud whistle and loops past massive green coffee orchards where coffee beans grow in the sun! ☕🌱",
+          "Locals play happy salsa and cumbia music inside the passenger cars on real maracas and drums while the train chugs along! 🪘💃"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BY",
+    countryName: "Belarus",
+    capital: "Minsk",
+    flagEmoji: "🇧🇾",
+    trains: [
+      {
+        name: "Minsk Children's Railway",
+        type: "🌲 Miniature Kids-Conductor Express",
+        photoUrl: belarusImg,
+        funFacts: [
+          "🌳 Top Speed: Little kid-conductor express glides at 15 mph! 🌳",
+          "This amazing railway is completely run by real children! Kids are the conductors, ticket sellers, and drivers! 🧑‍✈️👧",
+          "The little colorful train is called 'Zaslonov' and chugs through green pine forests past real animal play parks! 🌳🌲",
+          "It is the ultimate kid-friendly train on Earth, where children show other children how a real railway chugs along! 🌟🚂"
         ]
       }
     ]
