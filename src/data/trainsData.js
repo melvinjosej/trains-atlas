@@ -840,14 +840,14 @@ export const trainsData = [
     flagEmoji: "🇰🇭",
     trains: [
       {
-        name: "Cambodia Bamboo Train",
-        type: "🌾 Tropical Open-Air Bamboo Express",
+        name: "Royal Railway Express",
+        type: "🚂 Colorful Diesel Ocean Express",
         photoUrl: cambodiaImg,
         funFacts: [
-          "🌾 Top Speed: Breezy open-air chugger zooms at 30 mph! 🌾",
-          "This is the famous Bamboo Train—a flying magic carpet made of real bamboo stalks powered by a tiny tractor motor! 🌾🛵",
-          "It drives completely open-air through tropical green jungles and past banana trees under the sunny sky! 🌴🍌",
-          "Because there is only one track, when two trains meet, the drivers lift the whole train off the tracks to let the other pass! 🦾🛠️"
+          "🌴 Top Speed: Chugs across palm orchards at 55 mph! 🌴",
+          "This big, strong diesel train is painted in beautiful bright blue and yellow colors, chugging across the whole country of Cambodia! 🚂🎨",
+          "It carries passenger cars and happy families past giant green rice fields, grazing water buffaloes, and palm tree orchards! 🌾🐂",
+          "It zooms over high steel bridges and chugs all the way to the sunny ocean beaches of Sihanoukville! 🏖️🌊"
         ]
       }
     ]
