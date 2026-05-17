@@ -43,6 +43,8 @@ import pakistanImg from '../assets/trains/pakistan.jpeg'
 import uzbekistanImg from '../assets/trains/uzbekistan.jpeg'
 import turkmenistanImg from '../assets/trains/turkmenistan.jpeg'
 import cambodiaImg from '../assets/trains/cambodia.jpeg'
+import venezuelaImg from '../assets/trains/venezuela.jpeg'
+import ecuadorImg from '../assets/trains/ecuador.jpeg'
 
 export const trainsData = [
   {
@@ -848,6 +850,44 @@ export const trainsData = [
           "This big, strong diesel train is painted in beautiful bright blue and yellow colors, chugging across the whole country of Cambodia! 🚂🎨",
           "It carries passenger cars and happy families past giant green rice fields, grazing water buffaloes, and palm tree orchards! 🌾🐂",
           "It zooms over high steel bridges and chugs all the way to the sunny ocean beaches of Sihanoukville! 🏖️🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "VE",
+    countryName: "Venezuela",
+    capital: "Caracas",
+    flagEmoji: "🇻🇪",
+    trains: [
+      {
+        name: "Great Railway of Venezuela",
+        type: "🚂 Lush Tropical Valley Express",
+        photoUrl: venezuelaImg,
+        funFacts: [
+          "🌴 Top Speed: Cruises past high mountain canyons at 50 mph! 🌴",
+          "This strong diesel train chugs through lush green valleys filled with beautiful wild orchids and colorful tropical flowers! 🌸🚂",
+          "It zooms over high steel bridges and dives through dozens of dark mountain tunnels cut right into the rock! ⛰️🧗",
+          "It starts in the big mountain city of Caracas, climbing past high peaks and green rain forests under the sunny blue skies!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "EC",
+    countryName: "Ecuador",
+    capital: "Quito",
+    flagEmoji: "🇪🇨",
+    trains: [
+      {
+        name: "Devil's Nose Train (Nariz del Diablo)",
+        type: "🎢 Breathtaking Andes Zig-Zag Express",
+        photoUrl: ecuadorImg,
+        funFacts: [
+          "⛰️ Top Speed: Climbs vertical mountain walls at a cozy 20 mph! ⛰️",
+          "This is the famous Devil's Nose Train—an adventurous mountain chugger that climbs a super-steep vertical rock wall! ⛰️🧗",
+          "To climb up, it has to run zig-zag! It chugs forward, stops, rolls backward, stops, and zooms forward again! 🎢",
+          "It glides past giant green valleys and roaring mountain waterfalls high up in the majestic Andes mountains! 🏔️🌊"
         ]
       }
     ]

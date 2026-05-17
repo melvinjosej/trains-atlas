@@ -38,7 +38,9 @@ const COUNTRY_SYNONYMS = {
   'pk': ['pakistan', 'islamabad', 'karachi', 'khyber pass', 'steam safari', 'pakistanian'],
   'uz': ['uzbekistan', 'tashkent', 'samarkand', 'afrosiyob', 'uzbekstan'],
   'tm': ['turkmenistan', 'ashgabat', 'karakum', 'turkmenstan'],
-  'kh': ['cambodia', 'phnom penh', 'bamboo train', 'norry', 'cambodya']
+  'kh': ['cambodia', 'phnom penh', 'bamboo train', 'norry', 'cambodya'],
+  've': ['venezuela', 'caracas', 'gran ferrocarril', 'venezuala'],
+  'ec': ['ecuador', 'quito', 'devil\'s nose', 'nariz del diablo', 'ecuadorian']
 }
 
 function VoiceControl({ onSelectCountry }) {
