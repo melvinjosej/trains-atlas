@@ -48,6 +48,7 @@ import ecuadorImg from '../assets/trains/ecuador.jpeg'
 import colombiaImg from '../assets/trains/colombia.jpeg'
 import belarusImg from '../assets/trains/belarus.jpeg'
 import ukraineImg from '../assets/trains/ukraine.jpeg'
+import yemenImg from '../assets/trains/yemen.jpeg'
 
 export const trainsData = [
   {
@@ -840,7 +841,7 @@ export const trainsData = [
   },
   {
     id: "KH",
-    countryName: "Royal Railway Express",
+    countryName: "Cambodia",
     capital: "Phnom Penh",
     flagEmoji: "🇰🇭",
     trains: [
@@ -948,6 +949,25 @@ export const trainsData = [
           "This is the magical Tunnel of Love Train, driving directly inside an enchanted tunnel made completely of green leaves and branches! 🌳💚",
           "The leafy tree branches naturally grew together over the tracks to create a magical green archway that goes on for miles! 🧚🏰",
           "It looks exactly like a secret passage in a fantasy forest, chugging along slow enough for forest rabbits and deer to watch! 🐰🦌"
+        ]
+      }
+    ]
+  },
+  {
+    id: "YE",
+    countryName: "Yemen",
+    capital: "Sana'a",
+    flagEmoji: "🇾🇪",
+    trains: [
+      {
+        name: "Aden Desert Steam Express",
+        type: "🚂 Volcanic Cliff & Ocean Steam Express",
+        photoUrl: yemenImg,
+        funFacts: [
+          "🌳 Top Speed: Ancient desert steam express chugs at 30 mph! 🌳",
+          "This is a beautiful, historic steam train chugging past the sandy volcanic cliffs and ocean harbor of Aden! 🌋🚂",
+          "It blows a loud steam whistle as dhow sailing boats float in the deep blue water right next to the tracks! ⛵🌊",
+          "It chugs past the ancient city of Sana'a, which is filled with giant brown mud skyscrapers that look like massive gingerbread houses! 🏰🍪"
         ]
       }
     ]
