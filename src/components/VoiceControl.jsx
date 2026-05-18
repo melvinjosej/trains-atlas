@@ -128,7 +128,11 @@ function VoiceControl({ onSelectCountry }) {
       // Match spoken phrase against synonyms dictionary
       let matchedCountry = null
       for (const [code, synonyms] of Object.entries(COUNTRY_SYNONYMS)) {
-        const match = synonyms.some(synonym => transcript.includes(synonym))
+        const match = synonyms.some(synonym => {
+          const escapedSynonym = synonym.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+          const regex = new RegExp(`\\b${escapedSynonym}\\b`, 'i')
+          return regex.test(transcript)
+        })
         if (match) {
           matchedCountry = code.toUpperCase()
           break
