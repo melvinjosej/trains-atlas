@@ -49,6 +49,7 @@ import colombiaImg from '../assets/trains/colombia.jpeg'
 import belarusImg from '../assets/trains/belarus.jpeg'
 import ukraineImg from '../assets/trains/ukraine.jpeg'
 import yemenImg from '../assets/trains/yemen.jpeg'
+import denmarkImg from '../assets/trains/denmark.jpeg'
 
 export const trainsData = [
   {
@@ -968,6 +969,25 @@ export const trainsData = [
           "This is a beautiful, historic steam train chugging past the sandy volcanic cliffs and ocean harbor of Aden! 🌋🚂",
           "It blows a loud steam whistle as dhow sailing boats float in the deep blue water right next to the tracks! ⛵🌊",
           "It chugs past the ancient city of Sana'a, which is filled with giant brown mud skyscrapers that look like massive gingerbread houses! 🏰🍪"
+        ]
+      }
+    ]
+  },
+  {
+    id: "DK",
+    countryName: "Denmark",
+    capital: "Copenhagen",
+    flagEmoji: "🇩🇰",
+    trains: [
+      {
+        name: "Øresund Bridge Express",
+        type: "⚡ Ocean Bridge & Undersea Bullet Train",
+        photoUrl: denmarkImg,
+        funFacts: [
+          "⚡ Top Speed: Bridges and ocean tunnels cruised at 112 mph! ⚡",
+          "This sleek red-and-white train is called the Øresund Express, and it is a real-life magic bridge chugger! 🇩🇰",
+          "It dives deep into a dark underwater tunnel, then climbs high onto a giant bridge stretching right across the blue ocean! 🌊🌉",
+          "You can sit at the window and watch giant ships sailing far underneath your wheels as you cross from Denmark to Sweden! 🚢💨"
         ]
       }
     ]

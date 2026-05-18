@@ -46,7 +46,8 @@ const COUNTRY_SYNONYMS = {
   'co': ['colombia', 'bogota', 'coffee train', 'sabana', 'colombya'],
   'by': ['belarus', 'minsk', 'children railway', 'belarussia'],
   'ua': ['ukraine', 'kiev', 'kyiv', 'tunnel of love', 'klevan', 'ukrainya'],
-  'ye': ['yemen', 'aden', 'sanaa', 'desert express', 'yemenian']
+  'ye': ['yemen', 'aden', 'sanaa', 'desert express', 'yemenian'],
+  'dk': ['denmark', 'copenhagen', 'oresund', 'bridge train', 'denmarck']
 }
 
 function VoiceControl({ onSelectCountry }) {
