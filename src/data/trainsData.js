@@ -47,6 +47,7 @@ import venezuelaImg from '../assets/trains/venezuela.jpeg'
 import ecuadorImg from '../assets/trains/ecuador.jpeg'
 import colombiaImg from '../assets/trains/colombia.jpeg'
 import belarusImg from '../assets/trains/belarus.jpeg'
+import ukraineImg from '../assets/trains/ukraine.jpeg'
 
 export const trainsData = [
   {
@@ -839,7 +840,7 @@ export const trainsData = [
   },
   {
     id: "KH",
-    countryName: "Cambodia",
+    countryName: "Royal Railway Express",
     capital: "Phnom Penh",
     flagEmoji: "🇰🇭",
     trains: [
@@ -928,6 +929,25 @@ export const trainsData = [
           "This amazing railway is completely run by real children! Kids are the conductors, ticket sellers, and drivers! 🧑‍✈️👧",
           "The little colorful train is called 'Zaslonov' and chugs through green pine forests past real animal play parks! 🌳🌲",
           "It is the ultimate kid-friendly train on Earth, where children show other children how a real railway chugs along! 🌟🚂"
+        ]
+      }
+    ]
+  },
+  {
+    id: "UA",
+    countryName: "Ukraine",
+    capital: "Kyiv",
+    flagEmoji: "🇺🇦",
+    trains: [
+      {
+        name: "Tunnel of Love Train",
+        type: "🧚 Green Fairytale Forest Tunnel Train",
+        photoUrl: ukraineImg,
+        funFacts: [
+          "🌳 Top Speed: Fairytale leafy chugger crawls at 20 mph! 🌳",
+          "This is the magical Tunnel of Love Train, driving directly inside an enchanted tunnel made completely of green leaves and branches! 🌳💚",
+          "The leafy tree branches naturally grew together over the tracks to create a magical green archway that goes on for miles! 🧚🏰",
+          "It looks exactly like a secret passage in a fantasy forest, chugging along slow enough for forest rabbits and deer to watch! 🐰🦌"
         ]
       }
     ]
