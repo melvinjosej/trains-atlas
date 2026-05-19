@@ -50,7 +50,9 @@ const COUNTRY_SYNONYMS = {
   'dk': ['denmark', 'copenhagen', 'oresund', 'bridge train', 'denmarck'],
   'it': ['italy', 'rome', 'milan', 'frecciarossa', 'red arrow', 'italya'],
   'fi': ['finland', 'helsinki', 'santa claus express', 'lapland', 'rovaniemi', 'finlandia'],
-  'no': ['norway', 'oslo', 'flam', 'fjord', 'flamsbana', 'norwey']
+  'no': ['norway', 'oslo', 'flam', 'fjord', 'flamsbana', 'norwey'],
+  'gr': ['greece', 'athens', 'odontotos', 'kalavryta', 'tooth train', 'greek'],
+  'ro': ['romania', 'bucharest', 'mocanita', 'vaser', 'forest steam', 'romanya']
 }
 
 function VoiceControl({ onSelectCountry }) {

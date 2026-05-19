@@ -53,6 +53,8 @@ import denmarkImg from '../assets/trains/denmark.jpeg'
 import italyImg from '../assets/trains/italy.jpeg'
 import finlandImg from '../assets/trains/finland.jpeg'
 import norwayImg from '../assets/trains/norway.jpeg'
+import greeceImg from '../assets/trains/greece.jpeg'
+import romaniaImg from '../assets/trains/romania.jpeg'
 
 export const trainsData = [
   {
@@ -1048,6 +1050,44 @@ export const trainsData = [
           "This beautiful dark-green mountain train climbs super-steep cliffs starting from deep blue ocean fjords! ⛰️🌊",
           "It drives right next to giant, roaring waterfalls that crash down the mountain, spraying misty water right onto the train windows! 💦",
           "It winds through dark tunnels carved by hand right out of the solid mountain rock, blowing its loud echo-horn! 📢"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GR",
+    countryName: "Greece",
+    capital: "Athens",
+    flagEmoji: "🇬🇷",
+    trains: [
+      {
+        name: "Kalavryta Odontotos Tooth-Train",
+        type: "⛰️ Adventurous Canyon Cog Railway",
+        photoUrl: greeceImg,
+        funFacts: [
+          "⛰️ Top Speed: Kalavryta tooth-train climbs steep cliffs at 15 mph! ⛰️",
+          "This cute red-and-cream mountain train is called a 'Tooth-Train' because it has giant metal teeth under its belly to pull itself up steep cliffs! 🦷⚙️",
+          "It chugs over narrow stone bridges hanging high over giant canyon rivers and squeezes through dark tunnels cut right into rock! 🧗🌊",
+          "It passes beautiful mountain villages, roaring waterfalls, and wild caves where giants used to hide in Greek stories! 🧜🏰"
+        ]
+      }
+    ]
+  },
+  {
+    id: "RO",
+    countryName: "Romania",
+    capital: "Bucharest",
+    flagEmoji: "🇷🇴",
+    trains: [
+      {
+        name: "Mocănița Forest Steam Train",
+        type: "🌲 Carpathian Fairytale Forest Steam Train",
+        photoUrl: romaniaImg,
+        funFacts: [
+          "🌳 Top Speed: Carpathian forest steam chugger glides at 125 mph! 🌳",
+          "The Mocănița is a real, vintage steam engine that burns real wood logs to create giant, fluffy clouds of white steam! 🪵💨",
+          "It chugs deep into the magical Carpathian forests, rolling over wooden bridges next to sparkling clear mountain rivers! 🌲🏞️",
+          "It looks exactly like a fairytale toy train chugging through the woods, waving at wild deer and forest birds! 🦌🦅"
         ]
       }
     ]
