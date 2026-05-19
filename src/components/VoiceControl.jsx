@@ -47,7 +47,10 @@ const COUNTRY_SYNONYMS = {
   'by': ['belarus', 'minsk', 'children railway', 'belarussia'],
   'ua': ['ukraine', 'kiev', 'kyiv', 'tunnel of love', 'klevan', 'ukrainya'],
   'ye': ['yemen', 'aden', 'sanaa', 'desert express', 'yemenian'],
-  'dk': ['denmark', 'copenhagen', 'oresund', 'bridge train', 'denmarck']
+  'dk': ['denmark', 'copenhagen', 'oresund', 'bridge train', 'denmarck'],
+  'it': ['italy', 'rome', 'milan', 'frecciarossa', 'red arrow', 'italya'],
+  'fi': ['finland', 'helsinki', 'santa claus express', 'lapland', 'rovaniemi', 'finlandia'],
+  'no': ['norway', 'oslo', 'flam', 'fjord', 'flamsbana', 'norwey']
 }
 
 function VoiceControl({ onSelectCountry }) {

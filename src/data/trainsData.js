@@ -50,6 +50,9 @@ import belarusImg from '../assets/trains/belarus.jpeg'
 import ukraineImg from '../assets/trains/ukraine.jpeg'
 import yemenImg from '../assets/trains/yemen.jpeg'
 import denmarkImg from '../assets/trains/denmark.jpeg'
+import italyImg from '../assets/trains/italy.jpeg'
+import finlandImg from '../assets/trains/finland.jpeg'
+import norwayImg from '../assets/trains/norway.jpeg'
 
 export const trainsData = [
   {
@@ -988,6 +991,63 @@ export const trainsData = [
           "This sleek red-and-white train is called the Øresund Express, and it is a real-life magic bridge chugger! 🇩🇰",
           "It dives deep into a dark underwater tunnel, then climbs high onto a giant bridge stretching right across the blue ocean! 🌊🌉",
           "You can sit at the window and watch giant ships sailing far underneath your wheels as you cross from Denmark to Sweden! 🚢💨"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IT",
+    countryName: "Italy",
+    capital: "Rome",
+    flagEmoji: "🇮🇹",
+    trains: [
+      {
+        name: "Frecciarossa 1000",
+        type: "🚀 Sleek Ferrari-Red Bullet Train",
+        photoUrl: italyImg,
+        funFacts: [
+          "🚀 Top Speed: Blazing Ferrari-red bullet train zooms at 186 mph! 🚀",
+          "This is the Frecciarossa—which means 'Red Arrow'—and it is painted in a super-cool bright racing-red coat! 🇮🇹🏎️",
+          "It flies past historic stone castles, ancient Roman ruins, and beautiful olive fields like a low-flying red rocket! 🚀🏰",
+          "It is incredibly quiet and smooth inside, meaning you can drink hot chocolate without spilling a single drop! ☕"
+        ]
+      }
+    ]
+  },
+  {
+    id: "FI",
+    countryName: "Finland",
+    capital: "Helsinki",
+    flagEmoji: "🇫🇮",
+    trains: [
+      {
+        name: "Santa Claus Express",
+        type: "🛌 Magical Double-Decker Night Train",
+        photoUrl: finlandImg,
+        funFacts: [
+          "🛌 Top Speed: Snowy night-express glides at 100 mph! 🛌",
+          "This is the magical Santa Claus Express—a double-decker night train that takes you straight to Santa's home in Lapland! 🎅❄️",
+          "You get to sleep in warm, cozy bunk beds while watching the starry night and green Northern Lights dance outside your window! 🛌🌠",
+          "When you wake up, the ground is covered in deep white snow, and real reindeers are waiting to pull your sleigh! 🦌🛷"
+        ]
+      }
+    ]
+  },
+  {
+    id: "NO",
+    countryName: "Norway",
+    capital: "Oslo",
+    flagEmoji: "🇳🇴",
+    trains: [
+      {
+        name: "Flåm Railway (Flåmsbana)",
+        type: "🏔️ Breathtaking Steep Fjord Explorer",
+        photoUrl: norwayImg,
+        funFacts: [
+          "⛰️ Top Speed: Steep fjord climbing at a safe and cozy 25 mph! ⛰️",
+          "This beautiful dark-green mountain train climbs super-steep cliffs starting from deep blue ocean fjords! ⛰️🌊",
+          "It drives right next to giant, roaring waterfalls that crash down the mountain, spraying misty water right onto the train windows! 💦",
+          "It winds through dark tunnels carved by hand right out of the solid mountain rock, blowing its loud echo-horn! 📢"
         ]
       }
     ]
