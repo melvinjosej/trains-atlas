@@ -1084,7 +1084,7 @@ export const trainsData = [
         type: "🌲 Carpathian Fairytale Forest Steam Train",
         photoUrl: romaniaImg,
         funFacts: [
-          "🌳 Top Speed: Carpathian forest steam chugger glides at 125 mph! 🌳",
+          "🌳 Top Speed: Carpathian forest steam chugger glides at 12 mph! 🌳",
           "The Mocănița is a real, vintage steam engine that burns real wood logs to create giant, fluffy clouds of white steam! 🪵💨",
           "It chugs deep into the magical Carpathian forests, rolling over wooden bridges next to sparkling clear mountain rivers! 🌲🏞️",
           "It looks exactly like a fairytale toy train chugging through the woods, waving at wild deer and forest birds! 🦌🦅"
