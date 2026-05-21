@@ -55,6 +55,7 @@ import finlandImg from '../assets/trains/finland.jpeg'
 import norwayImg from '../assets/trains/norway.jpeg'
 import greeceImg from '../assets/trains/greece.jpeg'
 import romaniaImg from '../assets/trains/romania.jpeg'
+import indonesiaImg from '../assets/trains/indonesia.jpeg'
 
 export const trainsData = [
   {
@@ -1088,6 +1089,25 @@ export const trainsData = [
           "The Mocănița is a real, vintage steam engine that burns real wood logs to create giant, fluffy clouds of white steam! 🪵💨",
           "It chugs deep into the magical Carpathian forests, rolling over wooden bridges next to sparkling clear mountain rivers! 🌲🏞️",
           "It looks exactly like a fairytale toy train chugging through the woods, waving at wild deer and forest birds! 🦌🦅"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ID",
+    countryName: "Indonesia",
+    capital: "Jakarta",
+    flagEmoji: "🇮🇩",
+    trains: [
+      {
+        name: "Whoosh Bullet Train (KCIC)",
+        type: "🚀 Southeast Asia's Fastest Bullet Train",
+        photoUrl: indonesiaImg,
+        funFacts: [
+          "🚀 Top Speed: Southeast Asia's fastest bullet train zooms at 217 mph! 🚀",
+          "This super-cool red and silver bullet train is named 'Whoosh' because that's the giant sound it makes when it zooms by! WHOOSH! 🇮🇩💨",
+          "It flies past tropical green mountains, lush rice fields, and chattering monkey forests like a low-flying space rocket! 🐒🌴",
+          "It connects big cities in just 45 minutes, gliding so smooth and fast that it feels like flying! 🚀"
         ]
       }
     ]

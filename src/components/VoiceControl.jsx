@@ -52,7 +52,8 @@ const COUNTRY_SYNONYMS = {
   'fi': ['finland', 'helsinki', 'santa claus express', 'lapland', 'rovaniemi', 'finlandia'],
   'no': ['norway', 'oslo', 'flam', 'fjord', 'flamsbana', 'norwey'],
   'gr': ['greece', 'athens', 'odontotos', 'kalavryta', 'tooth train', 'greek'],
-  'ro': ['romania', 'bucharest', 'mocanita', 'vaser', 'forest steam', 'romanya']
+  'ro': ['romania', 'bucharest', 'mocanita', 'vaser', 'forest steam', 'romanya'],
+  'id': ['indonesia', 'jakarta', 'bandung', 'whoosh', 'indonesya']
 }
 
 function VoiceControl({ onSelectCountry }) {
