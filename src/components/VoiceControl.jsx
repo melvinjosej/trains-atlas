@@ -151,6 +151,7 @@ function VoiceControl({ onSelectCountry }) {
       if (matchedCountry) {
         selectCountryRef.current(matchedCountry)
         setErrorMessage(`Found ${transcript}! 🚂✨`)
+        rec.stop() // 🛑 Stop listening immediately once a country is successfully recognized!
       } else {
         setErrorMessage(`Heard "${transcript}", try another country! 🧐`)
       }
