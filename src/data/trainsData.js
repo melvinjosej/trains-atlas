@@ -56,6 +56,7 @@ import norwayImg from '../assets/trains/norway.jpeg'
 import greeceImg from '../assets/trains/greece.jpeg'
 import romaniaImg from '../assets/trains/romania.jpeg'
 import indonesiaImg from '../assets/trains/indonesia.jpeg'
+import swedenImg from '../assets/trains/sweden.jpeg'
 
 export const trainsData = [
   {
@@ -1108,6 +1109,25 @@ export const trainsData = [
           "This super-cool red and silver bullet train is named 'Whoosh' because that's the giant sound it makes when it zooms by! WHOOSH! 🇮🇩💨",
           "It flies past tropical green mountains, lush rice fields, and chattering monkey forests like a low-flying space rocket! 🐒🌴",
           "It connects big cities in just 45 minutes, gliding so smooth and fast that it feels like flying! 🚀"
+        ]
+      }
+    ]
+  },
+  {
+    id: "SE",
+    countryName: "Sweden",
+    capital: "Stockholm",
+    flagEmoji: "🇸🇪",
+    trains: [
+      {
+        name: "Inlandsbanan (Wilderness Express)",
+        type: "❄️ Breathtaking Arctic Wilderness Train",
+        photoUrl: swedenImg,
+        funFacts: [
+          "❄️ Top Speed: Arctic wilderness explorer cruises at 55 mph! ❄️",
+          "This is the famous Inlandsbanan—a cozy red and yellow train that travels right across the freezing Arctic Circle! ❄️🦌",
+          "It chugs through massive snowy pine forests where wild moose and families of reindeer run next to your window! 🦌🌲",
+          "The driver blows a giant, loud echo-horn to politely ask reindeer herds to step off the snowy tracks! 📢"
         ]
       }
     ]

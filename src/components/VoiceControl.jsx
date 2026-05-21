@@ -53,7 +53,8 @@ const COUNTRY_SYNONYMS = {
   'no': ['norway', 'oslo', 'flam', 'fjord', 'flamsbana', 'norwey'],
   'gr': ['greece', 'athens', 'odontotos', 'kalavryta', 'tooth train', 'greek'],
   'ro': ['romania', 'bucharest', 'mocanita', 'vaser', 'forest steam', 'romanya'],
-  'id': ['indonesia', 'jakarta', 'bandung', 'whoosh', 'indonesya']
+  'id': ['indonesia', 'jakarta', 'bandung', 'whoosh', 'indonesya'],
+  'se': ['sweden', 'stockholm', 'inlandsbanan', 'arctic circle', 'swedn']
 }
 
 function VoiceControl({ onSelectCountry }) {
