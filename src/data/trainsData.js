@@ -57,6 +57,8 @@ import greeceImg from '../assets/trains/greece.jpeg'
 import romaniaImg from '../assets/trains/romania.jpeg'
 import indonesiaImg from '../assets/trains/indonesia.jpeg'
 import swedenImg from '../assets/trains/sweden.jpeg'
+import bangladeshImg from '../assets/trains/bangladesh.jpeg'
+import austriaImg from '../assets/trains/austria.jpeg'
 
 export const trainsData = [
   {
@@ -1128,6 +1130,44 @@ export const trainsData = [
           "This is the famous Inlandsbanan—a cozy red and yellow train that travels right across the freezing Arctic Circle! ❄️🦌",
           "It chugs through massive snowy pine forests where wild moose and families of reindeer run next to your window! 🦌🌲",
           "The driver blows a giant, loud echo-horn to politely ask reindeer herds to step off the snowy tracks! 📢"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BD",
+    countryName: "Bangladesh",
+    capital: "Dhaka",
+    flagEmoji: "🇧🇩",
+    trains: [
+      {
+        name: "Maitree Express",
+        type: "🚂 Red & Green Jamuna Bridge River-Crossing Express",
+        photoUrl: bangladeshImg,
+        funFacts: [
+          "🌴 Top Speed: Giant river-crossing chugger glides at 65 mph! 🌴",
+          "This big, strong train is painted in bright red and green, matching the beautiful colors of the Bangladesh flag! 🇧🇩",
+          "It zooms past lush green rice fields and chattering monkey forests under the hot tropical sun! 🐒🌴",
+          "It crosses one of the longest bridges in the world, flying high above a giant, roaring river that stretches as far as the eye can see! 🌊🌉"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AT",
+    countryName: "Austria",
+    capital: "Vienna",
+    flagEmoji: "🇦🇹",
+    trains: [
+      {
+        name: "Semmering Mountain Railway",
+        type: "🎡 Futuristic Alpine Mountain Express",
+        photoUrl: austriaImg,
+        funFacts: [
+          "⚡ Top Speed: Alpine mountain bullet train zooms at 143 mph! ⚡",
+          "This sleek red train climbs high into the snowy Austrian Alps like a real-life mountain roller coaster! 🏔️🎡",
+          "It drives over massive double-decker stone arches that look like giant ancient castle bridges hanging in the clouds! 🏰🌉",
+          "It loops past snowy pine forests and deep mountain valleys where skiers zoom down the mountain slopes! ⛷️🌲"
         ]
       }
     ]
