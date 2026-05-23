@@ -30,6 +30,7 @@ const COUNTRY_SYNONYMS = {
   'th': ['thailand', 'bangkok', 'chiang mai', 'srt'],
   'la': ['laos', 'lane xang', 'mekong', 'vientiane'],
   'sg': ['singapore', 'mrt', 'sentosa', 'changi'],
+  'hk': ['hong kong', 'vibrant express', 'kowloon', 'hongkong'],
   'hr': ['croatia', 'split', 'zagreb', 'croatya', 'hz'],
   'jo': ['jordan', 'amman', 'petra', 'wadi rum', 'jordanian'],
   'mm': ['myanmar', 'burma', 'gokteik', 'yangon'],

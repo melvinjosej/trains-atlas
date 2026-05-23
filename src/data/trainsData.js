@@ -59,6 +59,7 @@ import indonesiaImg from '../assets/trains/indonesia.jpeg'
 import swedenImg from '../assets/trains/sweden.jpeg'
 import bangladeshImg from '../assets/trains/bangladesh.jpeg'
 import austriaImg from '../assets/trains/austria.jpeg'
+import vibrantexpressImg from '../assets/trains/vibrantexpress.jpeg';
 
 export const trainsData = [
   {
@@ -1168,6 +1169,25 @@ export const trainsData = [
           "This sleek red train climbs high into the snowy Austrian Alps like a real-life mountain roller coaster! 🏔️🎡",
           "It drives over massive double-decker stone arches that look like giant ancient castle bridges hanging in the clouds! 🏰🌉",
           "It loops past snowy pine forests and deep mountain valleys where skiers zoom down the mountain slopes! ⛷️🌲"
+        ]
+      }
+    ]
+  },
+  {
+    id: "HK",
+    countryName: "Hong Kong",
+    capital: "Hong Kong",
+    flagEmoji: "🇭🇰",
+    trains: [
+      {
+        name: "MTR Vibrant Express",
+        type: "🚀 Cross-Border Bullet Train",
+        photoUrl: vibrantexpressImg,
+        funFacts: [
+          "⚡ Top Speed: Zooms at 124 mph in Hong Kong, and up to 217 mph in Mainland China! ⚡",
+          "The Vibrant Express has a super-cool design with orange, red, and grey stripes! 🇭🇰",
+          "It connects Hong Kong to Guangzhou in just 48 minutes, saving a lot of time!",
+          "It has free Wi-Fi and rotating seats so you can always face forward! 🛜"
         ]
       }
     ]
