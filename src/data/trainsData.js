@@ -59,7 +59,9 @@ import indonesiaImg from '../assets/trains/indonesia.jpeg'
 import swedenImg from '../assets/trains/sweden.jpeg'
 import bangladeshImg from '../assets/trains/bangladesh.jpeg'
 import austriaImg from '../assets/trains/austria.jpeg'
-import vibrantexpressImg from '../assets/trains/vibrantexpress.jpeg';
+import vibrantexpressImg from '../assets/trains/vibrantexpress.jpeg'
+import boliviaImg from '../assets/trains/bolivia.jpeg'
+import mexicoImg from '../assets/trains/mexico.jpeg'
 
 export const trainsData = [
   {
@@ -1188,6 +1190,44 @@ export const trainsData = [
           "The Vibrant Express has a super-cool design with orange, red, and grey stripes! 🇭🇰",
           "It connects Hong Kong to Guangzhou in just 48 minutes, saving a lot of time!",
           "It has free Wi-Fi and rotating seats so you can always face forward! 🛜"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BO",
+    countryName: "Bolivia",
+    capital: "La Paz",
+    flagEmoji: "🇧🇴",
+    trains: [
+      {
+        name: "Mi Teleférico",
+        type: "🚠 Futuristic Flying Cable-Train",
+        photoUrl: boliviaImg,
+        funFacts: [
+          "☁️ Top Speed: Futuristic flying cable-train glides above the clouds at 12 mph! ☁️",
+          "This is 'Mi Teleférico'—a giant network of bright, colorful cabins that fly high in the sky above the tallest mountains! 🚠☁️",
+          "It is a real-life flying train! You glide directly through puffy white clouds and look down at tiny houses and snowy peaks! 🏔️🏠",
+          "It is completely electric and silent, soaring past giant rocky canyons like a magic flying capsule! 🚠✨"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MX",
+    countryName: "Mexico",
+    capital: "Mexico City",
+    flagEmoji: "🇲🇽",
+    trains: [
+      {
+        name: "Tren Maya",
+        type: "🐆 Modern Jaguar Jungle Express",
+        photoUrl: mexicoImg,
+        funFacts: [
+          "🐆 Top Speed: Jaguar-green jungle speedliner zooms at 100 mph! 🐆",
+          "This brand-new, super-cool train is painted in a beautiful jaguar-green coat and travels through tropical jungles! 🐆🌴",
+          "It zooms past ancient Mayan stone pyramids and beautiful glowing water sinkholes called cenotes! 🛕💦",
+          "You can look out the window and watch wild monkeys swinging and colorful toucans flying next to your tracks! 🐒🦜"
         ]
       }
     ]
