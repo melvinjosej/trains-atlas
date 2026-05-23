@@ -58,7 +58,7 @@ const COUNTRY_SYNONYMS = {
   'se': ['sweden', 'stockholm', 'inlandsbanan', 'arctic circle', 'swedn'],
   'bd': ['bangladesh', 'dhaka', 'maitree express', 'jamuna', 'bangladeshi'],
   'at': ['austria', 'vienna', 'semmering', 'railjet', 'austira', 'ostria'],
-  'bo': ['bolivia', 'la paz', 'teleferico', 'flying train', 'cable train', 'bolivya'],
+  'bo': ['bolivia', 'la paz', 'expreso del sur', 'salt train', 'uyuni', 'bolivya'],
   'mx': ['mexico', 'tren maya', 'mayan train', 'yucatan', 'mexico train', 'mexico bullet', 'mexico highspeed']
 }
 

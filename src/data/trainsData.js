@@ -1201,14 +1201,14 @@ export const trainsData = [
     flagEmoji: "🇧🇴",
     trains: [
       {
-        name: "Mi Teleférico",
-        type: "🚠 Futuristic Flying Cable-Train",
+        name: "Expreso del Sur",
+        type: "🚂 Andean Salt-Flat Express",
         photoUrl: boliviaImg,
         funFacts: [
-          "☁️ Top Speed: Futuristic flying cable-train glides above the clouds at 12 mph! ☁️",
-          "This is 'Mi Teleférico'—a giant network of bright, colorful cabins that fly high in the sky above the tallest mountains! 🚠☁️",
-          "It is a real-life flying train! You glide directly through puffy white clouds and look down at tiny houses and snowy peaks! 🏔️🏠",
-          "It is completely electric and silent, soaring past giant rocky canyons like a magic flying capsule! 🚠✨"
+          "🧂 Top Speed: High-mountain salt express chugs at 45 mph! 🧂",
+          "This strong blue and yellow diesel train climbs super-high up into the mountains to a magical white desert made entirely of real salt! 🧂⛰️",
+          "It drives past the famous 'Train Cemetery'—a giant, sand-swept playground filled with historic antique steam locomotives you can climb on! 🚂🏜️",
+          "You can look out the window and see herds of fluffy llamas and pink flamingos standing in matching shallow salt lakes! 🦙🦩"
         ]
       }
     ]
