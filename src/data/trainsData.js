@@ -71,6 +71,9 @@ import israelImg from '../assets/trains/israel.jpeg'
 import syriaImg from '../assets/trains/syria.jpeg'
 import georgiaImg from '../assets/trains/georgia.jpeg'
 import azerbaijanImg from '../assets/trains/azerbaijan.jpeg'
+import portugalImg from '../assets/trains/portugal.jpeg'
+import irelandImg from '../assets/trains/ireland.jpeg'
+import netherlandsImg from '../assets/trains/netherlands.jpeg'
 
 export const trainsData = [
   {
@@ -1408,6 +1411,63 @@ export const trainsData = [
           "This is the Baku-Tbilisi Express—a futuristic sleeping train that carries families across deep mountain deserts! 🛌🏜️",
           "You get to sleep in warm, cozy bunk beds while watching the stars and moon light up the rocky canyons! 🌌🎒",
           "It chugs along the ancient Silk Road trade route, passing golden sands and ancient stone palaces! 🕌🐫"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PT",
+    countryName: "Portugal",
+    capital: "Lisbon",
+    flagEmoji: "🇵🇹",
+    trains: [
+      {
+        name: "Alfa Pendular",
+        type: "🚀 Sleek Hydraulic Tilting Bullet Train",
+        photoUrl: portugalImg,
+        funFacts: [
+          "🚀 Top Speed: Shiny orange tilting bullet train zooms at 137 mph! 🚀",
+          "The Alfa Pendular has a magical tilting belly that lets it lean into corners just like a fast racing motorcycle! 🏍️📐",
+          "It flies past beautiful ocean beaches, giant orange bridges, and colorful seaside castles! 🏖️🌉",
+          "It is super smooth inside, meaning you can draw a picture of a train without your crayon slipping! 🖍️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IE",
+    countryName: "Ireland",
+    capital: "Dublin",
+    flagEmoji: "🇮🇪",
+    trains: [
+      {
+        name: "Enterprise Express",
+        type: "🍀 Sleek Emerald Castle Speedliner",
+        photoUrl: irelandImg,
+        funFacts: [
+          "🍀 Top Speed: Emerald valley express zooms at 90 mph! 🍀",
+          "The Enterprise Express is a sleek, colorful train that chugs past the greenest hills in the whole world! 🍀🇮🇪",
+          "It flies past mysterious crumbling stone castles where real kings and knights used to live! 🏰🛡️",
+          "If you look out the window, you can wave at thousands of fluffy white sheep eating green grass on the hills! 🐏🍀"
+        ]
+      }
+    ]
+  },
+  {
+    id: "NL",
+    countryName: "Netherlands",
+    capital: "Amsterdam",
+    flagEmoji: "🇳🇱",
+    trains: [
+      {
+        name: "ICNG (Intercity Nieuwe Generatie)",
+        type: "🚀 Futuristic Wind-Powered Speed Rocket",
+        photoUrl: netherlandsImg,
+        funFacts: [
+          "🚀 Top Speed: Bright yellow-and-blue Dutch bullet zooms at 124 mph! 🚀",
+          "This brand-new, futuristic train is painted in bright yellow and blue and is shaped like a fast rocket! 🇳🇱💨",
+          "It flies past giant, rotating wooden windmills and massive fields filled with millions of bright red tulips! 🌀🌷",
+          "It gets all its power from clean wind energy, meaning it is a friendly helper for the planet! 🌬️🍃"
         ]
       }
     ]

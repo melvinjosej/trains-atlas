@@ -68,7 +68,10 @@ const COUNTRY_SYNONYMS = {
   'il': ['israel', 'tel aviv', 'jerusalem', 'siemens', 'israeli'],
   'sy': ['syria', 'damascus', 'hedjaz', 'desert steam', 'syrian'],
   'ge': ['georgia', 'tbilisi', 'black sea', 'stadler', 'georgian'],
-  'az': ['azerbaijan', 'baku', 'silk road', 'ady', 'azerbaijani']
+  'az': ['azerbaijan', 'baku', 'silk road', 'ady', 'azerbaijani'],
+  'pt': ['portugal', 'lisbon', 'alfa pendular', 'porto', 'portuguese'],
+  'ie': ['ireland', 'dublin', 'enterprise', 'belfast', 'irish'],
+  'nl': ['netherlands', 'amsterdam', 'holland', 'icng', 'flying dutchman', 'dutch']
 }
 
 function VoiceControl({ onSelectCountry }) {
