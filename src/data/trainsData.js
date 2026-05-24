@@ -62,6 +62,8 @@ import austriaImg from '../assets/trains/austria.jpeg'
 import vibrantexpressImg from '../assets/trains/vibrantexpress.jpeg'
 import boliviaImg from '../assets/trains/bolivia.jpeg'
 import mexicoImg from '../assets/trains/mexico.jpeg'
+import tajikistanImg from '../assets/trains/tajikistan.jpeg'
+import chileImg from '../assets/trains/chile.jpeg'
 
 export const trainsData = [
   {
@@ -1228,6 +1230,44 @@ export const trainsData = [
           "This brand-new, super-cool train is painted in a beautiful jaguar-green coat and travels through tropical jungles! 🐆🌴",
           "It zooms past ancient Mayan stone pyramids and beautiful glowing water sinkholes called cenotes! 🛕💦",
           "You can look out the window and watch wild monkeys swinging and colorful toucans flying next to your tracks! 🐒🦜"
+        ]
+      }
+    ]
+  },
+  {
+    id: "TJ",
+    countryName: "Tajikistan",
+    capital: "Dushanbe",
+    flagEmoji: "🇹🇯",
+    trains: [
+      {
+        name: "Dushanbe-Kulob Express",
+        type: "🚂 Pamir Mountain Glacier Valley Express",
+        photoUrl: tajikistanImg,
+        funFacts: [
+          "🏔️ Top Speed: Pamir mountain diesel chugger climbs at 50 mph! 🏔️",
+          "This big, strong red and blue diesel train chugs past the giant Pamir Mountains, which are so tall they are called the 'Roof of the World'! 🏔️👑",
+          "It rolls alongside roaring rivers made of melted blue ice and goes through high mountain tunnels! 🌊🚇",
+          "You can wave at mountain eagles soaring in the sky and watch fluffy mountain sheep climbing on rocky cliffs! 🦅🐑"
+        ]
+      }
+    ]
+  },
+  {
+    id: "CL",
+    countryName: "Chile",
+    capital: "Santiago",
+    flagEmoji: "🇨🇱",
+    trains: [
+      {
+        name: "EFE Chillán Speedliner",
+        type: "🚀 South America's Fastest Bullet Train",
+        photoUrl: chileImg,
+        funFacts: [
+          "🚀 Top Speed: South America's fastest bullet train zooms at 100 mph! 🚀",
+          "This sleek red, white, and blue bullet train is officially the fastest on-track passenger train in all of South America! 🇨🇱💨",
+          "It zooms right past giant active volcanoes that have puffy smoke clouds coming out of their tops! 🌋☁️",
+          "It crosses high steel bridges over massive rushing rivers and flies past green vineyards under the hot sun! 🍇🌉"
         ]
       }
     ]
