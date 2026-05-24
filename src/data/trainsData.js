@@ -74,6 +74,9 @@ import azerbaijanImg from '../assets/trains/azerbaijan.jpeg'
 import portugalImg from '../assets/trains/portugal.jpeg'
 import irelandImg from '../assets/trains/ireland.jpeg'
 import netherlandsImg from '../assets/trains/netherlands.jpeg'
+import bulgariaImg from '../assets/trains/bulgaria.jpeg'
+import serbiaImg from '../assets/trains/serbia.jpeg'
+import slovakiaImg from '../assets/trains/slovakia.jpeg'
 
 export const trainsData = [
   {
@@ -1353,7 +1356,7 @@ export const trainsData = [
           "⚡ Top Speed: Double-decker valley speedliner zooms at 100 mph! ⚡",
           "This modern passenger train is double-decker! You can sit on the very top roof level and look down at deep valleys! 🪜🏔️",
           "It zooms over massive, giant concrete bridges hanging high in the air and goes through deep mountain tunnels! 🌉🚇",
-          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a floating magic carpet! 🧞"
+          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a flying magic carpet! 🧞"
         ]
       }
     ]
@@ -1468,6 +1471,63 @@ export const trainsData = [
           "This brand-new, futuristic train is painted in bright yellow and blue and is shaped like a fast rocket! 🇳🇱💨",
           "It flies past giant, rotating wooden windmills and massive fields filled with millions of bright red tulips! 🌀🌷",
           "It gets all its power from clean wind energy, meaning it is a friendly helper for the planet! 🌬️🍃"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BG",
+    countryName: "Bulgaria",
+    capital: "Sofia",
+    flagEmoji: "🇧🇬",
+    trains: [
+      {
+        name: "Septemvri-Dobrinishte Narrow Gauge",
+        type: "🌲 Breathtaking Mountain Forest Narrow-Gauge",
+        photoUrl: bulgariaImg,
+        funFacts: [
+          "⛰️ Top Speed: Cute mountain forest chugger climbs at 22 mph! ⛰️",
+          "This little red-and-cream train climbs super-high up into the giant Rhodope mountains! 🏔️🚂",
+          "It chugs through 35 dark tunnels carved by hand right out of the rocky mountains! 🚇🧗",
+          "It stops at the highest train station in the Balkans, where fluffy mountain sheep grazing under pine trees wave at you! 🐑🌲"
+        ]
+      }
+    ]
+  },
+  {
+    id: "RS",
+    countryName: "Serbia",
+    capital: "Belgrade",
+    flagEmoji: "🇷🇸",
+    trains: [
+      {
+        name: "Soko (Falcon)",
+        type: "🚀 Sleek Double-Decker Falcon Bullet Train",
+        photoUrl: serbiaImg,
+        funFacts: [
+          "🚀 Top Speed: Sleek falcon bullet train zooms at 124 mph! 🚀",
+          "This double-decker bullet train is named 'Soko'—which means 'Falcon'—because it flies as fast as a falcon bird! 🦅💨",
+          "It is two stories tall! Sit on the top roof level and watch the giant Danube River zoom far underneath your wheels! 🪜🌊",
+          "It has huge panoramic windows and slides so smoothly that it feels like a flying rocket ship! 🚀"
+        ]
+      }
+    ]
+  },
+  {
+    id: "SK",
+    countryName: "Slovakia",
+    capital: "Bratislava",
+    flagEmoji: "🇸🇰",
+    trains: [
+      {
+        name: "High Tatras Mountain Railway",
+        type: "❄️ Snowy Fairytale Mountain Toy Train",
+        photoUrl: slovakiaImg,
+        funFacts: [
+          "❄️ Top Speed: Snowy High Tatras toy train climbs at 37 mph! ❄️",
+          "This cute red-and-white mountain train climbs high up into the snowy High Tatras mountains! ❄️🏔️",
+          "It chugs directly past giant frozen lakes and snowy pine forests that look exactly like a fairytale Christmas card! 🌲⛄",
+          "The train has huge glass windows so you can watch skiers zooming down the slopes and wave at forest deer! 🦌⛷️"
         ]
       }
     ]
