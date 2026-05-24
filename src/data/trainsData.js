@@ -64,6 +64,7 @@ import boliviaImg from '../assets/trains/bolivia.jpeg'
 import mexicoImg from '../assets/trains/mexico.jpeg'
 import tajikistanImg from '../assets/trains/tajikistan.jpeg'
 import chileImg from '../assets/trains/chile.jpeg'
+import hungaryImg from '../assets/trains/hungary.jpeg'
 
 export const trainsData = [
   {
@@ -1268,6 +1269,25 @@ export const trainsData = [
           "This sleek red, white, and blue bullet train is officially the fastest on-track passenger train in all of South America! 🇨🇱💨",
           "It zooms right past giant active volcanoes that have puffy smoke clouds coming out of their tops! 🌋☁️",
           "It crosses high steel bridges over massive rushing rivers and flies past green vineyards under the hot sun! 🍇🌉"
+        ]
+      }
+    ]
+  },
+  {
+    id: "HU",
+    countryName: "Hungary",
+    capital: "Budapest",
+    flagEmoji: "🇭🇺",
+    trains: [
+      {
+        name: "Gyermekvasút (Children's Railway)",
+        type: "🌲 Miniature Kids-Conductor Forest Railway",
+        photoUrl: hungaryImg,
+        funFacts: [
+          "🌲 Top Speed: Forest children's express glides at a safe 12 mph! 🌲",
+          "This amazing forest railway is almost completely run by school children just like you! They sell tickets, blow whistles, and wave flags! 🧑‍✈️👧",
+          "It chugs through thick green oak forests and past adventure playgrounds in the beautiful Buda hills! 🌳🌲",
+          "It has open-air summer carriages where you can feel the fresh forest breeze and wave at wild forest rabbits! 🐰🍃"
         ]
       }
     ]
