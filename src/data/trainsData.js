@@ -67,6 +67,10 @@ import chileImg from '../assets/trains/chile.jpeg'
 import hungaryImg from '../assets/trains/hungary.jpeg'
 import iraqImg from '../assets/trains/iraq.jpeg'
 import lebanonImg from '../assets/trains/lebanon.jpeg'
+import israelImg from '../assets/trains/israel.jpeg'
+import syriaImg from '../assets/trains/syria.jpeg'
+import georgiaImg from '../assets/trains/georgia.jpeg'
+import azerbaijanImg from '../assets/trains/azerbaijan.jpeg'
 
 export const trainsData = [
   {
@@ -1328,6 +1332,82 @@ export const trainsData = [
           "This beautiful old steam train climbed super-steep mountain cliffs using a special set of gears under its belly! ⚙️⛰️",
           "It puffed giant clouds of white steam as it traveled through magical forests of giant cedar trees! 🌲💨",
           "It chugged right next to ancient stone castles and looked directly down at the beautiful, bright blue Mediterranean Sea! 🏰🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IL",
+    countryName: "Israel",
+    capital: "Jerusalem",
+    flagEmoji: "🇮🇱",
+    trains: [
+      {
+        name: "Jerusalem Valley Speedliner",
+        type: "🚀 Sleek Double-Decker Mountain Express",
+        photoUrl: israelImg,
+        funFacts: [
+          "⚡ Top Speed: Double-decker valley speedliner zooms at 100 mph! ⚡",
+          "This modern passenger train is double-decker! You can sit on the very top roof level and look down at deep valleys! 🪜🏔️",
+          "It zooms over massive, giant concrete bridges hanging high in the air and goes through deep mountain tunnels! 🌉🚇",
+          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a floating magic carpet! 🧞"
+        ]
+      }
+    ]
+  },
+  {
+    id: "SY",
+    countryName: "Syria",
+    capital: "Damascus",
+    flagEmoji: "🇸🇾",
+    trains: [
+      {
+        name: "Hedjaz Railway Steam Safari",
+        type: "🚂 Ancient Mesopotamian Desert Steam Express",
+        photoUrl: syriaImg,
+        funFacts: [
+          "🚂 Top Speed: Desert steam safari chugs at a cozy 30 mph! 🚂",
+          "This is a beautiful, 100-year-old historic steam engine that puffs massive, giant white clouds of real steam! ☁️🚂",
+          "It chugs past ancient desert castles, green palm oases, and crosses beautiful old stone arch bridges! 🌉🌴",
+          "You can look out the window and watch desert camel caravans walking past the massive sandy dunes! 🐫🏜️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GE",
+    countryName: "Georgia",
+    capital: "Tbilisi",
+    flagEmoji: "🇬🇪",
+    trains: [
+      {
+        name: "Black Sea Coast Speedliner",
+        type: "🚀 Giant Double-Decker Ocean Express",
+        photoUrl: georgiaImg,
+        funFacts: [
+          "🚀 Top Speed: Giant Black Sea double-decker flies at 100 mph! 🚀",
+          "This futuristic train is two stories tall! Sit on the top roof level and look down at active ocean waves! 🪜🌊",
+          "It climbs through green Caucasus mountain forests and drives directly alongside the sparkling shores of the Black Sea! 🏔️🏖️",
+          "If you watch closely out your window, you can see real wild dolphins jumping and splashing in the blue ocean waves! 🐬🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AZ",
+    countryName: "Azerbaijan",
+    capital: "Baku",
+    flagEmoji: "🇦🇿",
+    trains: [
+      {
+        name: "ADY Silk Road Sleeper",
+        type: "🛌 Modern Silk Road Bunk-Bed Night Sleeper",
+        photoUrl: azerbaijanImg,
+        funFacts: [
+          "🛌 Top Speed: Silk Road night sleeper glides at 100 mph! 🛌",
+          "This is the Baku-Tbilisi Express—a futuristic sleeping train that carries families across deep mountain deserts! 🛌🏜️",
+          "You get to sleep in warm, cozy bunk beds while watching the stars and moon light up the rocky canyons! 🌌🎒",
+          "It chugs along the ancient Silk Road trade route, passing golden sands and ancient stone palaces! 🕌🐫"
         ]
       }
     ]

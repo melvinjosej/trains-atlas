@@ -64,7 +64,11 @@ const COUNTRY_SYNONYMS = {
   'cl': ['chile', 'santiago', 'efe chillan', 'efe bullet', 'volcano train', 'chili'],
   'hu': ['hungary', 'budapest', 'children railway', 'gyermekvasut', 'hungaria'],
   'iq': ['iraq', 'baghdad', 'basra', 'mesopotamia', 'iraqi'],
-  'lb': ['lebanon', 'beirut', 'cedar train', 'rayak', 'lebanese']
+  'lb': ['lebanon', 'beirut', 'cedar train', 'rayak', 'lebanese'],
+  'il': ['israel', 'tel aviv', 'jerusalem', 'siemens', 'israeli'],
+  'sy': ['syria', 'damascus', 'hedjaz', 'desert steam', 'syrian'],
+  'ge': ['georgia', 'tbilisi', 'black sea', 'stadler', 'georgian'],
+  'az': ['azerbaijan', 'baku', 'silk road', 'ady', 'azerbaijani']
 }
 
 function VoiceControl({ onSelectCountry }) {
