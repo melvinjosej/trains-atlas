@@ -65,6 +65,8 @@ import mexicoImg from '../assets/trains/mexico.jpeg'
 import tajikistanImg from '../assets/trains/tajikistan.jpeg'
 import chileImg from '../assets/trains/chile.jpeg'
 import hungaryImg from '../assets/trains/hungary.jpeg'
+import iraqImg from '../assets/trains/iraq.jpeg'
+import lebanonImg from '../assets/trains/lebanon.jpeg'
 
 export const trainsData = [
   {
@@ -1288,6 +1290,44 @@ export const trainsData = [
           "This amazing forest railway is almost completely run by school children just like you! They sell tickets, blow whistles, and wave flags! 🧑‍✈️👧",
           "It chugs through thick green oak forests and past adventure playgrounds in the beautiful Buda hills! 🌳🌲",
           "It has open-air summer carriages where you can feel the fresh forest breeze and wave at wild forest rabbits! 🐰🍃"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IQ",
+    countryName: "Iraq",
+    capital: "Baghdad",
+    flagEmoji: "🇮🇶",
+    trains: [
+      {
+        name: "DEM 2700 Bullet Train",
+        type: "🚀 Mesopotamian Desert Bullet Train",
+        photoUrl: iraqImg,
+        funFacts: [
+          "🚀 Top Speed: Mesopotamian desert speedliner zooms at 100 mph! 🚀",
+          "This sleek blue and white bullet train is shaped like a futuristic space rocket and flies across the golden sands! 🇮🇶💨",
+          "It zooms past the legendary Tigris and Euphrates rivers and ancient giant sandy ruins from thousands of years ago! 🌊🏰",
+          "You can look out the window and wave at desert camel caravans and watch green date palms zoom by! 🐫🌴"
+        ]
+      }
+    ]
+  },
+  {
+    id: "LB",
+    countryName: "Lebanon",
+    capital: "Beirut",
+    flagEmoji: "🇱🇧",
+    trains: [
+      {
+        name: "Rayak-Beirut Mountain Cog Train",
+        type: "🌲 Breathtaking Cedar Mountain Gear Train",
+        photoUrl: lebanonImg,
+        funFacts: [
+          "🌲 Top Speed: Steep cedar-mountain steam train climbs at 15 mph! 🌲",
+          "This beautiful old steam train climbed super-steep mountain cliffs using a special set of gears under its belly! ⚙️⛰️",
+          "It puffed giant clouds of white steam as it traveled through magical forests of giant cedar trees! 🌲💨",
+          "It chugged right next to ancient stone castles and looked directly down at the beautiful, bright blue Mediterranean Sea! 🏰🌊"
         ]
       }
     ]

@@ -62,7 +62,9 @@ const COUNTRY_SYNONYMS = {
   'mx': ['mexico', 'tren maya', 'mayan train', 'yucatan', 'mexico train', 'mexico bullet', 'mexico highspeed'],
   'tj': ['tajikistan', 'dushanbe', 'kulob', 'pamir', 'tajakistan'],
   'cl': ['chile', 'santiago', 'efe chillan', 'efe bullet', 'volcano train', 'chili'],
-  'hu': ['hungary', 'budapest', 'children railway', 'gyermekvasut', 'hungaria']
+  'hu': ['hungary', 'budapest', 'children railway', 'gyermekvasut', 'hungaria'],
+  'iq': ['iraq', 'baghdad', 'basra', 'mesopotamia', 'iraqi'],
+  'lb': ['lebanon', 'beirut', 'cedar train', 'rayak', 'lebanese']
 }
 
 function VoiceControl({ onSelectCountry }) {
