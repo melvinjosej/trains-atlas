@@ -77,7 +77,11 @@ const COUNTRY_SYNONYMS = {
   'sk': ['slovakia', 'bratislava', 'tatras', 'toy train', 'high tatras', 'slovakya'],
   'bt': ['bhutan', 'paro', 'druk', 'thunder dragon', 'bhutanes'],
   'kg': ['kyrgyzstan', 'bishkek', 'boom gorge', 'issyk kul', 'canyon explorer', 'kyrgyztan'],
-  'kp': ['north korea', 'pyongyang', 'chollima', 'deepest subway', 'korea']
+  'kp': ['north korea', 'pyongyang', 'chollima', 'deepest subway', 'korea'],
+  'pl': ['poland', 'warsaw', 'pendolino', 'polish'],
+  'lt': ['lithuania', 'vilnius', 'kaunas', 'lithuvanian', 'lithuvania', 'lithuanian'],
+  'lv': ['latvia', 'riga', 'blue arrow', 'latvian'],
+  'ee': ['estonia', 'tallinn', 'carrot rocket', 'porgand', 'estonian']
 }
 
 function VoiceControl({ onSelectCountry }) {

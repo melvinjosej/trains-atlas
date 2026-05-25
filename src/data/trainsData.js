@@ -80,6 +80,10 @@ import slovakiaImg from '../assets/trains/slovakia.jpeg'
 import bhutanImg from '../assets/trains/bhutan.jpeg'
 import kyrgyzstanImg from '../assets/trains/kyrgyzstan.jpeg'
 import northkoreaImg from '../assets/trains/northkorea.jpeg'
+import polandImg from '../assets/trains/poland.jpeg'
+import lithuaniaImg from '../assets/trains/lithuania.jpeg'
+import latviaImg from '../assets/trains/latvia.jpeg'
+import estoniaImg from '../assets/trains/estonia.jpeg'
 
 export const trainsData = [
   {
@@ -1588,6 +1592,82 @@ export const trainsData = [
           "This train is named after 'Chollima'—a magical flying horse from fairy tales that has giant wings and flies through the sky! 🐎💨",
           "It is the deepest subway in the whole world! You have to ride a giant escalator for 4 whole minutes just to reach it! 🪜🚇",
           "The underground stations look like glittering crystal palaces with giant sparkling chandeliers and golden pillars! 🪩🏰"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PL",
+    countryName: "Poland",
+    capital: "Warsaw",
+    flagEmoji: "🇵🇱",
+    trains: [
+      {
+        name: "PKP Pendolino ED250",
+        type: "🚀 Sleek Pointy-Nosed Eagle Bullet Train",
+        photoUrl: polandImg,
+        funFacts: [
+          "🚀 Top Speed: Pointy-nosed eagle bullet train zooms at 155 mph! 🚀",
+          "This sleek silver bullet train has a pointy nose that looks exactly like a fast flying eagle! 🦅💨",
+          "It flies past giant medieval stone castles, thick green forests, and crosses bridges high above the river! 🏰🌉",
+          "Inside the train, chefs bake fresh chocolate croissants and warm tea to serve you at your seat! 🥐☕"
+        ]
+      }
+    ]
+  },
+  {
+    id: "LT",
+    countryName: "Lithuania",
+    capital: "Vilnius",
+    flagEmoji: "🇱🇹",
+    trains: [
+      {
+        name: "LTG Stadler KISS",
+        type: "⚡ Modern Double-Decker Castle Express",
+        photoUrl: lithuaniaImg,
+        funFacts: [
+          "⚡ Top Speed: Double-decker castle express zooms at 100 mph! ⚡",
+          "This train is double-decker! Sit on the top roof level and look down at fluffy sheep and green trees! 🪜🌳",
+          "It chugs past beautiful old castles built directly on small islands in the middle of lakes! 🏰🌊",
+          "It is completely powered by clean green electricity, making it a super-friendly helper for the planet! 🔌🌍"
+        ]
+      }
+    ]
+  },
+  {
+    id: "LV",
+    countryName: "Latvia",
+    capital: "Riga",
+    flagEmoji: "🇱🇻",
+    trains: [
+      {
+        name: "Škoda Blue Arrow",
+        type: "🚀 Sleek Aerodynamic Baltic Blue Speedliner",
+        photoUrl: latviaImg,
+        funFacts: [
+          "🚀 Top Speed: Baltic Blue Arrow speedliner zooms at 100 mph! 🚀",
+          "This brand-new train is painted in bright electric blue and yellow, looking like a fast shooting star! ☄️💙",
+          "It flies through thick green pine forests and rolls directly next to the sandy beaches of the Baltic Sea! 🌲🏖️",
+          "It has wide, low floors and giant windows so children can watch seagulls soaring in the sky! 🦅🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "EE",
+    countryName: "Estonia",
+    capital: "Tallinn",
+    flagEmoji: "🇪🇪",
+    trains: [
+      {
+        name: "Elron Neon-Orange 'Carrot'",
+        type: "🚀 Futuristic Orange 'Carrot' Speedliner",
+        photoUrl: estoniaImg,
+        funFacts: [
+          "🚀 Top Speed: Neon-orange 'Carrot Rocket' zooms at 100 mph! 🚀",
+          "Locals call this sleek train 'The Carrot' because it is painted in a brilliant, glowing orange coat! 🥕💨",
+          "It flies silently across green swamps, past wooden windmills, and through deep fairytale pine forests! 🌲🌀",
+          "It is extremely quiet and smooth, letting families play card games and draw pictures while riding! 🃏🎨"
         ]
       }
     ]
