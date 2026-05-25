@@ -77,6 +77,9 @@ import netherlandsImg from '../assets/trains/netherlands.jpeg'
 import bulgariaImg from '../assets/trains/bulgaria.jpeg'
 import serbiaImg from '../assets/trains/serbia.jpeg'
 import slovakiaImg from '../assets/trains/slovakia.jpeg'
+import bhutanImg from '../assets/trains/bhutan.jpeg'
+import kyrgyzstanImg from '../assets/trains/kyrgyzstan.jpeg'
+import northkoreaImg from '../assets/trains/northkorea.jpeg'
 
 export const trainsData = [
   {
@@ -1528,6 +1531,63 @@ export const trainsData = [
           "This cute red-and-white mountain train climbs high up into the snowy High Tatras mountains! ❄️🏔️",
           "It chugs directly past giant frozen lakes and snowy pine forests that look exactly like a fairytale Christmas card! 🌲⛄",
           "The train has huge glass windows so you can watch skiers zooming down the slopes and wave at forest deer! 🦌⛷️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BT",
+    countryName: "Bhutan",
+    capital: "Thimphu",
+    flagEmoji: "🇧🇹",
+    trains: [
+      {
+        name: "Paro Valley Scenic Express",
+        type: "🐉 Breathtaking Thunder Dragon Mountain Toy Train",
+        photoUrl: bhutanImg,
+        funFacts: [
+          "🐉 Top Speed: Thunder Dragon mountain train climbs at a cozy 30 mph! 🐉",
+          "This magical train has a giant golden Thunder Dragon painted on its sides, carrying you high into the snowy Himalayan mountains! 🐉🏔️",
+          "It winds past spectacular temples built right onto high rocky cliffs and crosses bridges over rushing cold glacial rivers! 🏰🌊",
+          "If you wave out your window, you can spot fluffy red pandas sleeping in the tall green bamboo trees! 🐼🎋"
+        ]
+      }
+    ]
+  },
+  {
+    id: "KG",
+    countryName: "Kyrgyzstan",
+    capital: "Bishkek",
+    flagEmoji: "🇰🇬",
+    trains: [
+      {
+        name: "Bishkek-Balykchy Scenic Express",
+        type: "⛰️ Breathtaking Tian Shan Canyon Explorer",
+        photoUrl: kyrgyzstanImg,
+        funFacts: [
+          "⛰️ Top Speed: Tian Shan canyon explorer climbs at 45 mph! ⛰️",
+          "This big, strong green diesel train climbs through giant canyons with bright red rock walls that look like fire! 🌋🧗",
+          "It rolls along roaring mountain streams and takes you to a giant, sparkling blue mountain lake surrounded by snowy peaks! 🌊🏔️",
+          "You can wave at wild golden eagles flying in the clouds and watch fluffy mountain sheep climb rocky cliffs! 🦅🐑"
+        ]
+      }
+    ]
+  },
+  {
+    id: "KP",
+    countryName: "North Korea",
+    capital: "Pyongyang",
+    flagEmoji: "🇰🇵",
+    trains: [
+      {
+        name: "Chollima Metro Express",
+        type: "🐎 Breathtaking Deepest Underground Palace Express",
+        photoUrl: northkoreaImg,
+        funFacts: [
+          "🐎 Top Speed: Deepest underground space rocket zooms at 40 mph! 🐎",
+          "This train is named after 'Chollima'—a magical flying horse from fairy tales that has giant wings and flies through the sky! 🐎💨",
+          "It is the deepest subway in the whole world! You have to ride a giant escalator for 4 whole minutes just to reach it! 🪜🚇",
+          "The underground stations look like glittering crystal palaces with giant sparkling chandeliers and golden pillars! 🪩🏰"
         ]
       }
     ]
