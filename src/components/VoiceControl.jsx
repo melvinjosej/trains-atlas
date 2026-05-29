@@ -82,9 +82,9 @@ const COUNTRY_SYNONYMS = {
   'lt': ['lithuania', 'vilnius', 'kaunas', 'lithuvanian', 'lithuvania', 'lithuanian'],
   'lv': ['latvia', 'riga', 'blue arrow', 'latvian'],
   'ee': ['estonia', 'tallinn', 'carrot rocket', 'porgand', 'estonian'],
-  'gl': ['greenland', 'nuuk', 'sisimiut', 'dog sled', 'husky train', 'greenlander'],
-  'is': ['iceland', 'reykjavik', 'kari', 'harbor steam', 'volcano explorer', 'icelandic'],
-  'nz': ['new zealand', 'wellington', 'tranzalpine', 'kiwi explorer', 'newzealand']
+  'nz': ['new zealand', 'wellington', 'tranzalpine', 'kiwi explorer', 'newzealand'],
+  'ma': ['morocco', 'rabat', 'al boraq', 'boraq', 'casablanca', 'moroccan'],
+  'tw': ['taiwan', 'taipei', 'thsr', '700t', 'taiwan bullet', 'taiwanese']
 }
 
 function VoiceControl({ onSelectCountry }) {

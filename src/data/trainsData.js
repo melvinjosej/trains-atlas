@@ -84,9 +84,9 @@ import polandImg from '../assets/trains/poland.jpeg'
 import lithuaniaImg from '../assets/trains/lithuania.jpeg'
 import latviaImg from '../assets/trains/latvia.jpeg'
 import estoniaImg from '../assets/trains/estonia.jpeg'
-import greenlandImg from '../assets/trains/greenland.jpeg'
-import icelandImg from '../assets/trains/iceland.jpeg'
 import newzealandImg from '../assets/trains/newzealand.jpeg'
+import moroccoImg from '../assets/trains/morocco.jpeg'
+import taiwanImg from '../assets/trains/taiwan.jpeg'
 
 export const trainsData = [
   {
@@ -1676,44 +1676,6 @@ export const trainsData = [
     ]
   },
   {
-    id: "GL",
-    countryName: "Greenland",
-    capital: "Nuuk",
-    flagEmoji: "🇬🇱",
-    trains: [
-      {
-        name: "Sisimiut Dog-Sled Wilderness Express",
-        type: "🐕 Traditional Husky-Powered Dog Sled",
-        photoUrl: greenlandImg,
-        funFacts: [
-          "❄️ Top Speed: Husky-powered dog sled zooms across glacier ice at 15 mph! ❄️",
-          "Greenland is covered in giant sheets of bright blue glacier ice, so it has zero metal tracks! We ride on real dog sleds instead! 🐶🛷",
-          "This red wooden sled is pulled by a team of 12 fluffy, happy white huskies who love to run and play in the deep snow! 🐕❄️",
-          "You can look up and watch the green and purple Northern Lights dance across the starry night sky while your puppies run! 🌌💚"
-        ]
-      }
-    ]
-  },
-  {
-    id: "IS",
-    countryName: "Iceland",
-    capital: "Reykjavik",
-    flagEmoji: "🇮🇸",
-    trains: [
-      {
-        name: "Kári Harbor Steam Locomotive",
-        type: "🚂 Cute Vintage Harbor Steam Locomotive",
-        photoUrl: icelandImg,
-        funFacts: [
-          "🌋 Top Speed: Cute harbor steam engine puffs along at 10 mph! 🌋",
-          "Iceland is a magical island filled with hot erupting geysers, giant smoking volcanoes, and freezing blue glaciers! 🌋❄️",
-          "This cute little green steam engine is named Kári, and it used to puff puffy white steam clouds right next to the ocean harbor! 🚂💨",
-          "Wave at giant whales swimming in the cold ocean bay and watch warm geysers shoot hot water high into the sky! 🐳💦"
-        ]
-      }
-    ]
-  },
-  {
     id: "NZ",
     countryName: "New Zealand",
     capital: "Wellington",
@@ -1728,6 +1690,44 @@ export const trainsData = [
           "This beautiful blue train climbs high up into the snowy Southern Alps, passing giant waterfalls and turquoise mountain lakes! 🏔️🌊",
           "It has a special open-air carriage with no windows, so you can feel the cool mountain wind in your hair! 🍃🚂",
           "Keep your eyes open for wild Kea birds—the only mountain parrots in the world who love to play tricks on travelers! 🦜🇳🇿"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MA",
+    countryName: "Morocco",
+    capital: "Rabat",
+    flagEmoji: "🇲🇦",
+    trains: [
+      {
+        name: "Al Boraq TGV Bullet Train",
+        type: "🚀 Africa's First & Fastest High-Speed Double-Decker Bullet Train",
+        photoUrl: moroccoImg,
+        funFacts: [
+          "🚀 Top Speed: Africa's fastest bullet train zooms at a blazing 200 mph! 🚀",
+          "This double-decker speed rocket is officially the very first and fastest high-speed train in all of Africa! 🇲🇦💨",
+          "Sit on the top roof deck of this royal TGV Duplex and watch deserts, green valleys, and historic white castles fly past! 🪜🏜️",
+          "It is painted in beautiful national red, white, and blue stripes and slides incredibly quiet and smooth! 🚀"
+        ]
+      }
+    ]
+  },
+  {
+    id: "TW",
+    countryName: "Taiwan",
+    capital: "Taipei",
+    flagEmoji: "🇹🇼",
+    trains: [
+      {
+        name: "Taiwan High Speed Rail 700T",
+        type: "🚀 Sleek Shinkansen-Based Tropical Bullet Train",
+        photoUrl: taiwanImg,
+        funFacts: [
+          "⚡ Top Speed: Sleek Shinkansen-based bullet train zooms at 186 mph! ⚡",
+          "This super-cool white-and-orange bullet train is based on Japan's famous Shinkansen space-rocket! 🚀🍊",
+          "It flies past towering tropical green mountains, colorful ancient temples, and shiny green rice fields! 🏔️🌾",
+          "It has automatic tilting engines, free high-speed Wi-Fi, and rotating seats that spin in a full circle! 🛜🌀"
         ]
       }
     ]
