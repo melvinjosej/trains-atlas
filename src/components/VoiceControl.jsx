@@ -84,7 +84,8 @@ const COUNTRY_SYNONYMS = {
   'ee': ['estonia', 'tallinn', 'carrot rocket', 'porgand', 'estonian'],
   'nz': ['new zealand', 'wellington', 'tranzalpine', 'kiwi explorer', 'newzealand'],
   'ma': ['morocco', 'rabat', 'al boraq', 'boraq', 'casablanca', 'moroccan'],
-  'tw': ['taiwan', 'taipei', 'thsr', '700t', 'taiwan bullet', 'taiwanese']
+  'tw': ['taiwan', 'taipei', 'thsr', '700t', 'taiwan bullet', 'taiwanese'],
+  'cz': ['czechia', 'prague', 'pendolino', 'czech republic', 'czech']
 }
 
 function VoiceControl({ onSelectCountry }) {

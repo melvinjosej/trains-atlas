@@ -87,6 +87,7 @@ import estoniaImg from '../assets/trains/estonia.jpeg'
 import newzealandImg from '../assets/trains/newzealand.jpeg'
 import moroccoImg from '../assets/trains/morocco.jpeg'
 import taiwanImg from '../assets/trains/taiwan.jpeg'
+import czechiaImg from '../assets/trains/czechia.jpeg'
 
 export const trainsData = [
   {
@@ -1366,7 +1367,7 @@ export const trainsData = [
           "⚡ Top Speed: Double-decker valley speedliner zooms at 100 mph! ⚡",
           "This modern passenger train is double-decker! You can sit on the very top roof level and look down at deep valleys! 🪜🏔️",
           "It zooms over massive, giant concrete bridges hanging high in the air and goes through deep mountain tunnels! 🌉🚇",
-          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a floating magic carpet! 🧞"
+          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a flying magic carpet! 🧞"
         ]
       }
     ]
@@ -1728,6 +1729,25 @@ export const trainsData = [
           "This super-cool white-and-orange bullet train is based on Japan's famous Shinkansen space-rocket! 🚀🍊",
           "It flies past towering tropical green mountains, colorful ancient temples, and shiny green rice fields! 🏔️🌾",
           "It has automatic tilting engines, free high-speed Wi-Fi, and rotating seats that spin in a full circle! 🛜🌀"
+        ]
+      }
+    ]
+  },
+  {
+    id: "CZ",
+    countryName: "Czechia",
+    capital: "Prague",
+    flagEmoji: "🇨🇿",
+    trains: [
+      {
+        name: "České Dráhy Pendolino CD 680",
+        type: "🚀 Sleek Tilting Central European Bullet Train",
+        photoUrl: czechiaImg,
+        funFacts: [
+          "🚀 Top Speed: Sleek tilting Czech bullet train zooms at 124 mph! 🚀",
+          "This beautiful silver and blue bullet train has a magical tilting belly that lets it lean into corners like a fast racing motorcycle! 📐🏍️",
+          "It flies past giant stone fairy-tale castles, zooms through dark mountain tunnels, and crosses ancient stone arch bridges! 🏰🌉",
+          "Inside the train, you can eat warm blueberry dumplings and drink hot chocolate while watching the pine forests zoom by! 🫐☕"
         ]
       }
     ]
