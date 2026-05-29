@@ -84,6 +84,9 @@ import polandImg from '../assets/trains/poland.jpeg'
 import lithuaniaImg from '../assets/trains/lithuania.jpeg'
 import latviaImg from '../assets/trains/latvia.jpeg'
 import estoniaImg from '../assets/trains/estonia.jpeg'
+import greenlandImg from '../assets/trains/greenland.jpeg'
+import icelandImg from '../assets/trains/iceland.jpeg'
+import newzealandImg from '../assets/trains/newzealand.jpeg'
 
 export const trainsData = [
   {
@@ -901,7 +904,7 @@ export const trainsData = [
     trains: [
       {
         name: "Great Railway of Venezuela",
-        type: "🚂 Lush Tropical Valley Express",
+        type: "🚀 Lush Tropical Valley Express",
         photoUrl: venezuelaImg,
         funFacts: [
           "🌴 Top Speed: Cruises past high mountain canyons at 50 mph! 🌴",
@@ -1363,7 +1366,7 @@ export const trainsData = [
           "⚡ Top Speed: Double-decker valley speedliner zooms at 100 mph! ⚡",
           "This modern passenger train is double-decker! You can sit on the very top roof level and look down at deep valleys! 🪜🏔️",
           "It zooms over massive, giant concrete bridges hanging high in the air and goes through deep mountain tunnels! 🌉🚇",
-          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a flying magic carpet! 🧞"
+          "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a floating magic carpet! 🧞"
         ]
       }
     ]
@@ -1668,6 +1671,63 @@ export const trainsData = [
           "Locals call this sleek train 'The Carrot' because it is painted in a brilliant, glowing orange coat! 🥕💨",
           "It flies silently across green swamps, past wooden windmills, and through deep fairytale pine forests! 🌲🌀",
           "It is extremely quiet and smooth, letting families play card games and draw pictures while riding! 🃏🎨"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GL",
+    countryName: "Greenland",
+    capital: "Nuuk",
+    flagEmoji: "🇬🇱",
+    trains: [
+      {
+        name: "Sisimiut Dog-Sled Wilderness Express",
+        type: "🐕 Traditional Husky-Powered Dog Sled",
+        photoUrl: greenlandImg,
+        funFacts: [
+          "❄️ Top Speed: Husky-powered dog sled zooms across glacier ice at 15 mph! ❄️",
+          "Greenland is covered in giant sheets of bright blue glacier ice, so it has zero metal tracks! We ride on real dog sleds instead! 🐶🛷",
+          "This red wooden sled is pulled by a team of 12 fluffy, happy white huskies who love to run and play in the deep snow! 🐕❄️",
+          "You can look up and watch the green and purple Northern Lights dance across the starry night sky while your puppies run! 🌌💚"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IS",
+    countryName: "Iceland",
+    capital: "Reykjavik",
+    flagEmoji: "🇮🇸",
+    trains: [
+      {
+        name: "Kári Harbor Steam Locomotive",
+        type: "🚂 Cute Vintage Harbor Steam Locomotive",
+        photoUrl: icelandImg,
+        funFacts: [
+          "🌋 Top Speed: Cute harbor steam engine puffs along at 10 mph! 🌋",
+          "Iceland is a magical island filled with hot erupting geysers, giant smoking volcanoes, and freezing blue glaciers! 🌋❄️",
+          "This cute little green steam engine is named Kári, and it used to puff puffy white steam clouds right next to the ocean harbor! 🚂💨",
+          "Wave at giant whales swimming in the cold ocean bay and watch warm geysers shoot hot water high into the sky! 🐳💦"
+        ]
+      }
+    ]
+  },
+  {
+    id: "NZ",
+    countryName: "New Zealand",
+    capital: "Wellington",
+    flagEmoji: "🇳🇿",
+    trains: [
+      {
+        name: "TranzAlpine Express",
+        type: "⛰️ Breathtaking Panoramic Alpine Express",
+        photoUrl: newzealandImg,
+        funFacts: [
+          "⛰️ Top Speed: Kiwi mountain explorer glides at 50 mph! ⛰️",
+          "This beautiful blue train climbs high up into the snowy Southern Alps, passing giant waterfalls and turquoise mountain lakes! 🏔️🌊",
+          "It has a special open-air carriage with no windows, so you can feel the cool mountain wind in your hair! 🍃🚂",
+          "Keep your eyes open for wild Kea birds—the only mountain parrots in the world who love to play tricks on travelers! 🦜🇳🇿"
         ]
       }
     ]
