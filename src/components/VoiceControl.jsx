@@ -29,7 +29,7 @@ const COUNTRY_SYNONYMS = {
   'om': ['oman', 'muscat', 'hajar', 'wadi'],
   'th': ['thailand', 'bangkok', 'chiang mai', 'srt'],
   'la': ['laos', 'lane xang', 'mekong', 'vientiane'],
-  'sg': ['singapore', 'mrt', 'sentosa', 'changi'],
+  'sg': ['singapore', 'eastern and oriental', 'luxury express', 'belmond', 'jungle train'],
   'hk': ['hong kong', 'vibrant express', 'kowloon', 'hongkong'],
   'hr': ['croatia', 'split', 'zagreb', 'croatya', 'hz'],
   'jo': ['jordan', 'amman', 'petra', 'wadi rum', 'jordanian'],
@@ -87,7 +87,10 @@ const COUNTRY_SYNONYMS = {
   'tw': ['taiwan', 'taipei', 'thsr', '700t', 'taiwan bullet', 'taiwanese'],
   'cz': ['czechia', 'prague', 'pendolino', 'czech republic', 'czech'],
   'lk': ['sri lanka', 'colombo', 'viceroy special', 'ocean coast', 'srilanka'],
-  'ph': ['philippines', 'manila', 'luzon', 'pnr', 'filipino', 'philipines']
+  'ph': ['philippines', 'manila', 'luzon', 'pnr', 'filipino', 'philipines'],
+  'ae': ['uae', 'united arab emirates', 'dubai', 'abu dhabi', 'etihad rail', 'emirates'],
+  'qa': ['qatar', 'doha', 'msheireb', 'tram', 'hydrogen tram', 'eco-tram'],
+  'bh': ['bahrain', 'manama', 'causeway express', 'causeway train', 'gulf express']
 }
 
 function VoiceControl({ onSelectCountry }) {

@@ -90,6 +90,9 @@ import taiwanImg from '../assets/trains/taiwan.jpeg'
 import czechiaImg from '../assets/trains/czechia.jpeg'
 import srilankaImg from '../assets/trains/srilanka.jpeg'
 import philippinesImg from '../assets/trains/philippines.jpeg'
+import uaeImg from '../assets/trains/uae.jpeg'
+import qatarImg from '../assets/trains/qatar.jpeg'
+import bahrainImg from '../assets/trains/bahrain.jpeg'
 
 export const trainsData = [
   {
@@ -716,14 +719,14 @@ export const trainsData = [
     flagEmoji: "🇸🇬",
     trains: [
       {
-        name: "Singapore MRT",
-        type: "🤖 Futuristic Driverless Metro",
+        name: "Eastern & Oriental Express",
+        type: "🚂 Royal Jungle Luxury Express",
         photoUrl: singaporeImg,
         funFacts: [
-          "⚡ Top Speed: Glides between skyscrapers at 50 mph! ⚡",
-          "This futuristic train is completely driverless! It drives itself using super-smart computers! 🤖",
-          "Because there is no driver cabin, children can stand right at the very front window and pretend to drive the train! 🚄",
-          "It zooms underground and glides high on tracks past giant futuristic glowing 'Supertrees' and indoor waterfalls! 🌳💦"
+          "🚂 Top Speed: Cozy jungle cruising at a steady 60 mph! 🚂",
+          "This classic, beautiful green-and-gold train is driven by a team of professional train drivers! 🧑‍✈️",
+          "It has a spectacular open-air observation carriage at the very back where you can feel the warm tropical breeze! 🍃",
+          "It takes you on a grand adventure from Singapore, chugging deep through giant green palm tree jungles! 🌴"
         ]
       }
     ]
@@ -1788,6 +1791,63 @@ export const trainsData = [
           "This brand-new, aerodynamic electric train has a super-pointy nose and zooms across the giant tropical island of Luzon! 🇵🇭💨",
           "It flies past giant active green volcanoes that look like perfect cone-shaped ice cream peaks! 🌋🍦",
           "It crosses high steel bridges over wide rivers where fishermen wave happily from their wooden boats! 🚣‍♂️🌴"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AE",
+    countryName: "United Arab Emirates",
+    capital: "Abu Dhabi",
+    flagEmoji: "🇦🇪",
+    trains: [
+      {
+        name: "Etihad Rail Passenger Train",
+        type: "🚀 Modern Desert Speedliner",
+        photoUrl: uaeImg,
+        funFacts: [
+          "⚡ Top Speed: Designed to zoom at 124 mph (200 km/h) across the emirates! ⚡",
+          "It connects 11 beautiful cities and regions in the UAE, from the sandy gulf to the rocky mountains! 🏔️",
+          "It is a super-friendly helper for the planet, reducing carbon emissions by up to 80% compared to cars! 🍃",
+          "You can travel from Abu Dhabi to Dubai in just 57 minutes while looking at beautiful desert dunes! 🐪"
+        ]
+      }
+    ]
+  },
+  {
+    id: "QA",
+    countryName: "Qatar",
+    capital: "Doha",
+    flagEmoji: "🇶🇦",
+    trains: [
+      {
+        name: "Msheireb Downtown Tram",
+        type: "🚊 Hydrogen-Powered Eco-Tram",
+        photoUrl: qatarImg,
+        funFacts: [
+          "🚊 Top Speed: Glides smoothly through the streets at a safe 18 mph (30 km/h)! 🚊",
+          "Unlike the driverless metro, this cute white and blue tram is operated by a friendly human driver! 🧑‍✈️",
+          "It is powered by clean hydrogen energy, which means it doesn't make dirty smoke and is super friendly to the planet! 🍃",
+          "It has a special open-air design on nice days and lets you explore Doha's smart city districts for free! 🏙️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BH",
+    countryName: "Bahrain",
+    capital: "Manama",
+    flagEmoji: "🇧🇭",
+    trains: [
+      {
+        name: "King Hamad Causeway Express",
+        type: "🚀 High-Speed Gulf Link Express",
+        photoUrl: bahrainImg,
+        funFacts: [
+          "🚀 Top Speed: Designed to zoom across the ocean bridges at a fast 124 mph (200 km/h)! 🚀",
+          "This giant express train will be operated by highly trained human drivers, safely carrying families between two countries! 🧑‍✈️",
+          "It will roll right across a massive 25-kilometer bridge (the King Hamad Causeway) built high over the blue ocean waves! 🌊🌉",
+          "It connects Bahrain to Saudi Arabia, letting you travel between countries while watching ships sail far below! 🚢🇧🇭🇸🇦"
         ]
       }
     ]
