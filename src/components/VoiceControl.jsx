@@ -85,7 +85,9 @@ const COUNTRY_SYNONYMS = {
   'nz': ['new zealand', 'wellington', 'tranzalpine', 'kiwi explorer', 'newzealand'],
   'ma': ['morocco', 'rabat', 'al boraq', 'boraq', 'casablanca', 'moroccan'],
   'tw': ['taiwan', 'taipei', 'thsr', '700t', 'taiwan bullet', 'taiwanese'],
-  'cz': ['czechia', 'prague', 'pendolino', 'czech republic', 'czech']
+  'cz': ['czechia', 'prague', 'pendolino', 'czech republic', 'czech'],
+  'lk': ['sri lanka', 'colombo', 'viceroy special', 'ocean coast', 'srilanka'],
+  'ph': ['philippines', 'manila', 'luzon', 'pnr', 'filipino', 'philipines']
 }
 
 function VoiceControl({ onSelectCountry }) {

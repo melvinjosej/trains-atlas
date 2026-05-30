@@ -88,6 +88,8 @@ import newzealandImg from '../assets/trains/newzealand.jpeg'
 import moroccoImg from '../assets/trains/morocco.jpeg'
 import taiwanImg from '../assets/trains/taiwan.jpeg'
 import czechiaImg from '../assets/trains/czechia.jpeg'
+import srilankaImg from '../assets/trains/srilanka.jpeg'
+import philippinesImg from '../assets/trains/philippines.jpeg'
 
 export const trainsData = [
   {
@@ -867,7 +869,7 @@ export const trainsData = [
     trains: [
       {
         name: "Karakum Desert Express",
-        type: "🐫 Marble City Desert Steppe Express",
+        type: "🐫 Outer Space Marble Desert Steppe Express",
         photoUrl: turkmenistanImg,
         funFacts: [
           "🐫 Top Speed: Chugs past golden desert dunes at 50 mph! 🐫",
@@ -1745,9 +1747,47 @@ export const trainsData = [
         photoUrl: czechiaImg,
         funFacts: [
           "🚀 Top Speed: Sleek tilting Czech bullet train zooms at 124 mph! 🚀",
-          "This beautiful silver and blue bullet train has a magical tilting belly that lets it lean into corners like a fast racing motorcycle! 📐🏍️",
+          "This beautiful silver and blue bullet train has a magical tilting belly that lets it lean into corners like a fast racing motorcycle! 📐\uD83C\uDFCD",
           "It flies past giant stone fairy-tale castles, zooms through dark mountain tunnels, and crosses ancient stone arch bridges! 🏰🌉",
           "Inside the train, you can eat warm blueberry dumplings and drink hot chocolate while watching the pine forests zoom by! 🫐☕"
+        ]
+      }
+    ]
+  },
+  {
+    id: "LK",
+    countryName: "Sri Lanka",
+    capital: "Colombo",
+    flagEmoji: "🇱🇰",
+    trains: [
+      {
+        name: "Udarata Menike Scenic Express",
+        type: "🌊 Breathtaking Ocean Coast & Tea Mountain Express",
+        photoUrl: srilankaImg,
+        funFacts: [
+          "🌊 Top Speed: Bright-red ocean speedliner zooms at 60 mph! 🌊",
+          "This beautiful red and gold passenger train rolls so close to the beach that salty ocean spray splashes right onto your window! 🏖️💦",
+          "It climbs high up into the tea-covered mountains, crossing massive old stone bridges that look like giant castle arches! 🏰🌉",
+          "Inside the green jungle valleys, wild elephants wave their long trunks happily at the train passengers as it chugs past! 🐘🌴"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PH",
+    countryName: "Philippines",
+    capital: "Manila",
+    flagEmoji: "🇵🇭",
+    trains: [
+      {
+        name: "PNR South Long Haul Speedliner",
+        type: "🚀 Sleek Aerodynamic Tropical Speedliner",
+        photoUrl: philippinesImg,
+        funFacts: [
+          "🚀 Top Speed: Sleek Luzon speedliner flies at 100 mph! 🚀",
+          "This brand-new, aerodynamic electric train has a super-pointy nose and zooms across the giant tropical island of Luzon! 🇵🇭💨",
+          "It flies past giant active green volcanoes that look like perfect cone-shaped ice cream peaks! 🌋🍦",
+          "It crosses high steel bridges over wide rivers where fishermen wave happily from their wooden boats! 🚣‍♂️🌴"
         ]
       }
     ]
