@@ -93,6 +93,7 @@ import philippinesImg from '../assets/trains/philippines.jpeg'
 import uaeImg from '../assets/trains/uae.jpeg'
 import qatarImg from '../assets/trains/qatar.jpeg'
 import bahrainImg from '../assets/trains/bahrain.jpeg'
+import moldovaImg from '../assets/trains/moldova.jpeg'
 
 export const trainsData = [
   {
@@ -1848,6 +1849,25 @@ export const trainsData = [
           "This giant express train will be operated by highly trained human drivers, safely carrying families between two countries! 🧑‍✈️",
           "It will roll right across a massive 25-kilometer bridge (the King Hamad Causeway) built high over the blue ocean waves! 🌊🌉",
           "It connects Bahrain to Saudi Arabia, letting you travel between countries while watching ships sail far below! 🚢🇧🇭🇸🇦"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MD",
+    countryName: "Moldova",
+    capital: "Chișinău",
+    flagEmoji: "🇲🇩",
+    trains: [
+      {
+        name: "CFM D1M",
+        type: "🚂 Modernized Central European Express",
+        photoUrl: moldovaImg,
+        funFacts: [
+          "⚡ Top Speed: Cozy cruising across the hills at 75 mph (120 km/h)! ⚡",
+          "This beautiful train is painted in bright yellow, red, and blue—matching the flag of Moldova! 🇲🇩",
+          "It is driven by friendly human drivers, taking families on cross-border journeys to historic cities in Romania! 🧑‍✈️",
+          "It travels on special dual-gauge tracks, meaning the wheels can slide on two different track widths without stopping! 🛤️"
         ]
       }
     ]

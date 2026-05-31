@@ -90,7 +90,8 @@ const COUNTRY_SYNONYMS = {
   'ph': ['philippines', 'manila', 'luzon', 'pnr', 'filipino', 'philipines'],
   'ae': ['uae', 'united arab emirates', 'dubai', 'abu dhabi', 'etihad rail', 'emirates'],
   'qa': ['qatar', 'doha', 'msheireb', 'tram', 'hydrogen tram', 'eco-tram'],
-  'bh': ['bahrain', 'manama', 'causeway express', 'causeway train', 'gulf express']
+  'bh': ['bahrain', 'manama', 'causeway express', 'causeway train', 'gulf express'],
+  'md': ['moldova', 'chisinau', 'cfm', 'd1m', 'moldovan']
 }
 
 function VoiceControl({ onSelectCountry }) {
