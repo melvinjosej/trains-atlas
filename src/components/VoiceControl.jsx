@@ -91,7 +91,13 @@ const COUNTRY_SYNONYMS = {
   'ae': ['uae', 'united arab emirates', 'dubai', 'abu dhabi', 'etihad rail', 'emirates'],
   'qa': ['qatar', 'doha', 'msheireb', 'tram', 'hydrogen tram', 'eco-tram'],
   'bh': ['bahrain', 'manama', 'causeway express', 'causeway train', 'gulf express'],
-  'md': ['moldova', 'chisinau', 'cfm', 'd1m', 'moldovan']
+  'md': ['moldova', 'chisinau', 'cfm', 'd1m', 'moldovan'],
+  'am': ['armenia', 'yerevan', 'gyumri', 'ep2d', 'armenian'],
+  'gn': ['guinea', 'conakry', 'conakry express', 'guinean'],
+  'ci': ['ivory coast', 'yamoussoukro', 'abidjan', 'sitarail', 'savannah express', 'coute divoire', 'cote d\'ivoire', 'ivorian'],
+  'gh': ['ghana', 'accra', 'tema', 'mpakadan', 'volta', 'ghanaian'],
+  'bj': ['benin', 'porto novo', 'cotonou', 'parakou', 'voyageur', 'beninese'],
+  'tg': ['togo', 'lome', 'coconut railway', 'kokosnussbahn', 'aneho', 'togolese']
 }
 
 function VoiceControl({ onSelectCountry }) {

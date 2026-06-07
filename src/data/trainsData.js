@@ -94,6 +94,12 @@ import uaeImg from '../assets/trains/uae.jpeg'
 import qatarImg from '../assets/trains/qatar.jpeg'
 import bahrainImg from '../assets/trains/bahrain.jpeg'
 import moldovaImg from '../assets/trains/moldova.jpeg'
+import armeniaImg from '../assets/trains/armenia.jpeg'
+import guineaImg from '../assets/trains/guinea.jpeg'
+import ivorycoastImg from '../assets/trains/ivorycoast.jpeg'
+import ghanaImg from '../assets/trains/ghana.jpeg'
+import beninImg from '../assets/trains/benin.jpeg'
+import togoImg from '../assets/trains/togo.jpeg'
 
 export const trainsData = [
   {
@@ -1868,6 +1874,120 @@ export const trainsData = [
           "This beautiful train is painted in bright yellow, red, and blue—matching the flag of Moldova! 🇲🇩",
           "It is driven by friendly human drivers, taking families on cross-border journeys to historic cities in Romania! 🧑‍✈️",
           "It travels on special dual-gauge tracks, meaning the wheels can slide on two different track widths without stopping! 🛤️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AM",
+    countryName: "Armenia",
+    capital: "Yerevan",
+    flagEmoji: "🇦🇲",
+    trains: [
+      {
+        name: "Yerevan-Gyumri EP2D Express",
+        type: "⚡ Modern Caucasian Electric Speedliner",
+        photoUrl: armeniaImg,
+        funFacts: [
+          "⚡ Top Speed: Glides quietly at 80 mph (130 km/h) through mountain valleys! ⚡",
+          "This sleek, bright red and grey electric train is driven by friendly human operators! 🧑‍✈️",
+          "It connects the bustling capital city of Yerevan with the beautiful historic arts city of Gyumri! 🎨",
+          "It has modern air-conditioned cars and big panoramic windows to watch snowy Caucasian peaks roll by! 🏔️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GN",
+    countryName: "Guinea",
+    capital: "Conakry",
+    flagEmoji: "🇬🇳",
+    trains: [
+      {
+        name: "Conakry Express",
+        type: "🚂 Commuter City Diesel Explorer",
+        photoUrl: guineaImg,
+        funFacts: [
+          "⚡ Top Speed: Steady commuter cruising at 50 mph (80 km/h)! ⚡",
+          "This big, strong blue and yellow diesel train is operated by highly trained human drivers! 🧑‍✈️",
+          "It is super important for helping thousands of people bypass heavy city traffic every single day! 🚗🚕",
+          "It chugs right along the coastal capital of Conakry, carrying families to school and work under the tropical sun! ☀️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "CI",
+    countryName: "Ivory Coast",
+    capital: "Yamoussoukro",
+    flagEmoji: "🇨🇮",
+    trains: [
+      {
+        name: "Sitarail Savannah Express",
+        type: "🚂 Trans-National Savannah Diesel Safari",
+        photoUrl: ivorycoastImg,
+        funFacts: [
+          "🌳 Top Speed: Cozy savannah journey at 45 mph (70 km/h)! 🌳",
+          "This classic, powerful diesel locomotive is driven by professional operators, pulling colorful passenger cars! 🧑‍✈️🎨",
+          "It travels past lush green cocoa orchards, dense tropical rainforests, and open golden savannahs! 🌴🐘",
+          "It is part of a famous historic line that connects Ivory Coast to its landlocked neighbors! 🌍"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GH",
+    countryName: "Ghana",
+    capital: "Accra",
+    flagEmoji: "🇬🇭",
+    trains: [
+      {
+        name: "Tema-Mpakadan Express",
+        type: "🚀 Modern Blue & Yellow Volta Speedliner",
+        photoUrl: ghanaImg,
+        funFacts: [
+          "🚀 Top Speed: Smoothly gliding at 75 mph (120 km/h)! 🚀",
+          "This brand-new, modern blue and yellow train commenced exciting passenger runs in late 2025! 🌟",
+          "It is operated by skilled human drivers, carrying excited families on scenic weekend trips! 🧑‍✈️",
+          "It rolls past the wild Shai Hills and ends near the giant, beautiful Volta River and Akosombo Dam! 🌊🏔️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BJ",
+    countryName: "Benin",
+    capital: "Porto-Novo",
+    flagEmoji: "🇧🇯",
+    trains: [
+      {
+        name: "Benin Voyageur",
+        type: "🚂 Yellow & Green Cotton-Steppe Express",
+        photoUrl: beninImg,
+        funFacts: [
+          "🌾 Top Speed: Steady and cozy chugging at 40 mph (65 km/h)! 🌾",
+          "This classic yellow and green diesel train is driven by friendly operators across the heart of Benin! 🧑‍✈️🟢",
+          "It chugs past Ganvié—a magical, ancient village built completely on wooden stilts over a beautiful lake! 🏘️🌊",
+          "It carries travelers past bustling open-air markets, palm tree groves, and vast cotton-growing fields! 🌴"
+        ]
+      }
+    ]
+  },
+  {
+    id: "TG",
+    countryName: "Togo",
+    capital: "Lomé",
+    flagEmoji: "🇹🇬",
+    trains: [
+      {
+        name: "The Coconut Railway (Kokosnussbahn)",
+        type: "🚂 Beachside Heritage Steam Chugger",
+        photoUrl: togoImg,
+        funFacts: [
+          "🥥 Top Speed: Cozy beachside strolling at a safe 20 mph (30 km/h)! 🥥",
+          "This historic, beautiful steam train was famously nicknamed the 'Coconut Railway' because it ran under thousands of real coconut trees! 🥥🌴",
+          "It was driven by old-fashioned steam engineers, puffing fluffy white clouds of steam into the blue sky! 💨",
+          "It rolled right along the sandy ocean beaches and beautiful lagoons, letting passengers watch the waves crash on the shore! 🌊🏖️"
         ]
       }
     ]
