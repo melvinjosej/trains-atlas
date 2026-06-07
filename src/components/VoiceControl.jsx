@@ -97,7 +97,9 @@ const COUNTRY_SYNONYMS = {
   'ci': ['ivory coast', 'yamoussoukro', 'abidjan', 'sitarail', 'savannah express', 'coute divoire', 'cote d\'ivoire', 'ivorian'],
   'gh': ['ghana', 'accra', 'tema', 'mpakadan', 'volta', 'ghanaian'],
   'bj': ['benin', 'porto novo', 'cotonou', 'parakou', 'voyageur', 'beninese'],
-  'tg': ['togo', 'lome', 'coconut railway', 'kokosnussbahn', 'aneho', 'togolese']
+  'tg': ['togo', 'lome', 'coconut railway', 'kokosnussbahn', 'aneho', 'togolese'],
+  'py': ['paraguay', 'asuncion', 'encarnacion', 'posadas', 'wadloper', 'paraguayan'],
+  'hn': ['honduras', 'tegucigalpa', 'san pedro sula', 'cuero y salado', 'coconut jungle', 'honduran']
 }
 
 function VoiceControl({ onSelectCountry }) {

@@ -100,6 +100,8 @@ import ivorycoastImg from '../assets/trains/ivorycoast.jpeg'
 import ghanaImg from '../assets/trains/ghana.jpeg'
 import beninImg from '../assets/trains/benin.jpeg'
 import togoImg from '../assets/trains/togo.jpeg'
+import paraguayImg from '../assets/trains/paraguay.jpeg'
+import hondurasImg from '../assets/trains/honduras.jpeg'
 
 export const trainsData = [
   {
@@ -1988,6 +1990,44 @@ export const trainsData = [
           "This historic, beautiful steam train was famously nicknamed the 'Coconut Railway' because it ran under thousands of real coconut trees! 🥥🌴",
           "It was driven by old-fashioned steam engineers, puffing fluffy white clouds of steam into the blue sky! 💨",
           "It rolled right along the sandy ocean beaches and beautiful lagoons, letting passengers watch the waves crash on the shore! 🌊🏖️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PY",
+    countryName: "Paraguay",
+    capital: "Asunción",
+    flagEmoji: "🇵🇾",
+    trains: [
+      {
+        name: "Posadas-Encarnación International Train",
+        type: "🚂 Wadloper Binational Diesel Express",
+        photoUrl: paraguayImg,
+        funFacts: [
+          "⚡ Top Speed: Quick border crossing at 50 mph (80 km/h)! ⚡",
+          "This binational diesel train is driven by professional operators, connecting Paraguay and Argentina! 🇵🇾🇦🇷🧑‍✈️",
+          "It takes you on a super quick 10-minute journey across the giant San Roque González bridge high over the wide Paraná River! 🌉🌊",
+          "It's one of the coolest and fastest ways to travel between two countries in South America! 🌍✨"
+        ]
+      }
+    ]
+  },
+  {
+    id: "HN",
+    countryName: "Honduras",
+    capital: "Tegucigalpa",
+    flagEmoji: "🇭🇳",
+    trains: [
+      {
+        name: "The Coconut Jungle Express (Tren de Cuero y Salado)",
+        type: "🚂 Narrow-Gauge Wildlife Refuge Explorer",
+        photoUrl: hondurasImg,
+        funFacts: [
+          "🥥 Top Speed: Gentle jungle cruising at 15 mph (25 km/h)! 🥥",
+          "This tiny narrow-gauge diesel train is driven by local guides, taking you deep into a protected wilderness reserve! 🌳🧑‍✈️",
+          "It was originally built over 100 years ago by banana companies to transport heavy coconuts and bananas! 🍌🥥",
+          "As it chugs along, you can look out the open-air windows to spot wild monkeys, sleeping sloths, and even rare manatees! 🐒🦥🦒"
         ]
       }
     ]
