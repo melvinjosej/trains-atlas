@@ -62,7 +62,7 @@ path {
   cursor: default;
 }
 
-.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af, .sa, .om, .th, .la, .sg, .hr, .jo, .mm, .pa, .vn, .pk, .uz, .tm, .kh, .ve, .ec, .co, .by, .ua, .ye, .dk, .it, .fi, .no, .gr, .ro, .id, .se, .bd, .at, .hk, .bo, .mx, .tj, .cl, .hu, .iq, .lb, .il, .sy, .ge, .az, .pt, .ie, .nl, .bg, .rs, .sk, .bt, .kg, .kp, .pl, .lt, .lv, .ee, .nz, .ma, .tw, .cz, .lk, .ph, .ae, .qa, .bh, .md, .am, .gn, .ci, .gh, .bj, .tg, .py, .hn {
+.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af, .sa, .om, .th, .la, .sg, .hr, .jo, .mm, .pa, .vn, .pk, .uz, .tm, .kh, .ve, .ec, .co, .by, .ua, .ye, .dk, .it, .fi, .no, .gr, .ro, .id, .se, .bd, .at, .hk, .bo, .mx, .tj, .cl, .hu, .iq, .lb, .il, .sy, .ge, .az, .pt, .ie, .nl, .bg, .rs, .sk, .bt, .kg, .kp, .pl, .lt, .lv, .ee, .nz, .ma, .tw, .cz, .lk, .ph, .ae, .qa, .bh, .md, .am, .gn, .ci, .gh, .bj, .tg, .py, .hn, .sr, .dj, .gq, .bn {
   fill: #fde047 !important; /* Beautiful sunshine yellow */
   stroke: #eab308 !important; /* Darker warm borders */
   stroke-width: 1.0;
@@ -79,7 +79,7 @@ path {
 .hr:active, .jo:active, .mm:active, .pa:active, .vn:active,
 .pk:active, .uz:active, .tm:active, .kh:active, .ve:active, .ec:active,
 .co:active, .by:active, .ua:active, .ye:active, .dk:active, .it:active, .fi:active, .no:active,
-.gr:active, .ro:active, .id:active, .se:active, .bd:active, .at:active, .hk:active, .bo:active, .mx:active, .tj:active, .cl:active, .hu:active, .iq:active, .lb:active, .il:active, .sy:active, .ge:active, .az:active, .pt:active, .ie:active, .nl:active, .bg:active, .rs:active, .sk:active, .bt:active, .kg:active, .kp:active, .pl:active, .lt:active, .lv:active, .ee:active, .nz:active, .ma:active, .tw:active, .cz:active, .lk:active, .ph:active, .ae:active, .qa:active, .bh:active, .md:active, .am:active, .gn:active, .ci:active, .gh:active, .bj:active, .tg:active, .py:active, .hn:active {
+.gr:active, .ro:active, .id:active, .se:active, .bd:active, .at:active, .hk:active, .bo:active, .mx:active, .tj:active, .cl:active, .hu:active, .iq:active, .lb:active, .il:active, .sy:active, .ge:active, .az:active, .pt:active, .ie:active, .nl:active, .bg:active, .rs:active, .sk:active, .bt:active, .kg:active, .kp:active, .pl:active, .lt:active, .lv:active, .ee:active, .nz:active, .ma:active, .tw:active, .cz:active, .lk:active, .ph:active, .ae:active, .qa:active, .bh:active, .md:active, .am:active, .gn:active, .ci:active, .gh:active, .bj:active, .tg:active, .py:active, .hn:active, .sr:active, .dj:active, .gq:active, .bn:active {
   fill: #f97316 !important; /* Flash bright orange when touched! */
 }
 

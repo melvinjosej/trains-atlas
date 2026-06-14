@@ -99,7 +99,11 @@ const COUNTRY_SYNONYMS = {
   'bj': ['benin', 'porto novo', 'cotonou', 'parakou', 'voyageur', 'beninese'],
   'tg': ['togo', 'lome', 'coconut railway', 'kokosnussbahn', 'aneho', 'togolese'],
   'py': ['paraguay', 'asuncion', 'encarnacion', 'posadas', 'wadloper', 'paraguayan'],
-  'hn': ['honduras', 'tegucigalpa', 'san pedro sula', 'cuero y salado', 'coconut jungle', 'honduran']
+  'hn': ['honduras', 'tegucigalpa', 'san pedro sula', 'cuero y salado', 'coconut jungle', 'honduran'],
+  'sr': ['suriname', 'paramaribo', 'lawa', 'surinamese', 'jungle express'],
+  'dj': ['djibouti', 'addis ababa', 'nagad', 'djiboutian', 'edr'],
+  'gq': ['equatorial guinea', 'malabo', 'bioko', 'cocoa chugger', 'san carlos', 'fernando po', 'equatoguinean'],
+  'bn': ['brunei', 'bandar seri begawan', 'muara', 'brooketon', 'trans borneo', 'bruneian']
 }
 
 function VoiceControl({ onSelectCountry }) {

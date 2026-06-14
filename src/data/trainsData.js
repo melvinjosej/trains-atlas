@@ -102,6 +102,10 @@ import beninImg from '../assets/trains/benin.jpeg'
 import togoImg from '../assets/trains/togo.jpeg'
 import paraguayImg from '../assets/trains/paraguay.jpeg'
 import hondurasImg from '../assets/trains/honduras.jpeg'
+import surinameImg from '../assets/trains/suriname.jpeg'
+import djiboutiImg from '../assets/trains/djibouti.jpeg'
+import equatorialguineaImg from '../assets/trains/equatorialguinea.jpeg'
+import bruneiImg from '../assets/trains/brunei.jpeg'
 
 export const trainsData = [
   {
@@ -2028,6 +2032,82 @@ export const trainsData = [
           "This tiny narrow-gauge diesel train is driven by local guides, taking you deep into a protected wilderness reserve! 🌳🧑‍✈️",
           "It was originally built over 100 years ago by banana companies to transport heavy coconuts and bananas! 🍌🥥",
           "As it chugs along, you can look out the open-air windows to spot wild monkeys, sleeping sloths, and even rare manatees! 🐒🦥🦒"
+        ]
+      }
+    ]
+  },
+  {
+    id: "SR",
+    countryName: "Suriname",
+    capital: "Paramaribo",
+    flagEmoji: "🇸🇷",
+    trains: [
+      {
+        name: "Lawa Gold-Rush Jungle Express",
+        type: "🚂 Historic Metre-Gauge Steam Explorer",
+        photoUrl: surinameImg,
+        funFacts: [
+          "🌟 Top Speed: Adventurous jungle chugging at 25 mph (40 km/h)! 🌟",
+          "This historic wood-burning steam train was driven by brave gold-rush engineers deep into the Amazonian rainforest! 🌳🧑‍✈️",
+          "It was built to help miners find hidden gold rivers, chugging past massive tropical trees and loud howler monkeys! 🐒💰",
+          "When the tracks reached the giant Suriname River, the train cars were loaded onto an amazing aerial cable car to fly across the water! 🚡🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "DJ",
+    countryName: "Djibouti",
+    capital: "Djibouti",
+    flagEmoji: "🇩🇯",
+    trains: [
+      {
+        name: "Addis Ababa-Djibouti Standard Gauge Express",
+        type: "⚡ Modern Standard Gauge Electric Speedliner",
+        photoUrl: djiboutiImg,
+        funFacts: [
+          "⚡ Top Speed: High-speed desert cruising at 75 mph (120 km/h)! ⚡",
+          "This super modern, bright electric train is driven by skilled human engineers connecting two important African countries! 🧑‍✈️🇩🇯🇪🇹",
+          "It carries families all the way from the sunny, bustling ocean port of Djibouti to the mountain capital of Ethiopia! 🌊🏔️",
+          "It completely replaced an old 100-year-old steam railway, turning a long multi-day trek into a smooth 11-hour ride! 🚀"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GQ",
+    countryName: "Equatorial Guinea",
+    capital: "Malabo",
+    flagEmoji: "🇬🇶",
+    trains: [
+      {
+        name: "Bioko Island Cocoa Chugger (Ferrocarril de San Carlos)",
+        type: "🚂 Volcanic Bioko Cocoa Steam Train",
+        photoUrl: equatorialguineaImg,
+        funFacts: [
+          "🍫 Top Speed: Gentle volcanic strolling at 15 mph (25 km/h)! 🍫",
+          "This cute historic narrow-gauge steam train was driven by local engineers along the beautiful slopes of Bioko Island! 🧑‍✈️🌋",
+          "It chugged through immense tropical plantations, carrying tons of rich, sweet cocoa beans to make delicious chocolate! 🍫☕",
+          "To climb down the super steep hills to the ocean harbor, it used a special 'rack and pinion' cog wheel to grip the tracks securely! ⚙️🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "BN",
+    countryName: "Brunei",
+    capital: "Bandar Seri Begawan",
+    flagEmoji: "🇧🇳",
+    trains: [
+      {
+        name: "Trans-Borneo High-Speed Express",
+        type: "🚀 Modern Trans-Borneo Speedliner",
+        photoUrl: bruneiImg,
+        funFacts: [
+          "🚀 Top Speed: Planned super speed airliner flying across the rails at 217 mph (350 km/h)! 🚀",
+          "This ultra-modern high-speed bullet train is an amazing proposed network that would be operated by highly trained drivers! 🧑‍✈️✨",
+          "It is designed to connect the beautiful, peaceful kingdom of Brunei with majestic tropical rainforest states across the giant island of Borneo! 🌴🐅",
+          "Passengers will zoom past incredible jungle canopies, modern cities, and coastal sunset views in total comfort! 🌇🚅"
         ]
       }
     ]
