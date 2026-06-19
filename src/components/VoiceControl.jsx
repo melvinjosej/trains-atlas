@@ -103,7 +103,8 @@ const COUNTRY_SYNONYMS = {
   'sr': ['suriname', 'paramaribo', 'lawa', 'surinamese', 'jungle express'],
   'dj': ['djibouti', 'addis ababa', 'nagad', 'djiboutian', 'edr'],
   'gq': ['equatorial guinea', 'malabo', 'bioko', 'cocoa chugger', 'san carlos', 'fernando po', 'equatoguinean'],
-  'bn': ['brunei', 'bandar seri begawan', 'muara', 'brooketon', 'trans borneo', 'bruneian']
+  'bn': ['brunei', 'bandar seri begawan', 'muara', 'brooketon', 'trans borneo', 'bruneian'],
+  'kw': ['kuwait', 'kuwait city', 'knrr', 'gulf railway', 'kuwaiti']
 }
 
 function VoiceControl({ onSelectCountry }) {

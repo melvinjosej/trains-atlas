@@ -106,6 +106,7 @@ import surinameImg from '../assets/trains/suriname.jpeg'
 import djiboutiImg from '../assets/trains/djibouti.jpeg'
 import equatorialguineaImg from '../assets/trains/equatorialguinea.jpeg'
 import bruneiImg from '../assets/trains/brunei.jpeg'
+import kuwaitImg from '../assets/trains/kuwait.jpeg'
 
 export const trainsData = [
   {
@@ -2108,6 +2109,25 @@ export const trainsData = [
           "This ultra-modern high-speed bullet train is an amazing proposed network that would be operated by highly trained drivers! 🧑‍✈️✨",
           "It is designed to connect the beautiful, peaceful kingdom of Brunei with majestic tropical rainforest states across the giant island of Borneo! 🌴🐅",
           "Passengers will zoom past incredible jungle canopies, modern cities, and coastal sunset views in total comfort! 🌇🚅"
+        ]
+      }
+    ]
+  },
+  {
+    id: "KW",
+    countryName: "Kuwait",
+    capital: "Kuwait City",
+    flagEmoji: "🇰🇼",
+    trains: [
+      {
+        name: "Kuwait National Rail Road Express",
+        type: "🚀 Modern Desert Gulf Speedliner",
+        photoUrl: kuwaitImg,
+        funFacts: [
+          "🚀 Top Speed: High-speed desert cruising at 124 mph (200 km/h)! 🚀",
+          "This super modern passenger bullet train is part of the exciting new Gulf Railway network operated by expert human drivers! 🧑‍✈️🇰🇼",
+          "It connects bustling Kuwait City across golden desert sands all the way to neighboring Saudi Arabia! 🏜️🐪",
+          "Passengers can watch beautiful sandy dunes and camel herds glide past big air-conditioned panoramic windows! ☀️🚅"
         ]
       }
     ]
