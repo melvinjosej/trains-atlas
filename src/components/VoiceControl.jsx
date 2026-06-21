@@ -104,7 +104,9 @@ const COUNTRY_SYNONYMS = {
   'dj': ['djibouti', 'addis ababa', 'nagad', 'djiboutian', 'edr'],
   'gq': ['equatorial guinea', 'malabo', 'bioko', 'cocoa chugger', 'san carlos', 'fernando po', 'equatoguinean'],
   'bn': ['brunei', 'bandar seri begawan', 'muara', 'brooketon', 'trans borneo', 'bruneian'],
-  'kw': ['kuwait', 'kuwait city', 'knrr', 'gulf railway', 'kuwaiti']
+  'kw': ['kuwait', 'kuwait city', 'knrr', 'gulf railway', 'kuwaiti'],
+  'zw': ['zimbabwe', 'harare', 'bulawayo', 'victoria falls', 'nrz', 'zimbabwean'],
+  'za': ['south africa', 'pretoria', 'johannesburg', 'cape town', 'blue train', 'gautrain', 'shosholoza meyl', 'south african']
 }
 
 function VoiceControl({ onSelectCountry }) {

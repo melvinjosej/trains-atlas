@@ -107,6 +107,8 @@ import djiboutiImg from '../assets/trains/djibouti.jpeg'
 import equatorialguineaImg from '../assets/trains/equatorialguinea.jpeg'
 import bruneiImg from '../assets/trains/brunei.jpeg'
 import kuwaitImg from '../assets/trains/kuwait.jpeg'
+import zimbabweImg from '../assets/trains/zimbabwe.jpeg'
+import southafricaImg from '../assets/trains/southafrica.jpeg'
 
 export const trainsData = [
   {
@@ -2128,6 +2130,44 @@ export const trainsData = [
           "This super modern passenger bullet train is part of the exciting new Gulf Railway network operated by expert human drivers! 🧑‍✈️🇰🇼",
           "It connects bustling Kuwait City across golden desert sands all the way to neighboring Saudi Arabia! 🏜️🐪",
           "Passengers can watch beautiful sandy dunes and camel herds glide past big air-conditioned panoramic windows! ☀️🚅"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ZW",
+    countryName: "Zimbabwe",
+    capital: "Harare",
+    flagEmoji: "🇿🇼",
+    trains: [
+      {
+        name: "Victoria Falls Rainbow Steam Express",
+        type: "🚂 Zambezi Bridge Steam Explorer",
+        photoUrl: zimbabweImg,
+        funFacts: [
+          "🌟 Top Speed: Majestic waterfall chugging at 25 mph (40 km/h)! 🌟",
+          "This historic vintage steam train is driven by expert engineers across the world-famous Victoria Falls steel arch bridge! 🧑‍✈️🇿🇼",
+          "It chugs high above the roaring Zambezi River right next to thunderous waterfalls, spraying cool rainbow mist everywhere! 🌈🚂💦",
+          "Passengers can enjoy fine dining inside beautiful 100-year-old wooden carriages while watching wild elephants near the tracks! 🐘🌅"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ZA",
+    countryName: "South Africa",
+    capital: "Pretoria",
+    flagEmoji: "🇿🇦",
+    trains: [
+      {
+        name: "The Blue Train Majestic Express",
+        type: "💎 Luxury African Blue Speedliner",
+        photoUrl: southafricaImg,
+        funFacts: [
+          "💎 Top Speed: Smooth countryside cruising at 56 mph (90 km/h)! 💎",
+          "This world-famous deep blue train is driven by skilled human drivers between South Africa's capital and the ocean coast! 🧑‍✈️🇿🇦",
+          "It glides past majestic mountains, sunny vineyard valleys, and golden savannah grasses where giraffes and zebras roam! 🦒🦓🍇",
+          "Inside, it's like a floating 5-star palace hotel with private butler service, big golden windows, and delicious royal treats! 👑🍰"
         ]
       }
     ]
