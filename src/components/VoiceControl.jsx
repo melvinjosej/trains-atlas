@@ -107,7 +107,8 @@ const COUNTRY_SYNONYMS = {
   'kw': ['kuwait', 'kuwait city', 'knrr', 'gulf railway', 'kuwaiti'],
   'zw': ['zimbabwe', 'harare', 'bulawayo', 'victoria falls', 'nrz', 'zimbabwean'],
   'za': ['south africa', 'pretoria', 'johannesburg', 'cape town', 'blue train', 'gautrain', 'shosholoza meyl', 'south african'],
-  'ao': ['angola', 'luanda', 'lobito', 'benguela', 'cfb', 'angolan']
+  'ao': ['angola', 'luanda', 'lobito', 'benguela', 'cfb', 'angolan'],
+  'cd': ['dr congo', 'congo', 'kinshasa', 'matadi', 'onatra', 'sctp', 'sncc', 'congolese']
 }
 
 function VoiceControl({ onSelectCountry }) {

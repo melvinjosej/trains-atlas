@@ -110,6 +110,7 @@ import kuwaitImg from '../assets/trains/kuwait.jpeg'
 import zimbabweImg from '../assets/trains/zimbabwe.jpeg'
 import southafricaImg from '../assets/trains/southafrica.jpeg'
 import angolaImg from '../assets/trains/angola.jpeg'
+import drcongoImg from '../assets/trains/drcongo.jpeg'
 
 export const trainsData = [
   {
@@ -2188,6 +2189,25 @@ export const trainsData = [
           "This famous transcontinental railway is driven by expert engineers from sunny Atlantic Ocean beaches deep into Africa! 🧑‍✈️🌊",
           "It chugs across 835 miles (1,344 km) of bright green highlands, passing giant baobab trees and friendly rural villages! 🌳🚂",
           "The historic track crosses amazing old iron bridges built over 100 years ago, connecting Angola all the way to the Congo border! 🌉✨"
+        ]
+      }
+    ]
+  },
+  {
+    id: "CD",
+    countryName: "DR Congo",
+    capital: "Kinshasa",
+    flagEmoji: "🇨🇩",
+    trains: [
+      {
+        name: "Matadi-Kinshasa Express",
+        type: "🚂 Crystal Mountain Explorer",
+        photoUrl: drcongoImg,
+        funFacts: [
+          "🌟 Top Speed: Mountain gorge chugging at 35 mph (56 km/h)! 🌟",
+          "This legendary jungle railway is driven by skilled human drivers connecting the Atlantic Ocean to the giant Congo River! 🧑‍✈️🌊",
+          "It chugs right through the dramatic Crystal Mountains, winding past lush tropical trees, deep river canyons, and waterfalls! 🏔️🚂💦",
+          "It was built over 125 years ago to bypass huge unnavigable river rapids, bringing vital goods and passengers to Kinshasa! 🍌🚢"
         ]
       }
     ]
