@@ -109,6 +109,7 @@ import bruneiImg from '../assets/trains/brunei.jpeg'
 import kuwaitImg from '../assets/trains/kuwait.jpeg'
 import zimbabweImg from '../assets/trains/zimbabwe.jpeg'
 import southafricaImg from '../assets/trains/southafrica.jpeg'
+import angolaImg from '../assets/trains/angola.jpeg'
 
 export const trainsData = [
   {
@@ -2168,6 +2169,25 @@ export const trainsData = [
           "This world-famous deep blue train is driven by skilled human drivers between South Africa's capital and the ocean coast! 🧑‍✈️🇿🇦",
           "It glides past majestic mountains, sunny vineyard valleys, and golden savannah grasses where giraffes and zebras roam! 🦒🦓🍇",
           "Inside, it's like a floating 5-star palace hotel with private butler service, big golden windows, and delicious royal treats! 👑🍰"
+        ]
+      }
+    ]
+  },
+  {
+    id: "AO",
+    countryName: "Angola",
+    capital: "Luanda",
+    flagEmoji: "🇦🇴",
+    trains: [
+      {
+        name: "Benguela Railway Atlantic Express",
+        type: "🚂 Historic Trans-African Explorer",
+        photoUrl: angolaImg,
+        funFacts: [
+          "🌟 Top Speed: Scenic savannah cruising at 56 mph (90 km/h)! 🌟",
+          "This famous transcontinental railway is driven by expert engineers from sunny Atlantic Ocean beaches deep into Africa! 🧑‍✈️🌊",
+          "It chugs across 835 miles (1,344 km) of bright green highlands, passing giant baobab trees and friendly rural villages! 🌳🚂",
+          "The historic track crosses amazing old iron bridges built over 100 years ago, connecting Angola all the way to the Congo border! 🌉✨"
         ]
       }
     ]
