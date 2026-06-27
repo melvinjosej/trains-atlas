@@ -62,7 +62,7 @@ path {
   cursor: default;
 }
 
-.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af, .sa, .om, .th, .la, .sg, .hr, .jo, .mm, .pa, .vn, .pk, .uz, .tm, .kh, .ve, .ec, .co, .by, .ua, .ye, .dk, .it, .fi, .no, .gr, .ro, .id, .se, .bd, .at, .hk, .bo, .mx, .tj, .cl, .hu, .iq, .lb, .il, .sy, .ge, .az, .pt, .ie, .nl, .bg, .rs, .sk, .bt, .kg, .kp, .pl, .lt, .lv, .ee, .nz, .ma, .tw, .cz, .lk, .ph, .ae, .qa, .bh, .md, .am, .gn, .ci, .gh, .bj, .tg, .py, .hn, .sr, .dj, .gq, .bn, .kw, .zw, .za, .ao, .cd {
+.jp, .us, .fr, .gb, .in, .de, .ch, .au, .ca, .tz, .ke, .cn, .tr, .ru, .kz, .pe, .ar, .br, .my, .mn, .np, .es, .be, .kr, .ir, .af, .sa, .om, .th, .la, .sg, .hr, .jo, .mm, .pa, .vn, .pk, .uz, .tm, .kh, .ve, .ec, .co, .by, .ua, .ye, .dk, .it, .fi, .no, .gr, .ro, .id, .se, .bd, .at, .hk, .bo, .mx, .tj, .cl, .hu, .iq, .lb, .il, .sy, .ge, .az, .pt, .ie, .nl, .bg, .rs, .sk, .bt, .kg, .kp, .pl, .lt, .lv, .ee, .nz, .ma, .tw, .cz, .lk, .ph, .ae, .qa, .bh, .md, .am, .gn, .ci, .gh, .bj, .tg, .py, .hn, .sr, .dj, .gq, .bn, .kw, .zw, .za, .ao, .cd {
   fill: #fde047 !important; /* Beautiful sunshine yellow */
   stroke: #eab308 !important; /* Darker warm borders */
   stroke-width: 1.0;
@@ -70,7 +70,7 @@ path {
 
 /* Hover/Active Touch states for Supported Countries */
 .jp:active, .us:active, .fr:active, .gb:active, .in:active, 
-.de:active, .ch:active, .au:active, .ca:active, .ke:active,
+.de:active, .ch:active, .au:active, .ca:active, .tz:active, .ke:active,
 .cn:active, .tr:active, .ru:active, .kz:active,
 .pe:active, .ar:active, .br:active,
 .my:active, .mn:active, .np:active, .es:active,

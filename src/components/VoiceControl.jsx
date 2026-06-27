@@ -12,6 +12,7 @@ const COUNTRY_SYNONYMS = {
   'au': ['australia', 'oz', 'the ghan', 'puffing billy', 'australya'],
   'ca': ['canada', 'jasper', 'ottawa', 'via rail'],
   'ke': ['kenya', 'mombasa', 'nairobi', 'safari'],
+    'tz': ['tanzania', 'dodoma', 'dar es salaam', 'kilimanjaro', 'serengeti', 'zanzibar', 'sgr'],
   'cn': ['china', 'beijing', 'maglev', 'chyna', 'shanghai'],
   'tr': ['turkey', 'ankara', 'eastern express', 'turki'],
   'ru': ['russia', 'moscow', 'trans-siberian', 'rusha'],
