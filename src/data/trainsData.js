@@ -111,6 +111,7 @@ import zimbabweImg from '../assets/trains/zimbabwe.jpeg'
 import southafricaImg from '../assets/trains/southafrica.jpeg'
 import angolaImg from '../assets/trains/angola.jpeg'
 import drcongoImg from '../assets/trains/drcongo.jpeg'
+import tanzaniaImg from '../assets/trains/tanzania.jpeg'
 
 export const trainsData = [
   {
@@ -441,6 +442,25 @@ export const trainsData = [
           "This beautiful orange and white train travels from the sandy ocean beach straight into safari parks!",
           "The tracks are built on high columns above the ground so wild animals can walk safely underneath! 🐘🦒",
           "If you look out the window, you can see real wild lions, giraffes, and zebras running by!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "TZ",
+    countryName: "Tanzania",
+    capital: "Dodoma",
+    flagEmoji: "🇹🇿",
+    trains: [
+      {
+        name: "Tanzania SGR",
+        type: "⚡ Electric Safari Express",
+        photoUrl: tanzaniaImg,
+        funFacts: [
+          "⚡ Top Speed: Fast cruising at 100 mph! ⚡",
+          "Tanzania's brand new modern electric train zooms across the savanna past breathtaking wildlife!",
+          "It connects Dar es Salaam on the Indian Ocean to the capital city Dodoma and beyond!",
+          "Look out the window to see stunning East African landscapes where great migrations happen! 🦒🦓🐘"
         ]
       }
     ]
