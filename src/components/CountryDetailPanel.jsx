@@ -59,7 +59,7 @@ function CountryDetailPanel({ country, onClose }) {
             
             {/* 🚂 Sub-Component Card Rendering */}
             <div className="flex-1 min-h-0">
-              <TrainCard train={currentTrain} />
+              <TrainCard train={currentTrain} country={country} index={activeTrainIndex} />
             </div>
 
             {/* 🎮 CAROUSEL BUTTON CONTROLS (Show only if country has more than 1 train) */}

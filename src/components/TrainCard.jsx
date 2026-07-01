@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-function TrainCard({ train }) {
+function TrainCard({ train, country, index = 0 }) {
   const [imgLoading, setImgLoading] = useState(true)
   const [imgError, setImgError] = useState(false)
   const [isMuted, setIsMuted] = useState(() => {
@@ -26,7 +26,8 @@ function TrainCard({ train }) {
     if (isMuted || !train) return
 
     // 1. Assemble the narrator script from train name, type, and all fun facts
-    const introText = `Let's explore the ${train.name}! It is a ${train.type}.`
+    const countryIntro = (country && index === 0) ? `${country.countryName}, ${country.capital}. ` : ''
+    const introText = `${countryIntro}Let's explore the ${train.name}! It is a ${train.type}.`
     const factsText = train.funFacts ? train.funFacts.join('. ') : ''
     const rawScriptText = `${introText}. ${factsText}`
 
@@ -49,7 +50,7 @@ function TrainCard({ train }) {
     return () => {
       window.speechSynthesis.cancel()
     }
-  }, [train, isMuted])
+  }, [train, country, index, isMuted])
 
   if (!train) return null
 
