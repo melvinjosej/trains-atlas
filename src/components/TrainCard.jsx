@@ -26,7 +26,7 @@ function TrainCard({ train, country, index = 0 }) {
     if (isMuted || !train) return
 
     // 1. Assemble the narrator script from train name, type, and all fun facts
-    const countryIntro = (country && index === 0) ? `${country.countryName}, ${country.capital}. ` : ''
+    const countryIntro = country ? `${country.countryName}, ${country.capital}. ` : ''
     const introText = `${countryIntro}Let's explore the ${train.name}! It is a ${train.type}.`
     const factsText = train.funFacts ? train.funFacts.join('. ') : ''
     const rawScriptText = `${introText}. ${factsText}`
