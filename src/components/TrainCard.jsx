@@ -20,10 +20,10 @@ function TrainCard({ train, country, index = 0 }) {
 
   // 🔊 Speech Synthesis (TTS) Narrator side-effect
   useEffect(() => {
-    // Cancel any active speech immediately on mount or train change
-    window.speechSynthesis.cancel()
-
-    if (isMuted || !train) return
+    if (isMuted || !train) {
+      window.speechSynthesis.cancel()
+      return
+    }
 
     // 1. Assemble the narrator script from train name, type, and all fun facts
     const countryIntro = country ? `${country.countryName}, ${country.capital}. ` : ''
@@ -37,17 +37,22 @@ function TrainCard({ train, country, index = 0 }) {
       .replace(/\s+/g, ' ')
       .trim()
 
-    // 3. Initialize browser voice utterance
-    const utterance = new SpeechSynthesisUtterance(cleanScript)
-    utterance.lang = 'en-US'
-    utterance.rate = 0.85 // Moderately slow, ideal for a 4-year-old's comprehension!
-    utterance.pitch = 1.1 // Warm, slightly higher pitch for a friendly, playful sound
+    // 3. Cancel any active speech immediately
+    window.speechSynthesis.cancel()
 
-    // 4. Trigger narrator
-    window.speechSynthesis.speak(utterance)
+    // 4. Use a 50ms buffer to allow WebKit/Safari speech engine on iPad to reset cleanly after cancel()
+    const timer = setTimeout(() => {
+      const utterance = new SpeechSynthesisUtterance(cleanScript)
+      utterance.lang = 'en-US'
+      utterance.rate = 0.85 // Moderately slow, ideal for a 4-year-old's comprehension!
+      utterance.pitch = 1.1 // Warm, slightly higher pitch for a friendly, playful sound
 
-    // 🧼 Cleanup function: cancel active narration when card closes or unmounts
+      window.speechSynthesis.speak(utterance)
+    }, 50)
+
+    // 🧼 Cleanup function: cancel active timer and narration when card closes or re-renders
     return () => {
+      clearTimeout(timer)
       window.speechSynthesis.cancel()
     }
   }, [train, country, index, isMuted])
