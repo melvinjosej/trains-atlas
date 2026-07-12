@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import TrainCard from './TrainCard'
 
 function CountryDetailPanel({ country, onClose }) {
   const [activeTrainIndex, setActiveTrainIndex] = useState(0)
+  const [prevCountryId, setPrevCountryId] = useState(country?.id)
 
   // 🔄 Reset train carousel index back to 0 whenever a new country is selected!
-  useEffect(() => {
+  if (country?.id !== prevCountryId) {
+    setPrevCountryId(country?.id)
     setActiveTrainIndex(0)
-  }, [country])
+  }
 
   const trains = country.trains || []
   const totalTrains = trains.length

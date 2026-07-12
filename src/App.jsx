@@ -97,6 +97,7 @@ function App() {
         >
           {currentCountry && (
             <CountryDetailPanel 
+              key={currentCountry.id}
               country={currentCountry} 
               onClose={() => setSelectedCountryId(null)} 
             />

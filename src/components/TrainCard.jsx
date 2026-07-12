@@ -3,20 +3,18 @@ import { useState, useEffect, useRef } from 'react'
 function TrainCard({ train, country, index = 0 }) {
   const [imgLoading, setImgLoading] = useState(true)
   const [imgError, setImgError] = useState(false)
+  const [prevPhotoUrl, setPrevPhotoUrl] = useState(train?.photoUrl)
   const [isMuted, setIsMuted] = useState(() => {
     return localStorage.getItem('trains-atlas-muted') === 'true'
   })
   const imgRef = useRef(null)
 
   // 🔄 Reset image states on train change
-  useEffect(() => {
+  if (train?.photoUrl !== prevPhotoUrl) {
+    setPrevPhotoUrl(train?.photoUrl)
     setImgLoading(true)
     setImgError(false)
-    
-    if (imgRef.current && imgRef.current.complete) {
-      setImgLoading(false)
-    }
-  }, [train.photoUrl])
+  }
 
   // 🔊 Speech Synthesis (TTS) Narrator side-effect
   useEffect(() => {
@@ -95,7 +93,12 @@ function TrainCard({ train, country, index = 0 }) {
 
         {/* 💯 Real Public Domain Image (with referer hiding) */}
         <img 
-          ref={imgRef}
+          ref={(node) => {
+            imgRef.current = node
+            if (node && node.complete && node.naturalWidth > 0) {
+              setImgLoading(false)
+            }
+          }}
           src={train.photoUrl} 
           alt={train.name}
           loading="lazy"

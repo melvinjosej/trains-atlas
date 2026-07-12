@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 
 // Resilient synonym-to-ISO-code dictionary designed to absorb toddler pronunciation quirks!
 const COUNTRY_SYNONYMS = {
@@ -193,7 +193,7 @@ function VoiceControl({ onSelectCountry }) {
       let matchedCountry = null
       for (const [code, synonyms] of Object.entries(COUNTRY_SYNONYMS)) {
         const match = synonyms.some(synonym => {
-          const escapedSynonym = synonym.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&')
+          const escapedSynonym = synonym.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
           const regex = new RegExp(`\\b${escapedSynonym}\\b`, 'i')
           return regex.test(transcript)
         })
@@ -219,7 +219,7 @@ function VoiceControl({ onSelectCountry }) {
     }
   }, [])
 
-  const toggleListen = () => {
+  const toggleListen = useCallback(() => {
     if (!recognition) {
       alert('Voice control is not supported in this browser or device. Try Chrome or Safari!')
       return
@@ -230,7 +230,7 @@ function VoiceControl({ onSelectCountry }) {
     } else {
       recognition.start()
     }
-  }
+  }, [recognition, listening])
 
   // ⌨️ Spacebar keyboard shortcut listener implementation (using stable callback reference)
   const toggleListenRef = useRef(toggleListen)
