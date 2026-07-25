@@ -113,6 +113,7 @@ import angolaImg from '../assets/trains/angola.jpeg'
 import drcongoImg from '../assets/trains/drcongo.jpeg'
 import tanzaniaImg from '../assets/trains/tanzania.jpeg'
 import guatemalaImg from '../assets/trains/guatemala.jpeg'
+import guyanaImg from '../assets/trains/guyana.jpeg'
 
 export const trainsData = [
   {
@@ -2247,6 +2248,24 @@ export const trainsData = [
           "The Guatemalan steam train used to carry delicious coffee beans from volcano mountains to the sea coast! ☕🚂",
           "It chugged through tropical rainforests with colorful toucans and howler monkeys watching above! 🦜🐒",
           "It drove across giant steel trestle bridges high above deep green valleys and sparkling rivers!"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GY",
+    countryName: "Guyana",
+    capital: "Georgetown",
+    flagEmoji: "🇬🇾",
+    trains: [
+      {
+        name: "Demerara-Mahaica Railway Express",
+        type: "🚂 South America's First Historic Coast & Jungle Railway",
+        photoUrl: guyanaImg,
+        funFacts: [
+          "Guyana was home to the very first operating railway in all of South America, built over 175 years ago! 🇬🇾🚂",
+          "It chugged along coastal palm trees and deep rainforest paths carrying tropical sugar cane and bauxite rocks! 🌴🪨",
+          "The train crossed wide sea-wall bridges right near the Atlantic ocean waves with wild toucans flying above! 🦜🌊"
         ]
       }
     ]
