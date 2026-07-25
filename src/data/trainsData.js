@@ -114,6 +114,7 @@ import drcongoImg from '../assets/trains/drcongo.jpeg'
 import tanzaniaImg from '../assets/trains/tanzania.jpeg'
 import guatemalaImg from '../assets/trains/guatemala.jpeg'
 import guyanaImg from '../assets/trains/guyana.jpeg'
+import uruguayImg from '../assets/trains/uruguay.jpeg'
 
 export const trainsData = [
   {
@@ -2268,6 +2269,25 @@ export const trainsData = [
           "Guyana was home to the very first operating railway in all of South America, built over 175 years ago! 🇬🇾🚂",
           "It chugged along coastal palm trees and deep rainforest paths carrying tropical sugar cane and bauxite rocks! 🌴🪨",
           "The train crossed wide sea-wall bridges right near the Atlantic ocean waves with wild toucans flying above! 🦜🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "UY",
+    countryName: "Uruguay",
+    capital: "Montevideo",
+    flagEmoji: "🇺🇾",
+    trains: [
+      {
+        name: "Tren Central de Uruguay (Pampa Speedliner)",
+        type: "🚂 Classic Rolling Grasslands & Coastal Express",
+        photoUrl: uruguayImg,
+        funFacts: [
+          "⚡ Top Speed: Countryside pampa cruising at 50 mph (80 km/h)! ⚡",
+          "This classic Uruguayan passenger train is operated by friendly human drivers from coastal Montevideo through rolling green pampas grass! 🇺🇾🚂",
+          "It crosses high stone bridges over sparkling rivers where horseback gauchos herd cattle and giant ostriches (rheas) run alongside! 🐎🦩",
+          "Passengers can watch sunny Atlantic beaches and historic plazas glide past big sun-shaded windows! ☀️🌊"
         ]
       }
     ]
