@@ -112,6 +112,7 @@ import southafricaImg from '../assets/trains/southafrica.jpeg'
 import angolaImg from '../assets/trains/angola.jpeg'
 import drcongoImg from '../assets/trains/drcongo.jpeg'
 import tanzaniaImg from '../assets/trains/tanzania.jpeg'
+import guatemalaImg from '../assets/trains/guatemala.jpeg'
 
 export const trainsData = [
   {
@@ -2228,6 +2229,24 @@ export const trainsData = [
           "This legendary jungle railway is driven by skilled human drivers connecting the Atlantic Ocean to the giant Congo River! 🧑‍✈️🌊",
           "It chugs right through the dramatic Crystal Mountains, winding past lush tropical trees, deep river canyons, and waterfalls! 🏔️🚂💦",
           "It was built over 125 years ago to bypass huge unnavigable river rapids, bringing vital goods and passengers to Kinshasa! 🍌🚢"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GT",
+    countryName: "Guatemala",
+    capital: "Guatemala City",
+    flagEmoji: "🇬🇹",
+    trains: [
+      {
+        name: "Ferrocarril de Guatemala (Coffee Locomotive)",
+        type: "🚂 Classic Jungle & Coffee Steam Train",
+        photoUrl: guatemalaImg,
+        funFacts: [
+          "The Guatemalan steam train used to carry delicious coffee beans from volcano mountains to the sea coast! ☕🚂",
+          "It chugged through tropical rainforests with colorful toucans and howler monkeys watching above! 🦜🐒",
+          "It drove across giant steel trestle bridges high above deep green valleys and sparkling rivers!"
         ]
       }
     ]
