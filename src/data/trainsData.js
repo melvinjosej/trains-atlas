@@ -116,6 +116,7 @@ import guatemalaImg from '../assets/trains/guatemala.jpeg'
 import guyanaImg from '../assets/trains/guyana.jpeg'
 import uruguayImg from '../assets/trains/uruguay.jpeg'
 import eritreaImg from '../assets/trains/eritrea.jpeg'
+import palestineImg from '../assets/trains/palestine.jpeg'
 
 export const trainsData = [
   {
@@ -1411,7 +1412,7 @@ export const trainsData = [
         type: "🚀 Sleek Double-Decker Mountain Express",
         photoUrl: israelImg,
         funFacts: [
-          "⚡ Top Speed: Double-decker valley speedliner zooms at 100 mph! ⚡",
+          "⚡ Top Speed: Double-decker valley speedliner zooms at 100 mph (160 km/h)! ⚡",
           "This modern passenger train is double-decker! You can sit on the very top roof level and look down at deep valleys! 🪜🏔️",
           "It zooms over massive, giant concrete bridges hanging high in the air and goes through deep mountain tunnels! 🌉🚇",
           "It connects beautiful historic cities in just 30 minutes, gliding so smooth it feels like a flying magic carpet! 🧞"
@@ -2308,6 +2309,25 @@ export const trainsData = [
           "This rare vintage steam train climbs from the tropical Red Sea port of Massawa over 7,000 feet up misty mountain switchbacks to Asmara! 🇪🇷🚂",
           "It chugs through 65 stone tunnels carved out of rocky mountain cliffs and over high stone arch bridges looking down on clouds! 🏔️☁️",
           "It is lovingly maintained by expert veteran railway engineers who keep the historic 90-year-old Ansaldo steam locomotives puffing smoothly! 🧑‍✈️💨"
+        ]
+      }
+    ]
+  },
+  {
+    id: "PS",
+    countryName: "Palestine",
+    capital: "Ramallah",
+    flagEmoji: "🇵🇸",
+    trains: [
+      {
+        name: "Hejaz Railway (Historic Olive Grove Express)",
+        type: "🚂 Classic Mediterranean Heritage Valley Steam Railway",
+        photoUrl: palestineImg,
+        funFacts: [
+          "⚡ Top Speed: Gentle heritage valley cruising at 35 mph (56 km/h)! ⚡",
+          "The historic Hejaz valley railway chugged through ancient olive groves, stone terraces, and sunny Mediterranean oases! 🇵🇸🚂",
+          "Friendly travelers shared fresh figs, sweet dates, and warm pita bread while looking out over terracotta hilltop towns! 🫒🧺",
+          "Its classic steam whistle echoed across valley stone bridges where mountain gazelles leaped through ancient hills! 🦌🏔️"
         ]
       }
     ]

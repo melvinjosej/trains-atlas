@@ -67,6 +67,7 @@ const COUNTRY_SYNONYMS = {
   'iq': ['iraq', 'baghdad', 'basra', 'mesopotamia', 'iraqi'],
   'lb': ['lebanon', 'beirut', 'cedar train', 'rayak', 'lebanese'],
   'il': ['israel', 'tel aviv', 'jerusalem', 'siemens', 'israeli'],
+  'ps': ['palestine', 'ramallah', 'hejaz', 'olive grove', 'palestinian', 'palestine train'],
   'sy': ['syria', 'damascus', 'hedjaz', 'desert steam', 'syrian'],
   'ge': ['georgia', 'tbilisi', 'black sea', 'stadler', 'georgian'],
   'az': ['azerbaijan', 'baku', 'silk road', 'ady', 'azerbaijani'],
