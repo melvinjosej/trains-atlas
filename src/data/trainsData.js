@@ -115,6 +115,7 @@ import tanzaniaImg from '../assets/trains/tanzania.jpeg'
 import guatemalaImg from '../assets/trains/guatemala.jpeg'
 import guyanaImg from '../assets/trains/guyana.jpeg'
 import uruguayImg from '../assets/trains/uruguay.jpeg'
+import eritreaImg from '../assets/trains/eritrea.jpeg'
 
 export const trainsData = [
   {
@@ -2288,6 +2289,25 @@ export const trainsData = [
           "This classic Uruguayan passenger train is operated by friendly human drivers from coastal Montevideo through rolling green pampas grass! 🇺🇾🚂",
           "It crosses high stone bridges over sparkling rivers where horseback gauchos herd cattle and giant ostriches (rheas) run alongside! 🐎🦩",
           "Passengers can watch sunny Atlantic beaches and historic plazas glide past big sun-shaded windows! ☀️🌊"
+        ]
+      }
+    ]
+  },
+  {
+    id: "ER",
+    countryName: "Eritrea",
+    capital: "Asmara",
+    flagEmoji: "🇪🇷",
+    trains: [
+      {
+        name: "Eritrean Railway (Asmara-Massawa Mallet Steamer)",
+        type: "🚂 Legendary Narrow-Gauge Mountain Steam Railway",
+        photoUrl: eritreaImg,
+        funFacts: [
+          "⚡ Top Speed: Mountain steep steam chugging at 20 mph (32 km/h)! ⚡",
+          "This rare vintage steam train climbs from the tropical Red Sea port of Massawa over 7,000 feet up misty mountain switchbacks to Asmara! 🇪🇷🚂",
+          "It chugs through 65 stone tunnels carved out of rocky mountain cliffs and over high stone arch bridges looking down on clouds! 🏔️☁️",
+          "It is lovingly maintained by expert veteran railway engineers who keep the historic 90-year-old Ansaldo steam locomotives puffing smoothly! 🧑‍✈️💨"
         ]
       }
     ]
