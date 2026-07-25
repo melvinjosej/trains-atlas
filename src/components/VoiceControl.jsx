@@ -109,7 +109,11 @@ const COUNTRY_SYNONYMS = {
   'zw': ['zimbabwe', 'harare', 'bulawayo', 'victoria falls', 'nrz', 'zimbabwean'],
   'za': ['south africa', 'pretoria', 'johannesburg', 'cape town', 'blue train', 'gautrain', 'shosholoza meyl', 'south african'],
   'ao': ['angola', 'luanda', 'lobito', 'benguela', 'cfb', 'angolan'],
-  'cd': ['dr congo', 'congo', 'kinshasa', 'matadi', 'onatra', 'sctp', 'sncc', 'congolese']
+  'cd': ['dr congo', 'congo', 'kinshasa', 'matadi', 'onatra', 'sctp', 'sncc', 'congolese'],
+  'gt': ['guatemala', 'guatemala city', 'ferrocarril', 'coffee locomotive', 'guatemalan', 'guatemala train'],
+  'gy': ['guyana', 'georgetown', 'demerara', 'mahaica', 'guyanese', 'guyana train'],
+  'uy': ['uruguay', 'montevideo', 'tren central', 'pampa speedliner', 'uruguayan', 'uruguay train'],
+  'er': ['eritrea', 'erithrea', 'asmara', 'massawa', 'mallet', 'eritrean', 'eritrean railway', 'eritrea train']
 }
 
 function VoiceControl({ onSelectCountry }) {
