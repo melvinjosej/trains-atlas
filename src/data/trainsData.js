@@ -2333,3 +2333,55 @@ export const trainsData = [
     ]
   }
 ];
+
+// O(1) Fast Lookup Map by uppercase country ISO code
+export const trainsByCountryId = new Map(
+  trainsData.map((country) => [country.id.toUpperCase(), country])
+);
+
+export function getCountryById(id) {
+  if (!id) return null;
+  return trainsByCountryId.get(id.toUpperCase()) || null;
+}
+
+// Extract numeric speed in km/h from train funFacts or type string
+export function parseSpeedKmh(train) {
+  if (!train) return 80;
+  const text = [train.type || '', ...(train.funFacts || [])].join(' ');
+  const kmhMatch = text.match(/(\d+)\s*km\/h/i);
+  if (kmhMatch) return parseInt(kmhMatch[1], 10);
+  const mphMatch = text.match(/(\d+)\s*mph/i);
+  if (mphMatch) return Math.round(parseInt(mphMatch[1], 10) * 1.60934);
+  return 100;
+}
+
+// Classify train into kid-friendly categories for filtering
+export function getTrainCategory(train) {
+  if (!train) return 'scenic';
+  const speed = parseSpeedKmh(train);
+  const text = `${train.name} ${train.type}`.toLowerCase();
+
+  if (speed >= 200 || text.includes('bullet') || text.includes('high-speed') || text.includes('maglev') || text.includes('shinkansen') || text.includes('tgv')) {
+    return 'bullet';
+  }
+  if (text.includes('steam') || text.includes('vintage') || text.includes('heritage') || text.includes('mallet')) {
+    return 'steam';
+  }
+  if (text.includes('mountain') || text.includes('glacier') || text.includes('alpine') || text.includes('clouds') || text.includes('canyon') || text.includes('scenic')) {
+    return 'mountain';
+  }
+  if (text.includes('luxury') || text.includes('royal') || text.includes('orient') || text.includes('trans-siberian') || text.includes('sleeper')) {
+    return 'luxury';
+  }
+  return 'scenic';
+}
+
+export const REGION_PRESETS = [
+  { id: 'world', label: '🌍 Whole World', zoom: 1, x: 0, y: 0 },
+  { id: 'americas', label: '🗽 Americas', zoom: 1.85, x: 28, y: 2 },
+  { id: 'europe', label: '🏰 Europe', zoom: 3.3, x: -5, y: 24 },
+  { id: 'asia', label: '⛩️ Asia', zoom: 2.3, x: -28, y: 10 },
+  { id: 'africa', label: '🦁 Africa', zoom: 2.3, x: -4, y: -12 },
+  { id: 'oceania', label: '🦘 Oceania', zoom: 2.7, x: -36, y: -26 }
+];
+

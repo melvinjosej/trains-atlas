@@ -1,54 +1,62 @@
 import { useState, useEffect, useRef } from 'react'
+import { parseSpeedKmh, getTrainCategory } from '../data/trainsData'
+import { soundFX } from '../utils/soundEffects'
 
 function TrainCard({ train, country, index = 0 }) {
   const [imgLoading, setImgLoading] = useState(true)
   const [imgError, setImgError] = useState(false)
   const [prevPhotoUrl, setPrevPhotoUrl] = useState(train?.photoUrl)
+  const [speakingFactIndex, setSpeakingFactIndex] = useState(null)
   const [isMuted, setIsMuted] = useState(() => {
     return localStorage.getItem('trains-atlas-muted') === 'true'
   })
   const imgRef = useRef(null)
 
-  // 🔄 Reset image states on train change
+  // Reset states on train change during render
   if (train?.photoUrl !== prevPhotoUrl) {
     setPrevPhotoUrl(train?.photoUrl)
     setImgLoading(true)
     setImgError(false)
+    if (speakingFactIndex !== null) {
+      setSpeakingFactIndex(null)
+    }
   }
 
-  // 🔊 Speech Synthesis (TTS) Narrator side-effect
+  // Clean text helper for Speech Synthesis
+  const cleanTextForSpeech = (text) => {
+    return text
+      .replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDC00-\uDFFF]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+  }
+
+  // Speak full narrator script on train change
   useEffect(() => {
     if (isMuted || !train) {
       window.speechSynthesis.cancel()
       return
     }
 
-    // 1. Assemble the narrator script from train name, type, and all fun facts
-    const countryIntro = country ? `${country.countryName}, ${country.capital}. ` : ''
-    const introText = `${countryIntro}Let's explore the ${train.name}! It is a ${train.type}.`
+    const countryIntro = country ? `${country.countryName}, capital ${country.capital}. ` : ''
+    const introText = `${countryIntro}Let's explore the ${train.name}!`
     const factsText = train.funFacts ? train.funFacts.join('. ') : ''
     const rawScriptText = `${introText}. ${factsText}`
+    const cleanScript = cleanTextForSpeech(rawScriptText)
 
-    // 2. Wipe out emojis and special unicode symbols so the text-to-speech voice reads cleanly
-    const cleanScript = rawScriptText
-      .replace(/[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDC00-\uDFFF]/g, "")
-      .replace(/\s+/g, ' ')
-      .trim()
-
-    // 3. Cancel any active speech immediately
     window.speechSynthesis.cancel()
 
-    // 4. Use a 50ms buffer to allow WebKit/Safari speech engine on iPad to reset cleanly after cancel()
     const timer = setTimeout(() => {
       const utterance = new SpeechSynthesisUtterance(cleanScript)
       utterance.lang = 'en-US'
-      utterance.rate = 0.85 // Moderately slow, ideal for a 4-year-old's comprehension!
-      utterance.pitch = 1.1 // Warm, slightly higher pitch for a friendly, playful sound
+      utterance.rate = 0.88
+      utterance.pitch = 1.1
+
+      utterance.onend = () => setSpeakingFactIndex(null)
+      utterance.onerror = () => setSpeakingFactIndex(null)
 
       window.speechSynthesis.speak(utterance)
-    }, 50)
+    }, 60)
 
-    // 🧼 Cleanup function: cancel active timer and narration when card closes or re-renders
     return () => {
       clearTimeout(timer)
       window.speechSynthesis.cancel()
@@ -57,13 +65,49 @@ function TrainCard({ train, country, index = 0 }) {
 
   if (!train) return null
 
+  const speedKmh = parseSpeedKmh(train)
+  const category = getTrainCategory(train)
+
   const toggleMute = () => {
+    soundFX.playClick()
     const nextMuteState = !isMuted
     setIsMuted(nextMuteState)
     localStorage.setItem('trains-atlas-muted', String(nextMuteState))
     if (nextMuteState) {
       window.speechSynthesis.cancel()
+      setSpeakingFactIndex(null)
     }
+  }
+
+  const handleBlowWhistle = () => {
+    if (category === 'bullet') {
+      soundFX.playHorn()
+    } else {
+      soundFX.playWhistle()
+    }
+  }
+
+  // Speak an individual fun fact when tapped by child
+  const handleSpeakFact = (factText, idx) => {
+    soundFX.playClick()
+    if (isMuted) return
+    window.speechSynthesis.cancel()
+    setSpeakingFactIndex(idx)
+
+    const utterance = new SpeechSynthesisUtterance(cleanTextForSpeech(factText))
+    utterance.lang = 'en-US'
+    utterance.rate = 0.88
+    utterance.pitch = 1.1
+    utterance.onend = () => setSpeakingFactIndex(null)
+    utterance.onerror = () => setSpeakingFactIndex(null)
+    window.speechSynthesis.speak(utterance)
+  }
+
+  // Speedometer color badge
+  const getSpeedBadgeStyle = () => {
+    if (speedKmh >= 250) return 'bg-rose-600 text-white border-rose-300'
+    if (speedKmh >= 150) return 'bg-amber-500 text-amber-950 border-amber-200'
+    return 'bg-emerald-600 text-white border-emerald-300'
   }
 
   return (
@@ -84,14 +128,14 @@ function TrainCard({ train, country, index = 0 }) {
         {imgError && (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-amber-50 p-4 text-center z-10 select-none">
             <span className="text-6xl mb-2 animate-bounce">🚂</span>
-            <div className="font-black text-amber-800 text-xl">Photo didn't load!</div>
+            <div className="font-black text-amber-800 text-xl">Photo didn&apos;t load!</div>
             <div className="text-sm text-amber-600 font-medium mt-2 max-w-[80%] mx-auto leading-relaxed">
-              Your corporate network blocker or firewall might be blocking Wikimedia Commons photos! 🧐
+              Check your network connection to view this train photo! 🧐
             </div>
           </div>
         )}
 
-        {/* 💯 Real Public Domain Image (with referer hiding) */}
+        {/* 💯 Real Public Domain Image */}
         <img 
           ref={(node) => {
             imgRef.current = node
@@ -115,8 +159,16 @@ function TrainCard({ train, country, index = 0 }) {
 
         {/* 🏷️ Train Type Badge Overlay */}
         {!imgError && (
-          <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white font-bold text-base px-4 py-1 rounded-full shadow-sm tracking-wide z-20">
+          <div className="absolute bottom-3 left-3 bg-black/70 backdrop-blur-md text-white font-bold text-xs sm:text-sm px-3.5 py-1 rounded-full shadow-md tracking-wide z-20 max-w-[65%] truncate">
             {train.type}
+          </div>
+        )}
+
+        {/* ⚡ Speedometer Badge Overlay */}
+        {!imgError && (
+          <div className={`absolute top-3 right-3 px-3 py-1 rounded-full font-black text-xs sm:text-sm border-2 shadow-md z-20 flex items-center space-x-1 ${getSpeedBadgeStyle()}`}>
+            <span>⚡</span>
+            <span>{speedKmh} km/h</span>
           </div>
         )}
       </div>
@@ -124,40 +176,59 @@ function TrainCard({ train, country, index = 0 }) {
       {/* 📝 TRAIN FACTS DETAILS DESCRIPTION BOX */}
       <div className="flex-1 p-4 flex flex-col min-h-0 overflow-y-auto no-scrollbar bg-gradient-to-b from-white to-slate-50/50">
         
-        {/* Train Name Title with floating Mute Narrator Toggle */}
-        <div className="flex items-center justify-between border-b-4 border-amber-300 pb-2 mb-3 shrink-0">
-          <h3 className="text-2xl font-black text-slate-800 leading-tight flex-1">
+        {/* Train Name Title + Whistle Button + Mute Narrator Toggle */}
+        <div className="flex items-center justify-between border-b-4 border-amber-300 pb-2 mb-3 shrink-0 gap-2">
+          <h3 className="text-xl sm:text-2xl font-black text-slate-800 leading-tight flex-1 truncate" title={train.name}>
             {train.name}
           </h3>
+
+          {/* 🚂 Blow Whistle Interactive Button */}
+          <button
+            onClick={handleBlowWhistle}
+            className="bg-amber-400 hover:bg-amber-300 active:scale-90 text-amber-950 font-black text-sm px-3 py-1.5 rounded-full border-2 border-amber-500 shadow-sm flex items-center space-x-1 cursor-pointer transition shrink-0"
+            title="Blow Train Whistle! 🚂💨"
+          >
+            <span>{category === 'bullet' ? '🚄' : '🚂'}</span>
+            <span>{category === 'bullet' ? 'Horn!' : 'Choo-Choo!'}</span>
+          </button>
+
+          {/* 🔊 Mute / Unmute Narrator Button */}
           <button 
             onClick={toggleMute}
-            className={`ml-3 text-2xl p-2.5 rounded-full cursor-pointer transition active:scale-90 border-2 shadow-sm ${
+            className={`text-xl p-2 rounded-full cursor-pointer transition active:scale-90 border-2 shadow-sm shrink-0 ${
               isMuted 
                 ? 'bg-rose-50 border-rose-200 hover:bg-rose-100 text-rose-700' 
                 : 'bg-emerald-50 border-emerald-200 hover:bg-emerald-100 text-emerald-700 animate-bounce-slow'
             }`}
-            title={isMuted ? "Unmute narrator 🔊" : "Mute narrator 🔇"}
+            title={isMuted ? 'Unmute narrator 🔊' : 'Mute narrator 🔇'}
           >
             {isMuted ? '🔇' : '🔊'}
           </button>
         </div>
 
-        {/* Fun Educational Child-Friendly Fact List */}
-        <div className="flex-1 space-y-3 overflow-y-auto no-scrollbar pr-1">
-          {train.funFacts && train.funFacts.map((fact, index) => {
+        {/* Fun Educational Child-Friendly Fact List (Tap any fact to hear it read aloud!) */}
+        <div className="flex-1 space-y-2.5 overflow-y-auto no-scrollbar pr-1">
+          {train.funFacts && train.funFacts.map((fact, idx) => {
             const badgeColors = [
-              'bg-amber-100 border-amber-400 text-amber-900',
-              'bg-sky-100 border-sky-400 text-sky-900',
-              'bg-emerald-100 border-emerald-400 text-emerald-900'
+              'bg-amber-100 border-amber-400 text-amber-900 hover:bg-amber-200/70',
+              'bg-sky-100 border-sky-400 text-sky-900 hover:bg-sky-200/70',
+              'bg-emerald-100 border-emerald-400 text-emerald-900 hover:bg-emerald-200/70'
             ]
-            const colorClass = badgeColors[index % badgeColors.length]
+            const colorClass = badgeColors[idx % badgeColors.length]
+            const isSpeakingThis = speakingFactIndex === idx
 
             return (
               <div 
-                key={index} 
-                className={`p-3 rounded-2xl border-l-8 shadow-sm font-medium text-lg leading-relaxed transform transition duration-300 hover:translate-x-1 flex items-start space-x-2 ${colorClass}`}
+                key={idx} 
+                onClick={() => handleSpeakFact(fact, idx)}
+                className={`p-3 rounded-2xl border-l-8 shadow-sm font-medium text-base sm:text-lg leading-relaxed transform transition duration-200 cursor-pointer flex items-start space-x-2.5 ${colorClass} ${
+                  isSpeakingThis ? 'ring-4 ring-teal-400 scale-[1.01]' : ''
+                }`}
+                title="Tap to hear this fun fact! 🔊"
               >
-                <span className="text-xl shrink-0 mt-0.5">🌟</span>
+                <span className="text-xl shrink-0 mt-0.5">
+                  {isSpeakingThis ? '🔊' : '🌟'}
+                </span>
                 <span>{fact}</span>
               </div>
             )
