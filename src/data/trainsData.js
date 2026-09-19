@@ -121,6 +121,7 @@ import madagascarImg from '../assets/trains/madagascar.jpeg'
 import michelineImg from '../assets/trains/micheline.jpeg'
 import icelandImg from '../assets/trains/iceland.jpeg'
 import greenlandImg from '../assets/trains/greenland.jpeg'
+import namibiaImg from '../assets/trains/namibia.jpeg'
 
 export const trainsData = [
   {
@@ -2400,6 +2401,25 @@ export const trainsData = [
           "Built on Qoornoq Island inside Nuuk's giant fjord, this northernmost island railway chugged right past floating white icebergs and humpback whales! 🇬🇱🧊🐳",
           "Because giant glaciers and steep snowy mountains cover Greenland, there are no railways between towns—making this coastal fjord track a rare Arctic treasure! 🏔️❄️",
           "Its sturdy narrow-gauge locomotive pulled wooden flatbed wagons past bright red, blue, and yellow Greenlandic houses under the magical Northern Lights! 🌌🚂"
+        ]
+      }
+    ]
+  },
+  {
+    id: "NA",
+    countryName: "Namibia",
+    capital: "Windhoek",
+    flagEmoji: "🇳🇦",
+    trains: [
+      {
+        name: "TransNamib Desert Express (StarLine)",
+        type: "🚂 Golden Namib Desert & Dune Safari Train",
+        photoUrl: namibiaImg,
+        funFacts: [
+          "⚡ Top Speed: Desert dune cruising at 50 mph (80 km/h)! ⚡",
+          "This bright blue-and-gold train rolls right across the ancient Namib Desert—the oldest desert in the whole world, with giant red sand dunes! 🇳🇦🏜️🚂",
+          "As it travels from mountain-ringed Windhoek to the sunny Atlantic coast at Swakopmund, wild oryx antelopes, ostriches, and desert elephants roam nearby! 🦌🐘",
+          "Special sand-sweeper plows clear wind-blown desert sand off the shiny steel tracks where the desert dunes meet the crashing ocean waves! 🌊✨"
         ]
       }
     ]

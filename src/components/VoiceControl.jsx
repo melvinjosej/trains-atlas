@@ -117,7 +117,8 @@ const COUNTRY_SYNONYMS = {
   'er': ['eritrea', 'erithrea', 'asmara', 'massawa', 'mallet', 'eritrean', 'eritrean railway', 'eritrea train'],
   'mg': ['madagascar', 'antananarivo', 'fianarantsoa', 'manakara', 'micheline', 'viko-viko', 'lemur train', 'jungle express', 'fce', 'malagasy', 'madagascar train'],
   'is': ['iceland', 'reykjavik', 'minor', 'pioner', 'harbour train', 'icelandic', 'iceland train'],
-  'gl': ['greenland', 'greeland', 'nuuk', 'qoornoq', 'fjord train', 'iceberg train', 'greenlandic', 'greenland train']
+  'gl': ['greenland', 'greeland', 'nuuk', 'qoornoq', 'fjord train', 'iceberg train', 'greenlandic', 'greenland train'],
+  'na': ['namibia', 'windhoek', 'transnamib', 'desert express', 'swakopmund', 'namib', 'namibian', 'namibia train']
 }
 
 function VoiceControl({ onSelectCountry }) {
