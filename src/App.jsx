@@ -65,6 +65,27 @@ function App() {
     }
   }, [])
 
+  // ⌨️ Press Escape to exit the selected country (or close open modals) and return to the full world map
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        if (isExplorerOpen) {
+          setIsExplorerOpen(false)
+          soundFX.playClick()
+        } else if (isPassportOpen) {
+          setIsPassportOpen(false)
+          soundFX.playClick()
+        } else if (selectedCountryId) {
+          soundFX.playClick()
+          window.speechSynthesis?.cancel()
+          handleSelectCountry(null)
+        }
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedCountryId, isExplorerOpen, isPassportOpen, handleSelectCountry])
+
   // 🎲 Surprise Me! Random Train Adventure handler
   const handleSurpriseMe = () => {
     soundFX.playWhistle()

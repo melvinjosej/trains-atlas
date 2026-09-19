@@ -145,7 +145,7 @@ function MapView({ selectedCountryId, onSelectCountry }) {
     setActiveRegion('custom')
   }
 
-  const handleResetView = () => {
+  const handleResetView = useCallback(() => {
     soundFX.playClick()
     setZoom(1)
     setPan({ x: 0, y: 0 })
@@ -153,7 +153,18 @@ function MapView({ selectedCountryId, onSelectCountry }) {
     if (selectedCountryId) {
       onSelectCountry(null)
     }
-  }
+  }, [selectedCountryId, onSelectCountry])
+
+  // ⌨️ Press Escape to reset map zoom/pan and exit country view back to full map
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape' && (selectedCountryId || zoom > 1 || activeRegion !== 'world')) {
+        handleResetView()
+      }
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [selectedCountryId, zoom, activeRegion, handleResetView])
 
   // Mouse / Touch Drag to Pan when zoomed in
   const handlePointerDown = (e) => {
