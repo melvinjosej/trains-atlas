@@ -117,6 +117,8 @@ import guyanaImg from '../assets/trains/guyana.jpeg'
 import uruguayImg from '../assets/trains/uruguay.jpeg'
 import eritreaImg from '../assets/trains/eritrea.jpeg'
 import palestineImg from '../assets/trains/palestine.jpeg'
+import madagascarImg from '../assets/trains/madagascar.jpeg'
+import michelineImg from '../assets/trains/micheline.jpeg'
 
 export const trainsData = [
   {
@@ -2328,6 +2330,36 @@ export const trainsData = [
           "The historic Hejaz valley railway chugged through ancient olive groves, stone terraces, and sunny Mediterranean oases! 🇵🇸🚂",
           "Friendly travelers shared fresh figs, sweet dates, and warm pita bread while looking out over terracotta hilltop towns! 🫒🧺",
           "Its classic steam whistle echoed across valley stone bridges where mountain gazelles leaped through ancient hills! 🦌🏔️"
+        ]
+      }
+    ]
+  },
+  {
+    id: "MG",
+    countryName: "Madagascar",
+    capital: "Antananarivo",
+    flagEmoji: "🇲🇬",
+    trains: [
+      {
+        name: "FCE Jungle Express (Fianarantsoa-Côte Est)",
+        type: "🚂 Rainforest & Airport Runway Jungle Train",
+        photoUrl: madagascarImg,
+        funFacts: [
+          "⚡ Top Speed: Tropical rainforest climbing at 25 mph (40 km/h)! ⚡",
+          "This famous green-and-yellow jungle train drives right across a real active airplane runway at Manakara Airport before reaching the Indian Ocean! ✈️🚂",
+          "It winds through 48 dark mountain tunnels and over 67 bridges past giant waterfalls, banana trees, and ring-tailed lemurs! 🐒🍌💦",
+          "Friendly villagers greet the train at every jungle station with baskets of sweet lychees, vanilla beans, and tropical fruits! 🌺🍍"
+        ]
+      },
+      {
+        name: "La Micheline (Viko-Viko Lemur Railcar)",
+        type: "🚂 Vintage Rubber-Tired Lemur Express",
+        photoUrl: michelineImg,
+        funFacts: [
+          "⚡ Top Speed: Bouncy rubber-tire cruising at 45 mph (72 km/h)! ⚡",
+          "Instead of loud metal wheels, this super-rare vintage train rolls on real air-filled Michelin rubber car tires right on the steel tracks! 🛞🚂",
+          "Madagascar is one of the only places on Earth where you can still ride a classic 1930s French Micheline railcar! 🇲🇬✨",
+          "It glides quietly through misty cloud forests where giant singing Indri lemurs and rainbow chameleons live in the treetops! 🦎🌳"
         ]
       }
     ]
