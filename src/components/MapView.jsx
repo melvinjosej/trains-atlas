@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import worldMapUrl from '../assets/world_map.svg'
-import { REGION_PRESETS } from '../data/trainsData'
+import { REGION_PRESETS, getCountryById } from '../data/trainsData'
 import { soundFX } from '../utils/soundEffects'
 
 // Module-level memory cache so the 1.1MB SVG string is fetched only once per session
@@ -48,13 +48,17 @@ function MapView({ selectedCountryId, onSelectCountry }) {
   useEffect(() => {
     if (!containerRef.current || !svgRaw) return
 
-    // 1. Clear previous selection highlights
+    // 1. Clear previous selection highlights and old SVG pin overlays
     const activePaths = containerRef.current.querySelectorAll('.country-selected')
     activePaths.forEach(el => el.classList.remove('country-selected'))
+    const oldPins = containerRef.current.querySelectorAll('.country-highlight-pin')
+    oldPins.forEach(pin => pin.remove())
 
     // 2. Highlight new selection & compute bounding box for smooth auto-zoom
     const rafId = requestAnimationFrame(() => {
       if (!containerRef.current) return
+
+      const svgEl = containerRef.current.querySelector('svg')
 
       if (selectedCountryId) {
         const codeLower = selectedCountryId.toLowerCase()
@@ -68,6 +72,12 @@ function MapView({ selectedCountryId, onSelectCountry }) {
             if (el.tagName.toLowerCase() === 'g') {
               const childPaths = el.querySelectorAll('path')
               childPaths.forEach(path => path.classList.add('country-selected'))
+            }
+
+            // Bring selected country element to the top of its SVG parent so its glowing border is never covered by neighbors
+            const topGroup = el.closest('svg > g') || el
+            if (topGroup && topGroup.parentNode && topGroup.parentNode.tagName.toLowerCase() === 'svg') {
+              topGroup.parentNode.appendChild(topGroup)
             }
 
             try {
@@ -84,7 +94,7 @@ function MapView({ selectedCountryId, onSelectCountry }) {
           })
         }
 
-        // If valid bounding box found, calculate smooth auto-zoom & pan center
+        // If valid bounding box found, calculate smooth auto-zoom, pan center, and inject pulsing SVG highlight badge
         if (minX < Infinity && maxX > -Infinity) {
           const W = 2752.766
           const H = 1537.631
@@ -96,6 +106,64 @@ function MapView({ selectedCountryId, onSelectCountry }) {
           // Compute ideal zoom level clamped between 1.8x and 5.5x
           const idealZoom = Math.min(W / (boxW * 2.8), H / (boxH * 2.8))
           const targetZoom = Math.min(Math.max(idealZoom, 1.8), 5.5)
+
+          // Inject an SVG pulsing beacon & country label right over the zoomed-in country
+          const countryData = getCountryById(selectedCountryId)
+          if (svgEl && countryData) {
+            const ns = 'http://www.w3.org/2000/svg'
+            const pinGroup = document.createElementNS(ns, 'g')
+            pinGroup.setAttribute('class', 'country-highlight-pin')
+            pinGroup.setAttribute('style', 'pointer-events: none;')
+
+            // Scale inversely to targetZoom so the badge & ring stay neatly sized at every zoom level
+            const invScale = Math.max(1 / targetZoom, 0.22)
+            const ringRadius = Math.max(Math.min(Math.max(boxW, boxH) * 0.55, 140), 26)
+
+            // Outer glowing dashed target ring around the country
+            const outerRing = document.createElementNS(ns, 'circle')
+            outerRing.setAttribute('cx', String(cx))
+            outerRing.setAttribute('cy', String(cy))
+            outerRing.setAttribute('r', String(ringRadius))
+            outerRing.setAttribute('fill', 'rgba(34, 197, 94, 0.12)')
+            outerRing.setAttribute('stroke', '#facc15')
+            outerRing.setAttribute('stroke-width', String(3.5 * invScale))
+            outerRing.setAttribute('stroke-dasharray', `${10 * invScale} ${6 * invScale}`)
+            pinGroup.appendChild(outerRing)
+
+            // Floating label badge above center
+            const labelGroup = document.createElementNS(ns, 'g')
+            const labelY = Math.max(minY - 18 * invScale, 24)
+            labelGroup.setAttribute('transform', `translate(${cx}, ${labelY}) scale(${invScale})`)
+
+            const labelText = `${countryData.flagEmoji} ${countryData.countryName.toUpperCase()}`
+            const pillWidth = Math.max(labelText.length * 13 + 36, 140)
+            const pillHeight = 40
+
+            const rect = document.createElementNS(ns, 'rect')
+            rect.setAttribute('x', String(-pillWidth / 2))
+            rect.setAttribute('y', String(-pillHeight / 2))
+            rect.setAttribute('width', String(pillWidth))
+            rect.setAttribute('height', String(pillHeight))
+            rect.setAttribute('rx', '20')
+            rect.setAttribute('fill', '#059669')
+            rect.setAttribute('stroke', '#fde047')
+            rect.setAttribute('stroke-width', '3.5')
+            labelGroup.appendChild(rect)
+
+            const textEl = document.createElementNS(ns, 'text')
+            textEl.setAttribute('x', '0')
+            textEl.setAttribute('y', '7')
+            textEl.setAttribute('text-anchor', 'middle')
+            textEl.setAttribute('fill', '#ffffff')
+            textEl.setAttribute('font-size', '20')
+            textEl.setAttribute('font-weight', '900')
+            textEl.setAttribute('font-family', 'Quicksand, Nunito, sans-serif')
+            textEl.textContent = labelText
+            labelGroup.appendChild(textEl)
+
+            pinGroup.appendChild(labelGroup)
+            svgEl.appendChild(pinGroup)
+          }
 
           // Normalized offset from center of map in percentage
           const normX = ((W / 2 - cx) / W) * 100
@@ -256,8 +324,9 @@ function MapView({ selectedCountryId, onSelectCountry }) {
       {/* 🗺️ Transformable SVG Wrapper with hardware-accelerated smooth transitions */}
       <div
         ref={svgWrapperRef}
-        className="w-full h-full flex items-center justify-center origin-center"
+        className={`w-full max-h-full flex items-center justify-center origin-center ${selectedCountryId ? 'has-selected-country' : ''}`}
         style={{
+          aspectRatio: '2752.766 / 1537.631',
           transform: `scale(${zoom}) translate(${pan.x}%, ${pan.y}%)`,
           transition: isDragging ? 'none' : 'transform 650ms cubic-bezier(0.22, 1, 0.36, 1)'
         }}

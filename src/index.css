@@ -83,20 +83,36 @@ path {
   fill: #f97316 !important; /* Flash bright orange when touched! */
 }
 
-/* 🌟 SELECTED ACTIVE COUNTRY HIGHLIGHT STATE 
-   When clicked, the selected country lights up a brilliant, vibrant emerald green! */
-.country-selected {
-  fill: #22c55e !important; /* Vibrant emerald green */
-  stroke: #15803d !important; /* Dark emerald borders */
-  stroke-width: 1.8;
-  filter: drop-shadow(0px 4px 8px rgba(22, 163, 74, 0.4));
-  animation: pulse-selected 2s infinite ease-in-out;
+/* 🌟 SPOTLIGHT DIMMING WHEN ZOOMED IN ON A SELECTED COUNTRY
+   Dims surrounding countries so the selected country pops out clearly! */
+.has-selected-country path.land:not(.country-selected),
+.has-selected-country g.land:not(.country-selected) > path:not(.country-selected) {
+  opacity: 0.35 !important;
+  filter: saturate(0.45);
+  transition: opacity 0.35s ease, filter 0.35s ease;
 }
 
-@keyframes pulse-selected {
-  0% { opacity: 1.0; }
-  50% { fill: #4ade80 !important; } /* Slightly lighter pulse */
-  100% { opacity: 1.0; }
+/* 🌟 SELECTED ACTIVE COUNTRY HIGHLIGHT STATE 
+   When zoomed in on a country, it lights up in vibrant electric coral-emerald with a glowing white halo! */
+.country-selected,
+g.country-selected > path,
+path.country-selected {
+  opacity: 1 !important;
+  fill: #22c55e !important; /* Vibrant emerald green */
+  stroke: #ffffff !important; /* Crisp high-contrast white halo border */
+  stroke-width: 2.8px !important;
+  stroke-linejoin: round !important;
+  filter: drop-shadow(0px 0px 8px rgba(34, 197, 94, 0.95)) drop-shadow(0px 0px 18px rgba(250, 204, 21, 0.85)) !important;
+  animation: pulse-selected-glow 1.6s infinite ease-in-out;
+}
+
+@keyframes pulse-selected-glow {
+  0%, 100% {
+    filter: drop-shadow(0px 0px 6px rgba(34, 197, 94, 0.9)) drop-shadow(0px 0px 14px rgba(250, 204, 21, 0.75));
+  }
+  50% {
+    filter: drop-shadow(0px 0px 14px rgba(16, 185, 129, 1)) drop-shadow(0px 0px 26px rgba(254, 240, 138, 1));
+  }
 }
 
 /* Hide default scrollbars in panels for an app-like experience */
