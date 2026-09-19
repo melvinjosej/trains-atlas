@@ -115,7 +115,9 @@ const COUNTRY_SYNONYMS = {
   'gy': ['guyana', 'georgetown', 'demerara', 'mahaica', 'guyanese', 'guyana train'],
   'uy': ['uruguay', 'montevideo', 'tren central', 'pampa speedliner', 'uruguayan', 'uruguay train'],
   'er': ['eritrea', 'erithrea', 'asmara', 'massawa', 'mallet', 'eritrean', 'eritrean railway', 'eritrea train'],
-  'mg': ['madagascar', 'antananarivo', 'fianarantsoa', 'manakara', 'micheline', 'viko-viko', 'lemur train', 'jungle express', 'fce', 'malagasy', 'madagascar train']
+  'mg': ['madagascar', 'antananarivo', 'fianarantsoa', 'manakara', 'micheline', 'viko-viko', 'lemur train', 'jungle express', 'fce', 'malagasy', 'madagascar train'],
+  'is': ['iceland', 'reykjavik', 'minor', 'pioner', 'harbour train', 'icelandic', 'iceland train'],
+  'gl': ['greenland', 'greeland', 'nuuk', 'qoornoq', 'fjord train', 'iceberg train', 'greenlandic', 'greenland train']
 }
 
 function VoiceControl({ onSelectCountry }) {

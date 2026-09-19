@@ -119,6 +119,8 @@ import eritreaImg from '../assets/trains/eritrea.jpeg'
 import palestineImg from '../assets/trains/palestine.jpeg'
 import madagascarImg from '../assets/trains/madagascar.jpeg'
 import michelineImg from '../assets/trains/micheline.jpeg'
+import icelandImg from '../assets/trains/iceland.jpeg'
+import greenlandImg from '../assets/trains/greenland.jpeg'
 
 export const trainsData = [
   {
@@ -2360,6 +2362,44 @@ export const trainsData = [
           "Instead of loud metal wheels, this super-rare vintage train rolls on real air-filled Michelin rubber car tires right on the steel tracks! 🛞🚂",
           "Madagascar is one of the only places on Earth where you can still ride a classic 1930s French Micheline railcar! 🇲🇬✨",
           "It glides quietly through misty cloud forests where giant singing Indri lemurs and rainbow chameleons live in the treetops! 🦎🌳"
+        ]
+      }
+    ]
+  },
+  {
+    id: "IS",
+    countryName: "Iceland",
+    capital: "Reykjavík",
+    flagEmoji: "🇮🇸",
+    trains: [
+      {
+        name: "Reykjavík Harbour Steam Train (Minør & Pioner)",
+        type: "🚂 Volcanic Harbour Steam Locomotive",
+        photoUrl: icelandImg,
+        funFacts: [
+          "⚡ Top Speed: Heavy volcanic boulder hauling at 15 mph (24 km/h)! ⚡",
+          "Iceland has no passenger railways today, so these two famous green steam engines—Minør and Pioner—are the only real locomotives in the whole country! 🇮🇸🚂",
+          "Built over 110 years ago, they puffed along special tracks carrying giant volcanic lava rocks from Öskjuhlíð hill to build Reykjavík's ocean harbor walls! 🌋🌊",
+          "Today, kids can visit Minør right by the sparkling boats at Reykjavík Old Harbour and see how brave steam engineers built the port! ⚓🐳"
+        ]
+      }
+    ]
+  },
+  {
+    id: "GL",
+    countryName: "Greenland",
+    capital: "Nuuk",
+    flagEmoji: "🇬🇱",
+    trains: [
+      {
+        name: "Qoornoq Fjord Railway (Arctic Iceberg Express)",
+        type: "🚂 Arctic Fjord & Iceberg Narrow-Gauge Train",
+        photoUrl: greenlandImg,
+        funFacts: [
+          "⚡ Top Speed: Icy Arctic fjord cruising at 12 mph (20 km/h)! ⚡",
+          "Built on Qoornoq Island inside Nuuk's giant fjord, this northernmost island railway chugged right past floating white icebergs and humpback whales! 🇬🇱🧊🐳",
+          "Because giant glaciers and steep snowy mountains cover Greenland, there are no railways between towns—making this coastal fjord track a rare Arctic treasure! 🏔️❄️",
+          "Its sturdy narrow-gauge locomotive pulled wooden flatbed wagons past bright red, blue, and yellow Greenlandic houses under the magical Northern Lights! 🌌🚂"
         ]
       }
     ]
